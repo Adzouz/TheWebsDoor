@@ -1,0 +1,41 @@
+fr:
+  -
+    id: 1
+    title: 'Sites Internet'
+    slug: 'sites'
+
+  -
+    id: 2
+    title: 'Applications Web'
+    slug: 'webapps'
+
+  -
+    id: 3
+    title: 'Applications Mobile'
+    slug: 'mobileapps'
+
+  -
+    id: 4
+    title: 'Jeux'
+    slug: 'games'
+
+en:
+  -
+    id: 1
+    title: 'Websites'
+    slug: 'sites'
+
+  -
+    id: 2
+    title: 'Web apps'
+    slug: 'webapps'
+
+  -
+    id: 3
+    title: 'Mobile apps'
+    slug: 'mobileapps'
+
+  -
+    id: 4
+    title: 'Games'
+    slug: 'games'

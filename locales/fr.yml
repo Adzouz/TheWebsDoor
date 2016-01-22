@@ -1,0 +1,37 @@
+fr:
+  nav:
+    home: 'Accueil'
+    about: 'A Propos'
+    skills: 'Compétences'
+    works: 'Portfolio'
+    contact: 'Contact'
+    blog: 'Blog'
+  follow_me: 'On se suit ?'
+  catchphrase:
+    first: 'Bonjour, je m''appelle'
+    second: 'Bienvenue sur mon site'
+    job: ' et je suis développeur front-end et back-end, intégrateur et graphiste.'
+  baseline:
+    title_first: 'J'''
+    title_second: ' Internet'
+    highlighted: 'Ensemble, parfaisons le web en donnant vie à vos projets.'
+  description: 'Spécialisé dans la création de sites internet, d''applications web et de visuels graphiques pour entreprises et particuliers.'
+  about:
+    title: 'Un peu plus sur moi...'
+    see_cv: 'Voir mon CV'
+  skills:
+    title: 'Compétences'
+    description: 'Au cours de mon apprentissage, j''ai pu approfondir mes connaissances et m''exercer sur de nouvelles technologies afin d''aller encore plus loin !'
+  works:
+    title: 'Portfolio'
+    all: 'Tous'
+    see: 'voir'
+  contact:
+    title: 'Contact'
+    description: 'Intéressé par mon travail ?<br />Je peux m''occuper de votre projet !<br /><br />Besoin d''un devis ou d''une prestation ?<br />N''hésitez pas à m''envoyer un message et j''y répondrai aussi rapidement que possible !'
+    form:
+      name: 'Nom'
+      email: 'E-mail'
+      subject: 'Sujet'
+      message: 'Message'
+      send: 'Envoyer !'

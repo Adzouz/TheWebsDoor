@@ -1,0 +1,193 @@
+/! Begin Home
+section#home.page-type.black-bg.font-white.depth-type.animated.delayed.no-opacity data-animation="fadeIn" data-animation-delay="0s" 
+  .container
+    .row
+      .col-xs-12.text-center
+        /! logo
+        .big-logo.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.2s" 
+          img alt="" src="/images/big-logo.svg" /
+        p.tagline.text-white.m0.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.4s" 
+          = t('catchphrase.first')
+          span.text-blue.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.6s"  Adrien Lepoutre
+          br /
+          span.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.8s"= t('catchphrase.second')
+  /! Background Triangle Overlay / Special Depth Bg
+  .depth-bg
+    /! parallax with texture
+    #parallax-index.parallax.texture style="background-image:url(/images/bg/bg-frame1.jpg);" 
+    /! Background Overlay Image (e.g. a transparant triangle)
+    .depth-bg-img style=("background-image: url(/images/bg/home-bg.png);") 
+  /! End Background Triangle Overlay / Special Depth Bg
+/! End Home
+
+/! Begin About
+section#about.page-type
+  .container.no-padding-bottom
+    .row
+      .col-xs-12.text-center
+        h1.section-title.no-margin-bottom
+          = t('baseline.title_first')
+          i.fa.fa-heart.text-blue
+          = t('baseline.title_second')
+        h2.sub-title = t('baseline.highlighted')
+    .row
+      .col-md-8.col-md-offset-2.text-center
+        p = t('description')
+    .row.text-center
+      - delay = 0.2
+      - datas_about = I18n.locale == :en ? data.about.en : data.about.fr
+      - datas_about.each do |about|
+        .col-sm-6.col-md-3
+          .service.bottom-arrow.clearfix.animated.delayed.no-opacity data-animation="fadeInLeft" data-animation-delay="#{delay}s" 
+            .shape.diamond.center.dark.shape-icon
+              i.fa.fa-fw class="fa-#{about.icon}"
+            h3.service-title = about.title
+            p = about.description
+        - delay = delay + 0.2
+/! End About
+
+/! Begin Separator Aside
+aside#parallax-one.separator-type
+  .container.text-center
+    .clearfix
+      .col-xs-12
+        p.tagline = t('about.title')
+        p.desc
+          | J'ai 
+          strong.text-blue
+            span.age 23
+            |  ans
+          | , je suis passionné d'informatique et j'ai tr&egrave;s vite trouv&eacute; mon domaine : 
+          strong.text-blue le web
+          | . Je me suis auto-form&eacute; aux principales technologies r&eacute;alisant mon premier site en 
+          strong.text-blue HTML/CSS
+          | . J'ai dynamis&eacute; celui-ci avec 
+          strong.text-blue Javascript
+          |  avec son framework : 
+          strong.text-blue jQuery
+          | . Enfin le 
+          strong.text-blue PHP
+          |  associ&eacute; &agrave; 
+          strong.text-blue MySQL
+          |  m'a permis de rendre mon site facilement administrable.
+        p.desc
+          | Aujourd'hui je continue toujours d'&eacute;largir mon champ et de toucher au plus de technologies possibles. Je me suis lanc&eacute; depuis peu dans la conception d'
+          strong.text-blue applications web
+          | , de 
+          strong.text-blue jeux vid&eacute;os
+          |  (2D pour le web) et d'
+          strong.text-blue applications iOS
+          | .
+        p.desc
+          | Passionn&eacute; de cr&eacute;ation graphique je fais &eacute;galement du design pour applications mobiles, des logos pour entreprises et particuliers, etc...
+        p.tagline
+          | Je m'occupe de toute 
+          span.text-blue identit&eacute; visuelle
+          |  sur le 
+          span.text-blue web
+        a.btn.btn-border.border-white href="http://cowlick.io/cv.pdf" target="_blank"  = t('about.see_cv')
+  /! parallax with texture
+  #parallax-cta.parallax.texture style="background-image:url(/images/bg/bg-frame2.jpg);" 
+/! End Separator Aside
+
+/! Begin Skills
+section#skills.page-type.depth-type
+  .container
+    .row
+      .col-xs-12.text-center
+        h1.section-title = t('skills.title')
+    .row
+      .col-md-8.col-md-offset-2.text-center
+        p = t('skills.description')
+    .row.text-center
+      - delay = 0.3
+      - data.skills.each do |skill|
+        .col-sm-6.col-md-3
+          .skill.clearfix.animated.delayed.no-opacity data-animation="bounceIn" data-animation-delay="#{delay}s" 
+            .shape.diamond.center
+              = image_tag "/images/bg/#{skill.image}"
+            h3.skill-title = skill.title
+            p.text-center.tagcloud
+              - skill.tags.each do |tag|
+                a = tag
+                br /
+        - delay = delay + 0.2
+    .row
+      .col-md-6
+      .col-md-6
+        .project-content
+          - data.skills_levels.each do |skill_level|
+            p.skill = skill_level.title
+            .progress
+              .progress-bar.animated.delayed.no-opacity data-animation="slideInLeft" data-animation-delay="0.2s" style=("width: #{skill_level.percentage}%;") 
+  /! special depth bg
+  .depth-bg
+    /! special depth image
+    .depth-img.frame-mac.animated.delayed.no-opacity data-animation="ts-slideInUp" data-animation-delay="1.2s" style=("background: url(/images/bg/bg-frame3.jpg);") 
+    /! background overlay image (e.g. a transparant triangle)
+    .depth-bg-img style=("background-image: url(/images/bg/skills-bg.png);") 
+  /! end special depth bg
+/! End Skills
+
+/! Begin Works
+section#works.page-type.grey-bg
+  .container
+    .row
+      .col-md-12
+        h1.section-title.text-center = t('works.title')
+        /! diamond slider navigation
+        #diamond-filter-portfolio.diamond-filter.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.3s" 
+          ul.special-font
+            li.active
+              a data-filter="*" href="#"  = t('works.all')
+            - datas_categories = I18n.locale == :en ? data.categories.en : data.categories.fr
+            - datas_categories.each do |category|
+              li
+                a data-filter=category.id href="#" = category.title
+        /! diamond slider
+        #diamondslider-portfolio.diamondslider.nav-white.animated.delayed.no-opacity data-animation="fadeInUp" data-animation-delay="1.1s" 
+          ul.slides
+            - data.works.each do |work|
+              li.shape.diamond data-category=work.category
+                a.item-hover.ajax-nav href=work.url target="_blank"
+                  span.hover-title.special-font= work.title
+                  span.hover-action - #{t('works.see')} -
+                img src="/images/works/#{work.image}" /
+/! End Works
+
+/! Begin Contact
+section#contact.page-type.black-bg.font-white
+  .container
+    .row.text-center
+      .col-md-12
+        h1.section-title = t('contact.title')
+    .row
+      .col-md-5.col-sm-6
+        p.desc
+          = t('contact.description')
+        h3.top-margin-60 = t('follow_me')
+        p.bottom-margin-60
+          - delay = 0.3
+          - data.social.each do |social|
+            a.btn.btn-icon.btn-icon-white.animated.delayed.no-opacity data-animation="fadeIn" data-animation-delay="#{delay}s" href=social.url target="_blank" title=social.title 
+              i.fontello class="social_icon-#{social.icon}"
+            - delay = delay + 0.3
+      .col-md-5.col-md-offset-2.col-sm-5.col-sm-offset-1
+        .contact-form
+          form.form.form-horizontal accept-charset="UTF-8" action="https://formkeep.com/f/410d666b42cd" method="POST"
+            fieldset
+              input type="hidden" name="utf8" value="✓" /
+              input#contact_name.form-control.form-dark name="contact[name]" placeholder=("#{t('contact.form.name')} *") required="required" type="text" /
+              input#contact_email.form-control.form-dark name="contact[email]" placeholder=("#{t('contact.form.email')} *") required="required" type="email" /
+              input#contact_subject.form-control.form-dark name="contact[subject]" placeholder=("#{t('contact.form.subject')} *") required="required" type="text" /
+              textarea#contact_body.form-control.form-dark name="contact[body]" placeholder=("#{t('contact.form.message')} *") required="required" rows="6" 
+              input#submit.btn.btn-border.border-white type="submit" value=t('contact.form.send') /
+              .loading
+/! End Contact
+
+/! Begin Separator Aside
+aside#location.separator-type.carousel-type
+  /! parallax with texture
+  #parallax-clients.parallax.texture style="background-image:url(/images/bg/bg-frame4.jpg);" 
+/! // End Separator Aside
+

@@ -1,0 +1,37 @@
+en:
+  nav:
+    home: 'Home'
+    about: 'About'
+    skills: 'Skills'
+    works: 'Works'
+    contact: 'Contact'
+    blog: 'Blog'
+  follow_me: 'Would you follow me?'
+  catchphrase:
+    first: 'Hi, I''m'
+    second: 'Welcome on my website'
+    job: ' , I''m a front-end and back-end developer, designer and a graphic designer.'
+  baseline:
+    title_first: 'I '
+    title_second: ' Internet'
+    highlighted: 'Together, let''s perfect the web by giving life to your projects.'
+  description: 'Specialized in creation of websites, web applications and visuals for professionals and individuals.'
+  about:
+    title: 'A little more about me...'
+    see_cv: 'See my CV'
+  skills:
+    title: 'Skills'
+    description: 'During my learning, I had the opportunity to deepen my knowledge and train myself on new technologies in order to go even further!'
+  works:
+    title: 'Works'
+    all: 'All'
+    see: 'see'
+  contact:
+    title: 'Contact'
+    description: 'Interested by my work?<br />I can manage your project!<br /><br />Need a quote or a service?<br />Feel free to send me a message and I''ll answer as soon as possible!'
+    form:
+      name: 'Name'
+      email: 'E-mail'
+      subject: 'Subject'
+      message: 'Message'
+      send: 'Send!'

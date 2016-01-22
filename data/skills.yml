@@ -1,0 +1,36 @@
+-
+  title: 'Front-end'
+  image: 'competence1.jpg'
+  tags:
+    - '#javascript'
+    - '#angularjs'
+    - '#node.js'
+    - '#express'
+    - '#middleman'
+-
+  title: 'Back-end'
+  image: 'competence2.jpg'
+  tags:
+    - '#php'
+    - '#symfony2'
+    - '#objectivec'
+    - '#swift'
+    - '#java'
+-
+  title: 'Design'
+  image: 'competence3.jpg'
+  tags:
+    - '#photoshop'
+    - '#illustrator'
+    - '#html5'
+    - '#css3'
+    - '#jquery'
+-
+  title: 'Frameworks / CMS'
+  image: 'competence4.jpg'
+  tags:
+    - '#sass'
+    - '#compass'
+    - '#wordpress'
+    - '#prestashop'
+    - '#ezpublish'

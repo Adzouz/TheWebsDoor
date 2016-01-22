@@ -1,0 +1,53 @@
+-
+  title: 'Petit Pain'
+  url: 'http://petitpain.fr'
+  image: 'petitpain.jpeg'
+  category: 1
+
+-
+  title: 'Say it with a Pin-up'
+  url: 'http://cowlick.io/pinup/'
+  image: 'pinup.jpeg'
+  category: 2
+
+-
+  title: 'Birthday Calendar'
+  url: 'http://cowlick.io/birthdaycalendar/'
+  image: 'birthday-calendar.jpeg'
+  category: 2
+
+-
+  title: 'Find my word'
+  url: 'http://cowlick.io/findmyword/'
+  image: 'find-my-word.jpeg'
+  category: 2
+
+-
+  title: 'Smiley2Skype'
+  url: 'http://cowlick.io/smiley2skype/'
+  image: 'smiley2skype.jpeg'
+  category: 2
+
+-
+  title: 'La Soundbox des Tutos'
+  url: 'http://bit.ly/lestutos'
+  image: 'soundbox-tutos.png'
+  category: 3
+
+-
+  title: 'Christine Escriva'
+  url: 'http://christineescriva.fr'
+  image: 'christine-escriva.jpeg'
+  category: 1
+
+-
+  title: 'Snake HTML5'
+  url: 'http://cowlick.io/hobbynote/snake/'
+  image: 'snake.jpeg'
+  category: 4
+
+-
+  title: 'Frogger Pokémon'
+  url: 'http://cowlick.io/frogger/'
+  image: 'frogger-pokemon.jpeg'
+  category: 4

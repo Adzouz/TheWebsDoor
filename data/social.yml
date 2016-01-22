@@ -1,0 +1,29 @@
+-
+  title: 'Facebook'
+  url: 'https://facebook.com/thewebsdoor'
+  icon: 'facebook'
+
+-
+  title: 'Twitter'
+  url: 'http://twitter.com/thewebsdoor'
+  icon: 'twitter'
+
+-
+  title: 'LinkedIn'
+  url: 'http://www.linkedin.com/in/adrienlepoutre'
+  icon: 'linkedin'
+
+-
+  title: 'Viadeo'
+  url: 'http://www.viadeo.com/fr/profile/adrienlepoutre'
+  icon: 'viadeo'
+
+-
+  title: 'Klout'
+  url: 'http://klout.com/TheWebsDoor'
+  icon: 'klout'
+
+-
+  title: 'RSS Blog'
+  url: 'http://blog.thewebsdoor.fr/feed.xml'
+  icon: 'rss'
