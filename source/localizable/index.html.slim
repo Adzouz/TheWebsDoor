@@ -9,8 +9,7 @@ section#home.page-type.black-bg.font-white.depth-type.animated.delayed.no-opacit
         p.tagline.text-white.m0.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.4s" 
           = t('catchphrase.first')
           span.text-blue.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.6s"  Adrien Lepoutre
-          br /
-          span.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.8s"= t('catchphrase.second')
+          span.catchphrase-second.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.8s"= t('catchphrase.second')
   /! Background Triangle Overlay / Special Depth Bg
   .depth-bg
     /! parallax with texture
@@ -31,13 +30,13 @@ section#about.page-type
           = t('baseline.title_second')
         h2.sub-title = t('baseline.highlighted')
     .row
-      .col-md-8.col-md-offset-2.text-center
+      .col-xs-12.col-md-8.col-md-offset-2.text-center
         p = t('description')
     .row.text-center
       - delay = 0.2
       - datas_about = I18n.locale == :en ? data.about.en : data.about.fr
       - datas_about.each do |about|
-        .col-sm-6.col-md-3
+        .col-xs-12.col-sm-6.col-md-3
           .service.bottom-arrow.clearfix.animated.delayed.no-opacity data-animation="fadeInLeft" data-animation-delay="#{delay}s" 
             .shape.diamond.center.dark.shape-icon
               i.fa.fa-fw class="fa-#{about.icon}"
@@ -97,12 +96,12 @@ section#skills.page-type.depth-type
       .col-xs-12.text-center
         h1.section-title = t('skills.title')
     .row
-      .col-md-8.col-md-offset-2.text-center
+      .col-xs-12.col-md-8.col-md-offset-2.text-center
         p = t('skills.description')
     .row.text-center
       - delay = 0.3
       - data.skills.each do |skill|
-        .col-sm-6.col-md-3
+        .col-xs-12.col-sm-6.col-md-3
           .skill.clearfix.animated.delayed.no-opacity data-animation="bounceIn" data-animation-delay="#{delay}s" 
             .shape.diamond.center
               = image_tag "/images/bg/#{skill.image}"
@@ -113,8 +112,8 @@ section#skills.page-type.depth-type
                 br /
         - delay = delay + 0.2
     .row
-      .col-md-6
-      .col-md-6
+      .col-xs-12.col-md-6
+      .col-xs-12.col-md-6
         .project-content
           - data.skills_levels.each do |skill_level|
             p.skill = skill_level.title
@@ -133,7 +132,7 @@ section#skills.page-type.depth-type
 section#works.page-type.grey-bg
   .container
     .row
-      .col-md-12
+      .col-xs-12
         h1.section-title.text-center = t('works.title')
         /! diamond slider navigation
         #diamond-filter-portfolio.diamond-filter.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.3s" 
@@ -159,10 +158,10 @@ section#works.page-type.grey-bg
 section#contact.page-type.black-bg.font-white
   .container
     .row.text-center
-      .col-md-12
+      .col-xs-12
         h1.section-title = t('contact.title')
     .row
-      .col-md-5.col-sm-6
+      .col-xs-12.col-sm-6.col-md-5
         p.desc
           = t('contact.description')
         h3.top-margin-60 = t('follow_me')
@@ -172,7 +171,7 @@ section#contact.page-type.black-bg.font-white
             a.btn.btn-icon.btn-icon-white.animated.delayed.no-opacity data-animation="fadeIn" data-animation-delay="#{delay}s" href=social.url target="_blank" title=social.title 
               i.fontello class="social_icon-#{social.icon}"
             - delay = delay + 0.3
-      .col-md-5.col-md-offset-2.col-sm-5.col-sm-offset-1
+      .col-xs-12.col-sm-5.col-sm-offset-1.col-md-5.col-md-offset-2
         .contact-form
           form.form.form-horizontal accept-charset="UTF-8" action="https://formkeep.com/f/410d666b42cd" method="POST"
             fieldset

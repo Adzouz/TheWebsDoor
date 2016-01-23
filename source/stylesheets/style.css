@@ -107,6 +107,9 @@
 		line-height: 40px;
 		margin-bottom: 40px;
 	}
+	.tagline .catchphrase-second {
+		display: block;
+	}
 	h3 {
 		font-size: 20px;
 		margin: 35px 0 25px;
@@ -2027,7 +2030,8 @@
 
 		/** depth bg */
 		.depth-type .container {
-			padding-bottom: 90px!important;
+			padding-top: 20px;
+			padding-bottom: 80px!important;
 		}
 		.depth-bg .depth-img {
 			display: none;
@@ -2090,6 +2094,16 @@
 		}
 		#location {
 			height: 150px;
+		}
+		.container {
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+		}
+		header .container {
+			padding: 0 15px !important;
+		}
+		.tagline .text-blue {
+			display: block;
 		}
 	}
 
