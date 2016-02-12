@@ -24,6 +24,7 @@ en:
     description: 'During my learning, I had the opportunity to deepen my knowledge and train myself on new technologies in order to go even further!'
   works:
     title: 'Works'
+    ineat_title: 'Works for INEAT-Conseil'
     all: 'All'
     see: 'see'
   contact:

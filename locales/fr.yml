@@ -3,7 +3,7 @@ fr:
     home: 'Accueil'
     about: 'A Propos'
     skills: 'Compétences'
-    works: 'Portfolio'
+    works: 'Réalisations'
     contact: 'Contact'
     blog: 'Blog'
   follow_me: 'On se suit ?'
@@ -23,7 +23,8 @@ fr:
     title: 'Compétences'
     description: 'Au cours de mon apprentissage, j''ai pu approfondir mes connaissances et m''exercer sur de nouvelles technologies afin d''aller encore plus loin !'
   works:
-    title: 'Portfolio'
+    title: 'Réalisations<br />personnelles'
+    ineat_title: 'Réalisations<br />pour INEAT-Conseil'
     all: 'Tous'
     see: 'voir'
   contact:

@@ -79,12 +79,16 @@ aside#parallax-one.separator-type
           | .
         p.desc
           | Passionn&eacute; de cr&eacute;ation graphique je fais &eacute;galement du design pour applications mobiles, des logos pour entreprises et particuliers, etc...
+        p.desc
+          | Je travaille à mon compte et dans une entreprise spécialisée dans la création d'applications (web, mobile) et de sites web (responsive) : 
+          a.text-blue href="http://www.ineat-conseil.com" target="_blank"
+            strong INEAT-Conseil
         p.tagline
           | Je m'occupe de toute 
           span.text-blue identit&eacute; visuelle
           |  sur le 
           span.text-blue web
-        a.btn.btn-border.border-white href="http://cowlick.io/cv.pdf" target="_blank"  = t('about.see_cv')
+        a.btn.btn-border.border-white href="http://evileye.fr/cv.pdf" target="_blank"  = t('about.see_cv')
   /! parallax with texture
   #parallax-cta.parallax.texture style="background-image:url(/images/bg/bg-frame2.jpg);" 
 /! End Separator Aside
@@ -147,6 +151,27 @@ section#works.page-type.grey-bg
         #diamondslider-portfolio.diamondslider.nav-white.animated.delayed.no-opacity data-animation="fadeInUp" data-animation-delay="1.1s" 
           ul.slides
             - data.works.each do |work|
+              li.shape.diamond data-category=work.category
+                a.item-hover.ajax-nav href=work.url target="_blank"
+                  span.hover-title.special-font= work.title
+                  span.hover-action - #{t('works.see')} -
+                img src="/images/works/#{work.image}" /
+    .row
+      .col-xs-12
+        h1.section-title.text-center = t('works.ineat_title')
+        /! diamond slider navigation
+        #diamond-filter-portfolio-ineat.diamond-filter.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.3s" 
+          ul.special-font
+            li.active
+              a data-filter="*" href="#"  = t('works.all')
+            - datas_categories_ineat = I18n.locale == :en ? data.categories_ineat.en : data.categories_ineat.fr
+            - datas_categories_ineat.each do |category|
+              li
+                a data-filter=category.id href="#" = category.title
+        /! diamond slider
+        #diamondslider-portfolio-ineat.diamondslider.nav-white.animated.delayed.no-opacity data-animation="fadeInUp" data-animation-delay="1.1s" 
+          ul.slides
+            - data.works_ineat.each do |work|
               li.shape.diamond data-category=work.category
                 a.item-hover.ajax-nav href=work.url target="_blank"
                   span.hover-title.special-font= work.title

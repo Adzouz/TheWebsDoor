@@ -600,6 +600,14 @@
 				filterSelector: "#diamond-filter-portfolio",
 			});
 
+			$( "#diamondslider-portfolio-ineat" ).diamondslider({
+				rows: "auto",
+				gutterWidth: 12,
+				sliding: false,
+				filter: true,
+				filterSelector: "#diamond-filter-portfolio-ineat",
+			});
+
 			$( "#diamondslider-team" ).diamondslider({
 				rows: 2,
 				gutterWidth: 12,

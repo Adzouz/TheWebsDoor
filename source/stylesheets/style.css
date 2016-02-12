@@ -685,6 +685,9 @@
 		text-align: justify;
 		color: #ddd;
 	}
+	p.desc a:hover, p.desc a:active, p.desc a:focus {
+		color: #fff;
+	}
 	.footer-type {
 		background: #fff;
 		color: #5c5c5c;

@@ -1,0 +1,11 @@
+fr:
+  -
+    id: 1
+    title: 'Sites Internet'
+    slug: 'sites'
+
+en:
+  -
+    id: 1
+    title: 'Websites'
+    slug: 'sites'

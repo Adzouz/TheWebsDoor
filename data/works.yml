@@ -6,25 +6,25 @@
 
 -
   title: 'Say it with a Pin-up'
-  url: 'http://cowlick.io/pinup/'
+  url: 'http://pinup.evileye.fr'
   image: 'pinup.jpeg'
   category: 2
 
 -
   title: 'Birthday Calendar'
-  url: 'http://cowlick.io/birthdaycalendar/'
+  url: 'http://birthdaycalendar.evileye.fr'
   image: 'birthday-calendar.jpeg'
   category: 2
 
 -
   title: 'Find my word'
-  url: 'http://cowlick.io/findmyword/'
+  url: 'http://findmyword.evileye.fr'
   image: 'find-my-word.jpeg'
   category: 2
 
 -
   title: 'Smiley2Skype'
-  url: 'http://cowlick.io/smiley2skype/'
+  url: 'http://smiley2skype.evileye.fr'
   image: 'smiley2skype.jpeg'
   category: 2
 
@@ -41,13 +41,13 @@
   category: 1
 
 -
-  title: 'Snake HTML5'
-  url: 'http://cowlick.io/hobbynote/snake/'
-  image: 'snake.jpeg'
-  category: 4
+  title: 'Lycée Saint-Rémi'
+  url: 'http://saintremi.com'
+  image: 'saintremi.png'
+  category: 1
 
 -
   title: 'Frogger Pokémon'
-  url: 'http://cowlick.io/frogger/'
+  url: 'http://evileye.fr/frogger/'
   image: 'frogger-pokemon.jpeg'
   category: 4
