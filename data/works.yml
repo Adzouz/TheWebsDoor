@@ -41,6 +41,12 @@
   category: 1
 
 -
+  title: 'MEM - The Rock Band'
+  url: 'http://memrockband.evileye.fr'
+  image: 'memrockband.jpeg'
+  category: 1
+
+-
   title: 'Lycée Saint-Rémi'
   url: 'http://saintremi.com'
   image: 'saintremi.png'
