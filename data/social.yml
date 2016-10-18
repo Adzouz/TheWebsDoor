@@ -19,11 +19,6 @@
   icon: 'viadeo'
 
 -
-  title: 'Klout'
-  url: 'http://klout.com/TheWebsDoor'
-  icon: 'klout'
-
--
   title: 'RSS Blog'
   url: 'http://blog.thewebsdoor.fr/feed.xml'
   icon: 'rss'

@@ -125,12 +125,14 @@ body
       
     jQuery(function($) {
 
-      var ageDifMs = Date.now() - new Date(1992, 9, 26);
-      var ageDate = new Date(ageDifMs);
-      var age = Math.abs(ageDate.getUTCFullYear() - 1970);
+      var date = new Date("1992-09-26");
+      var today = new Date();
+
+      var timeDiff = Math.abs(today.getTime() - date.getTime());
+      var age = parseInt(Math.ceil(timeDiff / (1000 * 3600 * 24)) / 365);
+      
       if (age > parseInt($('#parallax-one .age').html())) {
-        console.log("test");
-        $('#parallax-one .age').html(Math.abs(ageDate.getUTCFullYear() - 1970));
+        $('#parallax-one .age').html(age);
       }
 
       var intervalScene = initScene();

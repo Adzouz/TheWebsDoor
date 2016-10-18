@@ -3,7 +3,6 @@
   image: 'competence1.jpg'
   tags:
     - '#javascript'
-    - '#angularjs'
     - '#node.js'
     - '#express'
     - '#middleman'
@@ -13,7 +12,6 @@
   tags:
     - '#php'
     - '#symfony2'
-    - '#objectivec'
     - '#swift'
     - '#java'
 -
@@ -22,15 +20,13 @@
   tags:
     - '#photoshop'
     - '#illustrator'
-    - '#html5'
     - '#css3'
     - '#jquery'
 -
   title: 'Frameworks / CMS'
   image: 'competence4.jpg'
   tags:
+    - '#jade'
     - '#sass'
-    - '#compass'
     - '#wordpress'
     - '#prestashop'
-    - '#ezpublish'

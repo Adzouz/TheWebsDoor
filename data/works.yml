@@ -1,4 +1,10 @@
 -
+  title: 'Pokébox'
+  url: 'http://pokebox.evileye.fr'
+  image: 'pokebox.png'
+  category: 2
+
+-
   title: 'Petit Pain'
   url: 'http://petitpain.fr'
   image: 'petitpain.jpeg'
@@ -35,12 +41,6 @@
   category: 3
 
 -
-  title: 'Christine Escriva'
-  url: 'http://christineescriva.fr'
-  image: 'christine-escriva.jpeg'
-  category: 1
-
--
   title: 'MEM - The Rock Band'
   url: 'http://memrockband.evileye.fr'
   image: 'memrockband.jpeg'
@@ -57,3 +57,21 @@
   url: 'http://evileye.fr/frogger/'
   image: 'frogger-pokemon.jpeg'
   category: 4
+
+-
+  title: 'KIKADIÇA (beta)'
+  url: 'http://kikadica.evileye.fr/'
+  image: 'kikadica.png'
+  category: 1
+
+-
+  title: 'B''ATZ'
+  url: 'http://batzmusic.com/'
+  image: 'batz.jpg'
+  category: 1
+
+-
+  title: 'Jahneration'
+  url: 'http://jahneration.com/'
+  image: 'jahneration.jpg'
+  category: 1

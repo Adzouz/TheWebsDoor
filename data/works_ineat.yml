@@ -3,3 +3,9 @@
   url: 'http://bullebleue.fr'
   image: 'bullebleue.png'
   category: 1
+
+-
+  title: 'TheBookEdition'
+  url: 'http://thebookedition.com'
+  image: 'tbe.png'
+  category: 1
