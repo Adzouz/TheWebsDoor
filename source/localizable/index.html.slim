@@ -4,7 +4,7 @@ section#home.page-type.black-bg.font-white.depth-type.animated.delayed.no-opacit
     .row
       .col-xs-12.text-center
         /! logo
-        .big-logo.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.2s" 
+        .big-logo.animated.short.delayed.no-opacity data-animation="bounceIn" data-animation-delay="0.2s"
           img alt="" src="/images/big-logo.svg" /
         p.tagline.text-white.m0.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.4s" 
           = t('catchphrase.first')
@@ -104,7 +104,7 @@ section#works.page-type.grey-bg
       .col-xs-12
         h1.section-title.text-center = t('works.title')
         /! diamond slider navigation
-        #diamond-filter-portfolio.diamond-filter.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.3s" 
+        #diamond-filter-portfolio.diamond-filter
           ul.special-font
             li.active
               a data-filter="*" href="#"  = t('works.all')
@@ -113,19 +113,21 @@ section#works.page-type.grey-bg
               li
                 a data-filter=category.id href="#" = category.title
         /! diamond slider
-        #diamondslider-portfolio.diamondslider.nav-white.animated.delayed.no-opacity data-animation="fadeInUp" data-animation-delay="1.1s" 
+        #diamondslider-portfolio.diamondslider.nav-white
           ul.slides
+            - delay = 0.3
             - data.works.each do |work|
-              li.shape.diamond data-category=work.category
+              li.animated.shape.diamond.animated.delayed.no-opacity data-category=work.category data-animation="bounceInRotated" data-animation-delay="#{delay}s" 
                 a.item-hover.ajax-nav href=work.url target="_blank"
                   span.hover-title.special-font= work.title
                   span.hover-action - #{t('works.see')} -
                 img src="/images/works/#{work.image}" /
+              - delay = delay + 0.1
     .row
       .col-xs-12
         h1.section-title.text-center = t('works.ineat_title')
         /! diamond slider navigation
-        #diamond-filter-portfolio-ineat.diamond-filter.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.3s" 
+        #diamond-filter-portfolio-ineat.diamond-filter
           ul.special-font
             li.active
               a data-filter="*" href="#"  = t('works.all')
@@ -134,14 +136,16 @@ section#works.page-type.grey-bg
               li
                 a data-filter=category.id href="#" = category.title
         /! diamond slider
-        #diamondslider-portfolio-ineat.diamondslider.nav-white.animated.delayed.no-opacity data-animation="fadeInUp" data-animation-delay="1.1s" 
+        #diamondslider-portfolio-ineat.diamondslider.nav-white
           ul.slides
+            - delay = 0.3
             - data.works_ineat.each do |work|
-              li.shape.diamond data-category=work.category
+              li.shape.diamond.animated.delayed.no-opacity data-category=work.category data-animation="bounceInRotated" data-animation-delay="#{delay}s"
                 a.item-hover.ajax-nav href=work.url target="_blank"
                   span.hover-title.special-font= work.title
                   span.hover-action - #{t('works.see')} -
                 img src="/images/works/#{work.image}" /
+              - delay = delay + 0.1
 /! End Works
 
 /! Begin Contact

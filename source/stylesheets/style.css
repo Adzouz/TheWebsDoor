@@ -1958,6 +1958,11 @@
 		background-attachment: scroll!important;
 	}
 
+	.animated.short {
+		-webkit-animation-duration: .5s;
+		animation-duration: .5s;
+	}
+
 /*	==================================================
 	# Media Queries
 	================================================== */
@@ -2116,3 +2121,64 @@
 			font-size: 34px;
 		}
 	}
+
+@-webkit-keyframes bounceInRotated {
+	0% {
+		opacity: 0;
+		-webkit-transform: rotate(45deg) scale(.3);
+		transform: rotate(45deg) scale(.3);
+	}
+
+		50% {
+		opacity: 1;
+		-webkit-transform: rotate(45deg) scale(1.05);
+		transform: rotate(45deg) scale(1.05);
+	}
+
+		70% {
+		opacity: 1;
+		-webkit-transform: rotate(45deg) scale(.9);
+		transform: rotate(45deg) scale(.9);
+	}
+
+		100% {
+		opacity: 1;
+		-webkit-transform: rotate(45deg) scale(1);
+		transform: rotate(45deg) scale(1);
+	}
+}
+
+@keyframes bounceInRotated {
+	0% {
+		opacity: 0;
+		-webkit-transform: rotate(45deg) scale(.3);
+		-ms-transform: rotate(45deg) scale(.3);
+		transform: rotate(45deg) scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-webkit-transform: rotate(45deg) scale(1.05);
+		-ms-transform: rotate(45deg) scale(1.05);
+		transform: rotate(45deg) scale(1.05);
+	}
+
+	70% {
+		opacity: 1;
+		-webkit-transform: rotate(45deg) scale(.9);
+		-ms-transform: rotate(45deg) scale(.9);
+		transform: rotate(45deg) scale(.9);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: rotate(45deg) scale(1);
+		-ms-transform: rotate(45deg) scale(1);
+		transform: rotate(45deg) scale(1);
+	}
+}
+
+.bounceInRotated {
+	-webkit-animation-name: bounceInRotated;
+	animation-name: bounceInRotated;
+}
