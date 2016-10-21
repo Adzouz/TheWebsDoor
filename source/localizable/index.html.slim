@@ -51,59 +51,8 @@ aside#parallax-one.separator-type
     .clearfix
       .col-xs-12
         p.tagline = t('about.title')
-        p.desc
-          | J'ai 
-          strong.text-blue
-            span.age 24
-            |  ans
-          | , je suis passionné d'informatique et j'ai tr&egrave;s vite trouv&eacute; mon domaine : le 
-          strong.text-blue web
-          | .
-        p.desc
-          | Je me suis auto-form&eacute; aux principales technologies r&eacute;alisant mon premier site au collège. Toujours plus curieux d'en apprendre d'avantage, j'ai intégré l'école 
-          strong.text-blue SUPINFO
-          |  dans laquelle j'obtins mon diplôme avec spécialisation en 
-          strong.text-blue sécurité des systèmes.
-        p.desc
-          | Je me suis lanc&eacute; depuis le début de mes études dans la conception de 
-          strong.text-blue sites Internet
-          | , d'
-          strong.text-blue applications web
-          | , de 
-          strong.text-blue jeux vid&eacute;os
-          |  (2D pour le web) et d'
-          strong.text-blue applications iOS
-          | .
-        p.desc
-          | Passionn&eacute; par la 
-          strong.text-blue conception graphique
-          |  et l'
-          strong.text-blue ergonomie
-          |  je me suis dirigé vers un métier de 
-          strong.text-blue UI / UX designer
-          |  en plus d'être 
-          strong.text-blue développeur front-end
-          |  et 
-          strong.text-blue back-end
-          | . Le but étant d'apporter une solution complète à tout client (
-          strong.text-blue conception
-          | , 
-          strong.text-blue développement
-          | , 
-          strong.text-blue mise en production
-          | , 
-          strong.text-blue infogérance
-          | ).
-        p.desc
-          | Je travaille à mon compte et dans une entreprise spécialisée dans la création d'applications (web, mobile) et de sites web (responsive) : 
-          a.text-blue href="http://www.ineat-conseil.com" target="_blank"
-            strong INEAT
-          | .
-        p.tagline
-          | Je m'occupe de toute 
-          span.text-blue identit&eacute; visuelle
-          |  sur le 
-          span.text-blue web
+        = t('about.description')
+        p.tagline = t('about.baseline')
         a.btn.btn-border.border-white href="http://evileye.fr/cv.pdf" target="_blank"  = t('about.see_cv')
   /! parallax with texture
   #parallax-cta.parallax.texture style="background-image:url(/images/bg/bg-frame2.jpg);" 

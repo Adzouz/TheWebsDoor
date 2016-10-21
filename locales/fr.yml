@@ -18,6 +18,12 @@ fr:
   description: 'Spécialisé dans la création de sites internet, d''applications web et de visuels graphiques pour entreprises et particuliers.'
   about:
     title: 'Un peu plus sur moi...'
+    description: '<p class="desc">J''ai <strong class="text-blue"><span class="age">24</span></strong> ans, je suis passionné d''informatique et j''ai très vite trouvé mon domaine : le <strong class="text-blue">web</strong>.</p>
+    <p class="desc">Je me suis auto-formé aux principales technologies réalisant mon premier site au collège. Toujours plus curieux d''en apprendre d''avantage, j''ai intégré l''école <strong class="text-blue">SUPINFO</strong> dans laquelle j''obtins mon diplôme avec spécialisation en <strong class="text-blue">sécurité des systèmes</strong>.</p>
+    <p class="desc">Je me suis lancé depuis le début de mes études dans la conception de <strong class="text-blue">sites Internet</strong>, d''<strong class="text-blue">applications web</strong>, de <strong class="text-blue">jeux vid&eacute;os</strong> (2D pour le web) et d''<strong class="text-blue">applications iOS</strong>.</p>
+    <p class="desc">Passionné par la <strong class="text-blue">conception graphique</strong> et l''<strong class="text-blue">ergonomie</strong> je me suis dirigé vers un métier de <strong class="text-blue">UI / UX designer</strong> en plus d''être <strong class="text-blue">développeur front-end</strong> et <strong class="text-blue">back-end</strong>. Le but étant d''apporter une solution complète à tout client (<strong class="text-blue">conception</strong>, <strong class="text-blue">développement</strong>, <strong class="text-blue">mise en production</strong>, <strong>hébergement</strong>, <strong class="text-blue">infogérance</strong>).</p>
+    <p class="desc">Je travaille à mon compte et dans une entreprise spécialisée dans la création d''applications (web, mobile) et de sites web (responsive design) : <a class="text-blue" href="http://www.ineat-conseil.com" target="_blank"><strong>INEAT</strong></a>.</p>'
+    baseline: 'Je m''occupe de toute <span class="text-blue">identité visuelle</span> sur le <span class="text-blue">web</span>'
     see_cv: 'Voir mon CV'
   skills:
     title: 'Compétences'
