@@ -42,3 +42,6 @@ fr:
       subject: 'Sujet'
       message: 'Message'
       send: 'Envoyer !'
+  page404:
+    not_found: 'Cette page n''existe pas ou plus.'
+    back_text: 'Revenir au site'

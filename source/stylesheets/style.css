@@ -824,6 +824,106 @@
 		padding-top: 30px;
 	}
 
+	#page404 {
+		background: #1d1d1d;
+	}
+
+	#page404:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		height: 500px;
+		background: rgb(87, 180, 247);
+		z-index: 5;
+	}
+
+	#page404 h1 {
+		margin-top: 50px;
+		font-size: 30px;
+		color: #fff;
+	}
+
+	#page404 h1 .text-blue {
+		font-size: 155px;
+	}
+
+	#page404 .sub-title {
+		margin: 50px 0;
+	}
+
+	#page404 {
+		padding-bottom: 100px;
+	}
+
+	.game-container {
+		height: 500px;
+		position: relative;
+	}
+
+	.link-anim {
+		display: block;
+		width: 119px;
+		height: 115px;
+		background: url(/images/link.png) no-repeat;
+		background-position: 0 0;
+		margin: auto;
+		position: absolute;
+		bottom: 100px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 10;
+	}
+
+	.ground {
+		display: block;
+		height: 100px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: url(/images/ground.png) repeat-x;
+		z-index: 10;
+	}
+
+	@-webkit-keyframes scroll{
+	  100%{
+	    background-position: -2000px 0px;
+	  }
+	}
+
+	@-moz-keyframes scroll{
+	  100%{
+	    background-position: -2000px 0px;
+	  }
+	}
+
+	@-o-keyframes scroll{
+	  100%{
+	    background-position: -2000px 0px;
+	  }
+	}
+
+	@-ms-keyframes scroll{
+	  100%{
+	    background-position: -2000px 0px;
+	  }
+	}
+
+	@keyframes scroll{
+	  100%{
+	    background-position: -2000px 0px;
+	  }
+	}
+
+	@media (max-width: 767px) {
+		.game-container, #page404:before {
+			height: 300px;
+		}
+	}
+
 	/** skills **/
 	#skills .container {
 		padding-bottom: 250px;
@@ -2122,6 +2222,62 @@
 		}
 	}
 
+@-webkit-keyframes bounceInCentered {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-50%) scale(.3);
+		transform: translateX(-50%) scale(.3);
+	}
+
+		50% {
+		opacity: 1;
+		-webkit-transform: translateX(-50%) scale(1.05);
+		transform: translateX(-50%) scale(1.05);
+	}
+
+		70% {
+		opacity: 1;
+		-webkit-transform: translateX(-50%) scale(.9);
+		transform: translateX(-50%) scale(.9);
+	}
+
+		100% {
+		opacity: 1;
+		-webkit-transform: translateX(-50%) scale(1);
+		transform: translateX(-50%) scale(1);
+	}
+}
+
+@keyframes bounceInCentered {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-50%) scale(.3);
+		-ms-transform: translateX(-50%) scale(.3);
+		transform: translateX(-50%) scale(.3);
+	}
+
+	50% {
+		opacity: 1;
+		-webkit-transform: translateX(-50%) scale(1.05);
+		-ms-transform: translateX(-50%) scale(1.05);
+		transform: translateX(-50%) scale(1.05);
+	}
+
+	70% {
+		opacity: 1;
+		-webkit-transform: translateX(-50%) scale(.9);
+		-ms-transform: translateX(-50%) scale(.9);
+		transform: translateX(-50%) scale(.9);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(-50%) scale(1);
+		-ms-transform: translateX(-50%) scale(1);
+		transform: translateX(-50%) scale(1);
+	}
+}
+
 @-webkit-keyframes bounceInRotated {
 	0% {
 		opacity: 0;
@@ -2176,6 +2332,11 @@
 		-ms-transform: rotate(45deg) scale(1);
 		transform: rotate(45deg) scale(1);
 	}
+}
+
+.bounceInCentered {
+	-webkit-animation-name: bounceInCentered;
+	animation-name: bounceInCentered;
 }
 
 .bounceInRotated {
