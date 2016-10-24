@@ -888,6 +888,17 @@
 		z-index: 10;
 	}
 
+	.fence {
+		display: block;
+		position: absolute;
+		bottom: 100px;
+		width: 70px;
+		height: 100px;
+		right: -70px;
+		background: url(/images/fence.png) no-repeat;
+		z-index: 10;
+	}
+
 	@-webkit-keyframes scroll{
 	  100%{
 	    background-position: -2000px 0px;
