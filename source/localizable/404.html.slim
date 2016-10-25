@@ -1,5 +1,8 @@
 section#page404
   .game-container
+    .score
+      | Score : 
+      span 0
     .game-info.animated.short
       - lang = I18n.locale == :en ? 'en' : 'fr'
       img src="/images/press_enter_#{lang}.svg"

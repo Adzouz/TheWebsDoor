@@ -907,9 +907,21 @@
 		position: absolute;
 		bottom: 100px;
 		width: 70px;
-		height: 100px;
+		height: 66px;
 		right: -70px;
 		background: url(/images/fence.png) no-repeat;
+		z-index: 10;
+	}
+
+	.score {
+		font-family: 'brandon-grotesque', 'Open Sans';
+		font-size: 22px;
+		font-weight: 800;
+		text-transform: uppercase;
+		position: absolute;
+		left: 20px;
+		top: 15px;
+		color: #fff;
 		z-index: 10;
 	}
 
@@ -946,6 +958,9 @@
 	@media (max-width: 767px) {
 		.game-container, #page404:before {
 			height: 300px;
+		}
+		.fence, .score, .game-info {
+			display: none;
 		}
 	}
 

@@ -2,7 +2,7 @@ jQuery(function($) {
 
   if($('#page404').length == 1) {
 
-    var ratio_speed = 1.5;
+    var ratio_speed = 1.25;
     var size_sprite_window = Math.ceil($(window).width() / 100) * 100;
     var link_size = 119;
     var max = 1071;
@@ -11,7 +11,11 @@ jQuery(function($) {
     var speed = ratio_speed * size_sprite_window;
     var is_jumping = false;
     var game_started = false;
-    var intervalGame;
+    var intervalGame, intervalFences;
+    var margin_error = 10;
+    var score = 0;
+    var fences_generated = 0;
+    var current_fence_passed = 0;
 
     // Animation du sprite du personnage
     setInterval(function() {
@@ -29,14 +33,18 @@ jQuery(function($) {
 
     // Fonction qui va démarrer le jeu
     function launchGame() {
+      score = 0;
+      fences_generated = 0;
       game_started = true;
+      current_fence_passed = 0;
       $('.game-info').removeClass('bounceIn');
       if(!$('.game-info').hasClass('bounceOut')) {
         $('.game-info').addClass('bounceOut');
       }
-      intervalGame = setInterval(function() {
+      intervalFences = setInterval(function() {
         if(Math.floor((Math.random() * 10) + 1) == 1 && fence_just_spawned == 0) {
-          var $fence = $("<div>", {"class": "fence"});
+          fences_generated++;
+          var $fence = $("<div>", {"class": "fence", "data-id": fences_generated});
           $('.fences').append($fence);
           size_sprite_window = Math.ceil($(window).width() / 100) * 100;
           speed = ratio_speed * size_sprite_window;
@@ -50,17 +58,41 @@ jQuery(function($) {
           fence_just_spawned = 0;
         }
       }, 100);
+      intervalGame = setInterval(function() {
+        $('.score span').html(score);
+        $('.fence').each(function() {
+          // Quand l'obstacle se trouve au même endroit que le personnage avec marge d'erreur
+          if($(this).offset().left + margin_error <= $('.link-anim').offset().left + $('.link-anim').width() && $(this).offset().left + $(this).width() - (4 * margin_error) >= $('.link-anim').offset().left) {
+            // On vérifie s'il est en l'air ou pas
+            if($('.link-anim').offset().top + $('.link-anim').height() <= $(this).offset().top) {
+
+            }
+            else {
+              console.log("Score : " + score);
+              stopGame();
+            }
+          }
+          // Quand l'obstacle est passé, on augmente le compteur
+          if($(this).offset().left + $(this).width() < $('.link-anim').offset().left) {
+            if(current_fence_passed < $(this).attr('data-id')) {
+              score++;
+              current_fence_passed = $(this).attr('data-id');
+            }
+          }
+        });
+      }, 20);
     }
 
     // Fonction qui va arrêter le jeu
     function stopGame() {
+      $('.fence').remove();
+      clearInterval(intervalGame);
+      clearInterval(intervalFences);
       $('.game-info').removeClass('bounceOut');
       if(!$('.game-info').hasClass('bounceIn')) {
         $('.game-info').addClass('bounceIn');
       }
       game_started = false;
-      clearInterval(intervalGame);
-      $('.fence').remove();
     }
 
     // Fonction qui va gérer le défilement du sol
