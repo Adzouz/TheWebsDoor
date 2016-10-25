@@ -1,5 +1,8 @@
 section#page404
   .game-container
+    .game-info.animated.short
+      - lang = I18n.locale == :en ? 'en' : 'fr'
+      img src="/images/press_enter_#{lang}.svg"
     .fences
     .link-anim.animated.short.delayed.no-opacity data-animation="bounceInCentered" data-animation-delay="0.4s"
     .ground
