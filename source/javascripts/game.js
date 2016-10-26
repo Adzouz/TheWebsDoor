@@ -64,10 +64,7 @@ jQuery(function($) {
           // Quand l'obstacle se trouve au même endroit que le personnage avec marge d'erreur
           if($(this).offset().left + margin_error <= $('.link-anim').offset().left + $('.link-anim').width() && $(this).offset().left + $(this).width() - (4 * margin_error) >= $('.link-anim').offset().left) {
             // On vérifie s'il est en l'air ou pas
-            if($('.link-anim').offset().top + $('.link-anim').height() <= $(this).offset().top) {
-
-            }
-            else {
+            if($('.link-anim').offset().top + $('.link-anim').height() > $(this).offset().top) {
               console.log("Score : " + score);
               stopGame();
             }

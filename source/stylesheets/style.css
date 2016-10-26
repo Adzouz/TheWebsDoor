@@ -745,30 +745,34 @@
 	}
 
 	.lune {
-		width: 122px;
+		width: 123px;
 	}
 
 	.soleil {
 		background: url(/images/weather/soleil.png) no-repeat;
+		background-size: 100% 100%;
 	}
 
 	.svg .soleil {
-		background: url(/images/weather/sun.svg) no-repeat;
+		background: url(/images/weather/soleil.svg) no-repeat;
 		background-size: 100% 100%;
 	}
 
 	.lune {
 		background: url(/images/weather/lune.png) no-repeat;
+		background-size: 100% 100%;
 	}
 
 	.svg .lune {
 		background: url(/images/weather/lune.svg) no-repeat;
+		background-size: 100% 100%;
 	}
 
 	.nuages_left, .nuages_right {
-		width: 275px;
+		width: 274px;
 		height: 165px;
 		background: url(/images/weather/nuages.png);
+		background-size: 100% 100%;
 		position: absolute;
 		top: 17px;
 		z-index: 5;
@@ -881,7 +885,7 @@
 		display: block;
 		width: 119px;
 		height: 115px;
-		background: url(/images/link.png) no-repeat;
+		background: url(/images/game/link.png) no-repeat;
 		background-position: 0 0;
 		margin: auto;
 		position: absolute;
@@ -898,7 +902,7 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background: url(/images/ground.png) repeat-x;
+		background: url(/images/game/ground.png) repeat-x;
 		z-index: 10;
 	}
 
@@ -909,7 +913,7 @@
 		width: 70px;
 		height: 66px;
 		right: -70px;
-		background: url(/images/fence.png) no-repeat;
+		background: url(/images/game/fence.png) no-repeat;
 		z-index: 10;
 	}
 
@@ -1489,36 +1493,6 @@
 	.owl-controls .owl-buttons .disabled {
 		display: block;
 		opacity: 0.1;
-	}
-
-/*	==================================================
-	# Slider
-	================================================== */
-	.slider {
-		margin: 0 0 30px;
-	}
-	/** prev/next navigation */
-	.slider .owl-controls .owl-buttons div {
-		width: 30px;
-		height: 30px;
-		background: url(/images/slider_nav_white.png);
-		position: absolute;
-		bottom: 15px;
-		top: auto;
-		opacity: 0.25;
-	}
-	.slider .owl-controls .owl-buttons div:hover {
-		opacity: 1.0;
-	}
-	.slider .owl-controls .owl-buttons .owl-next,
-	.slider .owl-controls .owl-buttons .owl-next:hover {
-		background-position: 100% 0!important;
-	}
-	.slider .owl-controls .owl-buttons .owl-prev {
-		left: 15px;
-	}
-	.slider .owl-controls .owl-buttons .owl-next {
-		right: 15px;
 	}
 
 /*	==================================================
