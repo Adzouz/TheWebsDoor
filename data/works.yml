@@ -77,6 +77,12 @@
   category: 1
 
 -
+  title: 'Shop Jahneration'
+  url: 'http://shop.jahneration.com/'
+  image: 'jahneration-shop.jpg'
+  category: 1
+
+-
   title: 'Super-Lav'
   url: 'http://superlav.com/'
   image: 'superlav.png'

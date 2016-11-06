@@ -2182,6 +2182,62 @@ embed, iframe, object, video {
 		transform: rotate(45deg) scale(1);
 	}
 }
+@-webkit-keyframes bounceOutRotated {
+  0% {
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  25% {
+    -webkit-transform: rotate(45deg) scale(.95);
+    transform: rotate(45deg) scale(.95);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) scale(1.1);
+    transform: rotate(45deg) scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) scale(.3);
+    transform: rotate(45deg) scale(.3);
+  }
+}
+
+@keyframes bounceOutRotated {
+  0% {
+    -webkit-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  25% {
+    -webkit-transform: rotate(45deg) scale(.95);
+    -ms-transform: rotate(45deg) scale(.95);
+    transform: rotate(45deg) scale(.95);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) scale(1.1);
+    -ms-transform: rotate(45deg) scale(1.1);
+    transform: rotate(45deg) scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) scale(.3);
+    -ms-transform: rotate(45deg) scale(.3);
+    transform: rotate(45deg) scale(.3);
+  }
+}
+
+.bounceOutRotated {
+  -webkit-animation-name: bounceOutRotated;
+  animation-name: bounceOutRotated;
+}
 .bounceInCentered {
 	-webkit-animation-name: bounceInCentered;
 	animation-name: bounceInCentered;
