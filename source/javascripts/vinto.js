@@ -88,25 +88,13 @@
 			// On initial click we want to slide out the header box and
 			// else close the header box.
 
-			var header_box_inner = $( "#header-box .header-box-inner" ),
-				header_open		 = $( "#header-open" );
+			var header_box_inner 	= $( "#header-box .header-box-inner" ),
+				header_box_trigger 	= $( ".header-box-trigger" );
 
 			$( ".header-box-trigger" ).on( "click", function() {
-				if ( header_box_inner.hasClass("opened") ) {
-					header_box_inner.removeClass("animated slideInDown").addClass("animated slideOutUp");
-
-					header_box_inner.one("webkitAnimationEnd oanimationend msAnimationEnd animationend", function(e) {
-						$(this).removeClass("opened").addClass("closed");
-						header_open.removeClass("animated slideOutUp").addClass("animated slideInDown");
-					});
-				}
-				else {
-					header_open.addClass("animated slideOutUp");
-
-					header_open.one("webkitAnimationEnd oanimationend msAnimationEnd animationend", function(e) {
-						header_box_inner.removeClass("closed animated slideOutUp").addClass("opened animated slideInDown");
-					});
-				}
+				header_box_inner.slideToggle(800, "easeOutBounce");
+				header_box_trigger.children('i.fa').toggleClass('fa-plus').toggleClass('fa-minus');
+				header_box_inner.toggleClass('opened').toggleClass('closed');
 			});
 
 

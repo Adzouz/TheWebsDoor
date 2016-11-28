@@ -732,9 +732,22 @@ footer .copyright-banner {
 #page404 .game-info img {
 	height: 100%;
 }
+#page404 > .container {
+	position: relative;
+	top: -2px;
+	background: #1d1d1d;
+}
 .game-container {
 	height: 500px;
 	position: relative;
+}
+.game-mobile-switch {
+	position: relative;
+	z-index: 10;
+	padding: 50px 30px;
+	max-width: 360px;
+	margin: auto;
+	display: none;
 }
 .link-anim {
 	display: block;
@@ -807,10 +820,13 @@ footer .copyright-banner {
 }
 @media (max-width:767px) {
 	.game-container, #page404:before {
-		height: 300px;
+		height: 380px;
 	}
 	.fence, .score, .game-info {
 		display: none;
+	}
+	.game-mobile-switch {
+		display: block;
 	}
 }
 
@@ -884,7 +900,6 @@ footer .copyright-banner {
 	z-index: 100;
 }
 .header-box-inner {
-	padding: 45px 0;
 	background: rgba(22, 160, 133, 0.8);
 	color: white;
 }
@@ -900,10 +915,13 @@ footer .copyright-banner {
 .header-box-inner.closed {
 	display: none;
 }
+.header-box-inner .header-box-inner-container {
+	padding: 45px 0;
+}
 .header-box-trigger {
 	width: 32px;
 	height: 14px;
-	background: url(/images/trigger-headerbox-arrow.png);
+	background: url(/images/trigger-headerbox-arrow-light.png);
 	display: block;
 	position: absolute;
 	bottom: -14px;
@@ -915,9 +933,6 @@ footer .copyright-banner {
 	line-height: 14px;
 	text-align: center;
 }
-.header-box-trigger.trigger-light {
-	background: url(/images/trigger-headerbox-arrow-light.png);
-}
 
 /*	==================================================
 # Header Logo - edit: v1.1
@@ -926,11 +941,24 @@ footer .copyright-banner {
 	margin: 0;
 }
 .logo, .logo a {
-	height: 60px;
 	display: block;
 }
-.logo img {
-	height: 100%;
+@media (min-width: 768px) {
+	.logo img {
+		height: 100%;
+	}
+	.logo, .logo a {
+		height: 60px;
+	}
+}
+@media (max-width: 767px) {
+	.logo {
+		padding-right: 40px;
+	}
+	.logo img {
+		max-width: 100%;
+		max-height: 60px;
+	}
 }
 
 /*	==================================================
@@ -1259,17 +1287,31 @@ embed, iframe, object, video {
 }
 
 /** mobile navigation */
+.header-container {
+	position: relative;
+}
+@media (max-width: 991px) {
+	.header-container:after {
+		content:".";
+		height:0;
+		line-height:0;
+		display:block;
+		visibility:hidden;
+		clear:both;
+	}
+}
 #trigger-mobile-nav {
 	width: 20px;
 	height: 20px;
 	background: none;
 	display: none;
 	position: absolute;
-	right: 15px;
-	top: 20px;
+	right: 0;
+	top: 50%;
 	cursor: pointer;
 	line-height: 0;
 	color: #fff;
+	margin-top: -10px;
 }
 #trigger-mobile-nav .fa {
 	font-size: 20px;
@@ -1959,9 +2001,11 @@ embed, iframe, object, video {
 		padding: 15px 0;
 	}
 	.nav > li.language-switch a {
+		font-weight: normal;
 		background-color: transparent;
 		margin: 0;
 		text-indent: 0;
+		color: #fff;
 	}
 	.nav > li.language-switch a span {
 		background: none !important;

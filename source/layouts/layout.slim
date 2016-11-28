@@ -30,7 +30,7 @@ html(lang=I18n.locale)
     = stylesheet_link_tag '../fonts/font-awesome/css/font-awesome.min'
 
     /! Main Stylesheet
-    = stylesheet_link_tag 'style'
+    link href="/stylesheets/style.css?v=3" rel="stylesheet" /
 
     script src="//fast.eager.io/jA5YB0bXj6.js"
 
@@ -43,11 +43,12 @@ body
       .container
         .row
           .col-xs-12.clearfix.topbar
-            .logo.pull-left
-              a href="/" 
-                = image_tag 'logo.png' 
-            #trigger-mobile-nav
-              i.fa.fa-bars
+            .header-container
+              .logo.pull-left
+                a href="/" 
+                  = image_tag 'logo.png' 
+              #trigger-mobile-nav
+                i.fa.fa-bars
             nav#main-nav.main-nav.pull-right.clearfix.mobile-nav
               ul.nav
                 li
@@ -75,27 +76,24 @@ body
 
     /! begin header box
     #header-box.header-box.font-white
-      .header-box-inner.closed.no-delay
-        .container
-          .row
-            .col-xs-12.col-md-6
-              p
-                = t('catchphrase.first')
-                a href="#"  Adrien Lepoutre 
-                = t('catchphrase.job')
-            .col-xs-12.col-md-6
-              h3 = t('follow_me')
-              p
-                - delay = 0.3
-                - data.social.each do |social|
-                  a.btn.btn-icon.btn-icon-white href=social.url target="_blank" title=social.title 
-                    i.fontello class="social_icon-#{social.icon}"
-                  - delay = delay + 0.3
-        /! trigger for opening/closing the header box
-        #header-close.header-box-trigger.trigger-light
-          i.fa.fa-minus.fa-fw
-      /! trigger for opening/closing the header box
-      #header-open.header-box-trigger.no-delay
+      .header-box-inner.closed
+        .header-box-inner-container
+          .container
+            .row
+              .col-xs-12.col-md-6
+                p
+                  = t('catchphrase.first')
+                  a href="#"  Adrien Lepoutre 
+                  = t('catchphrase.job')
+              .col-xs-12.col-md-6
+                h3 = t('follow_me')
+                p
+                  - delay = 0.3
+                  - data.social.each do |social|
+                    a.btn.btn-icon.btn-icon-white href=social.url target="_blank" title=social.title 
+                      i.fontello class="social_icon-#{social.icon}"
+                    - delay = delay + 0.3
+      #header-open.header-box-trigger
         i.fa.fa-plus.fa-fw
     /! end header box
   /! end Header
@@ -121,15 +119,15 @@ body
   = javascript_include_tag 'plugins/imagesloaded'
   = javascript_include_tag 'plugins/jquery.touchSwipe.min'
   = javascript_include_tag 'plugins/owl.carousel.min'
-  = javascript_include_tag 'plugins/jquery.diamondslider.min'
+  script src="/javascripts/plugins/jquery.diamondslider.min.js?v=1" type="text/javascript"
   = javascript_include_tag 'plugins/jquery.grafixesTabs'
   = javascript_include_tag 'plugins/jquery.parallax'
   = javascript_include_tag 'plugins/fluidvids'
   = javascript_include_tag 'plugins/jquery.appear'
   = javascript_include_tag 'plugins/jquery.scripts'
-  = javascript_include_tag 'vinto'
+  script src="/javascripts/vinto.js?v=1" type="text/javascript"
   = javascript_include_tag 'suncalc'
-  = javascript_include_tag 'game'
+  script src="/javascripts/game.js" type="text/javascript"
 
   javascript:
       
