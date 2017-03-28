@@ -572,36 +572,36 @@
 		================================================== */
 		$( function() {
 
-			$( "#diamondslider-home" ).diamondslider({
-				rows: 3,
-				gutterWidth: 12,
-				sliding: true,
-				filter: true,
-				filterSelector: "#diamond-filter-home",
-			});
+			// $( "#diamondslider-home" ).diamondslider({
+			// 	rows: 3,
+			// 	gutterWidth: 12,
+			// 	sliding: true,
+			// 	filter: true,
+			// 	filterSelector: "#diamond-filter-home",
+			// });
 
-			$( "#diamondslider-portfolio" ).diamondslider({
-				rows: "auto",
-				gutterWidth: 12,
-				sliding: false,
-				filter: true,
-				filterSelector: "#diamond-filter-portfolio",
-			});
+			// $( "#diamondslider-portfolio" ).diamondslider({
+			// 	rows: "auto",
+			// 	gutterWidth: 12,
+			// 	sliding: false,
+			// 	filter: true,
+			// 	filterSelector: "#diamond-filter-portfolio",
+			// });
 
-			$( "#diamondslider-portfolio-ineat" ).diamondslider({
-				rows: "auto",
-				gutterWidth: 12,
-				sliding: false,
-				filter: true,
-				filterSelector: "#diamond-filter-portfolio-ineat",
-			});
+			// $( "#diamondslider-portfolio-ineat" ).diamondslider({
+			// 	rows: "auto",
+			// 	gutterWidth: 12,
+			// 	sliding: false,
+			// 	filter: true,
+			// 	filterSelector: "#diamond-filter-portfolio-ineat",
+			// });
 
-			$( "#diamondslider-team" ).diamondslider({
-				rows: 2,
-				gutterWidth: 12,
-				sliding: true,
-				filter: false,
-			});
+			// $( "#diamondslider-team" ).diamondslider({
+			// 	rows: 2,
+			// 	gutterWidth: 12,
+			// 	sliding: true,
+			// 	filter: false,
+			// });
 
 			// When a user hovers over an diamondslider item
 			// we want to show the item information.

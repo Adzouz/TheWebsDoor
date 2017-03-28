@@ -1,4 +1,6 @@
 fr:
+  metas:
+    description: 'Spécialisé dans la création de sites internet, d''applications web et de visuels graphiques pour entreprises et particuliers. The Web''s Door propulse toute identité sur le web !'
   nav:
     home: 'Accueil'
     about: 'A Propos'

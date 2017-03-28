@@ -1,4 +1,52 @@
 -
+  title: 'Lycée Saint-Rémi'
+  url: 'http://saintremi.com'
+  image: 'saintremi.png'
+  category: 1
+
+-
+  title: 'Birthday Calendar'
+  url: 'http://birthdaycalendar.evileye.fr'
+  image: 'birthday-calendar.jpeg'
+  category: 2
+
+-
+  title: 'MEM - The Rock Band'
+  url: 'http://memrockband.evileye.fr'
+  image: 'memrockband.jpg'
+  category: 1
+
+-
+  title: 'Pacesium'
+  url: 'http://pacesium.com'
+  image: 'pacesium.jpg'
+  category: 1
+
+-
+  title: 'Find my word'
+  url: 'http://findmyword.evileye.fr'
+  image: 'find-my-word.jpeg'
+  category: 2
+
+-
+  title: 'Smiley2Skype'
+  url: 'http://smiley2skype.evileye.fr'
+  image: 'smiley2skype.jpeg'
+  category: 2
+
+-
+  title: 'Frogger Pokémon'
+  url: 'http://evileye.fr/frogger/'
+  image: 'frogger-pokemon.jpg'
+  category: 4
+
+-
+  title: 'La Soundbox des Tutos'
+  url: 'http://bit.ly/lestutos'
+  image: 'soundbox-tutos.png'
+  category: 3
+
+-
   title: 'Pokébox'
   url: 'http://pokebox.evileye.fr'
   image: 'pokebox.png'
@@ -17,46 +65,10 @@
   category: 2
 
 -
-  title: 'Birthday Calendar'
-  url: 'http://birthdaycalendar.evileye.fr'
-  image: 'birthday-calendar.jpeg'
-  category: 2
-
--
-  title: 'Find my word'
-  url: 'http://findmyword.evileye.fr'
-  image: 'find-my-word.jpeg'
-  category: 2
-
--
-  title: 'Smiley2Skype'
-  url: 'http://smiley2skype.evileye.fr'
-  image: 'smiley2skype.jpeg'
-  category: 2
-
--
-  title: 'La Soundbox des Tutos'
-  url: 'http://bit.ly/lestutos'
-  image: 'soundbox-tutos.png'
-  category: 3
-
--
-  title: 'MEM - The Rock Band'
-  url: 'http://memrockband.evileye.fr'
-  image: 'memrockband.jpeg'
+  title: 'Super-Lav'
+  url: 'http://superlav.com/'
+  image: 'superlav.png'
   category: 1
-
--
-  title: 'Lycée Saint-Rémi'
-  url: 'http://saintremi.com'
-  image: 'saintremi.png'
-  category: 1
-
--
-  title: 'Frogger Pokémon'
-  url: 'http://evileye.fr/frogger/'
-  image: 'frogger-pokemon.jpeg'
-  category: 4
 
 -
   title: 'KIKADIÇA (beta)'
@@ -80,10 +92,4 @@
   title: 'Shop Jahneration'
   url: 'http://shop.jahneration.com/'
   image: 'jahneration-shop.jpg'
-  category: 1
-
--
-  title: 'Super-Lav'
-  url: 'http://superlav.com/'
-  image: 'superlav.png'
   category: 1

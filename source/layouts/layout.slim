@@ -4,16 +4,24 @@ html(lang=I18n.locale)
     meta content="IE=edge" http-equiv="X-UA-Compatible" /
     meta charset="utf-8" /
     meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /
-    link href="/images/favicon.ico" rel=("shortcut icon") /
 
-    meta name="description" content="Spécialisé dans la création de sites internet, d’applications web et de visuels graphiques pour entreprises et particuliers. The Web's Door propulse toute identité sur le web !" /
+    link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" /
+    link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32" /
+    link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16" /
+    link rel="manifest" href="/images/favicons/manifest.json" /
+    link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#16a085" /
+    meta name="msapplication-TileColor" content="#ffffff" /
+    meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png" /
+    meta name="theme-color" content="#ffffff" /
+
+    meta name="description" content= t('metas.description') /
     meta name="author" content="Adrien Lepoutre" /
 
     meta property="og:title" content="The Web's Door" /
-    meta property="og:description" content="Spécialisé dans la création de sites internet, d’applications web et de visuels graphiques pour entreprises et particuliers. The Web's Door propulse toute identité sur le web !" /
+    meta property="og:description" content= t('metas.description') /
     meta property="fb:app_id" content="386568964690808" /
 
-    meta property="og:image" content="http://thewebsdoor.fr/images/facebook.png" /
+    meta property="og:image" content="http://thewebsdoor.com/images/facebook.png" /
     
     /! Use title if it's in the page YAML frontmatter
     title= current_page.data.title || "The Web's Door"
@@ -30,7 +38,7 @@ html(lang=I18n.locale)
     = stylesheet_link_tag '../fonts/font-awesome/css/font-awesome.min'
 
     /! Main Stylesheet
-    link href="/stylesheets/style.css?v=3" rel="stylesheet" /
+    link href="/stylesheets/style.css?v=4" rel="stylesheet" /
 
     script src="//fast.eager.io/jA5YB0bXj6.js"
 

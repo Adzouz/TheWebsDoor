@@ -1,32 +1,31 @@
 -
-  title: 'Front-end'
+  title: 'Front'
   image: 'competence1.jpg'
-  tags:
-    - '#javascript'
-    - '#node.js'
-    - '#express'
-    - '#middleman'
--
-  title: 'Back-end'
-  image: 'competence2.jpg'
-  tags:
-    - '#php'
-    - '#symfony2'
-    - '#swift'
-    - '#java'
--
-  title: 'Design'
-  image: 'competence3.jpg'
-  tags:
-    - '#photoshop'
-    - '#illustrator'
-    - '#css3'
-    - '#jquery'
--
-  title: 'Frameworks / CMS'
-  image: 'competence4.jpg'
   tags:
     - '#jade'
     - '#sass'
+    - '#javascript'
+    - '#jQuery'
+-
+  title: 'Back'
+  image: 'competence2.jpg'
+  tags:
+    - '#php'
+    - '#node.js'
+    - '#swift'
+-
+  title: 'Design'
+  image: 'competence4.jpg'
+  tags:
+    - '#photoshop'
+    - '#illustrator'
+    - '#bootstrap'
+    - '#sketch'
+-
+  title: 'Frameworks / CMS'
+  image: 'competence3.jpg'
+  tags:
     - '#wordpress'
     - '#prestashop'
+    - '#symfony2'
+    - '#expressjs'

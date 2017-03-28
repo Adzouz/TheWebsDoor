@@ -1,14 +1,25 @@
 @font-face {
-	font-family: 'Gotham';
-	src: url('/fomts/gotham/gothamhtf-medium.woff2') format('woff2'), url('/fomts/gotham/gothamhtf-medium.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
+    font-family: 'Montserrat';
+    src: url('/fonts/montserrat/montserrat-regular.eot');
+    src: url('/fonts/montserrat/montserrat-regular.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/montserrat/montserrat-regular.woff2') format('woff2'),
+         url('/fonts/montserrat/montserrat-regular.woff') format('woff'),
+         url('/fonts/montserrat/montserrat-regular.ttf') format('truetype'),
+         url('/fonts/montserrat/montserrat-regular.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
+
 @font-face {
-	font-family: 'Gotham';
-	src: url('/fomts/gotham/gothamhtf-black.woff2') format('woff2'), url('/fomts/gotham/gothamhtf-black.woff') format('woff');
-	font-weight: 800;
-	font-style: normal;
+    font-family: 'Montserrat';
+    src: url('/fonts/montserrat/montserrat-bold.eot');
+    src: url('/fonts/montserrat/montserrat-bold.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/montserrat/montserrat-bold.woff2') format('woff2'),
+         url('/fonts/montserrat/montserrat-bold.woff') format('woff'),
+         url('/fonts/montserrat/montserrat-bold.ttf') format('truetype'),
+         url('/fonts/montserrat/montserrat-bold.svg#montserratbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
 }
 
 /*	==================================================
@@ -18,9 +29,10 @@ html {
 	-webkit-font-smoothing: antialiased;
 }
 body {
-	font-family: 'Roboto', Arial;
+	font-family: 'Montserrat', Arial;
 	font-weight: 300;
 	color: #636363;
+	letter-spacing: -0.05em;
 }
 a:focus {
 	outline: 0px;
@@ -33,13 +45,13 @@ a:hover, a:focus {
 	# Typography
 	================================================== */
 h1, h2, h3, h4, h5, h6, .package-header, .special-font, .tagline {
-	font-family: 'Gotham', 'Open Sans';
+	font-family: 'Montserrat', 'Open Sans';
 	font-weight: 800;
 	color: #3d3d3d;
 	text-transform: uppercase;
 }
 .main-nav {
-	font-family: 'Gotham', 'Open Sans';
+	font-family: 'Montserrat', 'Open Sans';
 	font-weight: 400;
 }
 .section-title {
@@ -74,7 +86,7 @@ p {
 	margin-bottom: 20px;
 }
 .normal-font, .normal-font li {
-	font-family: 'Roboto', Arial !important;
+	font-family: 'Montserrat', Arial !important;
 	text-transform: none !important;
 	font-weight: 300 !important;
 }
@@ -112,7 +124,7 @@ a:hover, a:focus {
 	# Buttons
 	================================================== */
 .btn {
-	font-family: 'Gotham', 'Open Sans';
+	font-family: 'Montserrat', 'Open Sans';
 	font-weight: 400;
 	font-size: 13px;
 	text-transform: uppercase;
@@ -415,35 +427,19 @@ a, img, .package-header {
 /*	==================================================
 # DiamondSlider
 ================================================== */
-.diamondslider {
-	position: relative;
-	z-index: 60;
-}
-.diamondslider .diamond-viewport {
-	position: relative;
-	overflow: hidden;
-}
 .diamondslider .slides {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	z-index: 60;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
-	position: relative;
-	-webkit-transition: -webkit-transform 700ms ease; /* Changed here */
-	-moz-transition: -moz-transform 700ms ease;
-	-o-transition: -o-transform 700ms ease;
-	transition: transform 700ms ease;
+	max-width: 750px;
 }
-.diamondslider .shape {
-	margin: 0;
-	position: absolute;
-	display: none;
-	-webkit-transition: -webkit-all 700ms ease; /* Changed here */
-	-moz-transition: -moz-all 700ms ease;
-	-o-transition: -o-all 700ms ease;
-	transition: all 700ms ease;
-}
-.diamondslider .shape.active {
-	z-index: 50;
+
+.diamondslider .slides li {
+	flex: 0 0 120px;
+	height: 120px;
 }
 
 /** DiamondSlider: Direction Navigation */
@@ -1164,7 +1160,7 @@ embed, iframe, object, video {
 }
 .depth-bg .depth-texture {
 	display: block;
-	background: url(/images/texture-dark.png);
+	background: url(/images/texture-green-dark.png);
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -1419,7 +1415,7 @@ embed, iframe, object, video {
 .service-title, .skill-title {
 	margin: 30px 0 35px;
 }
-.service.bottom-arrow, .skill {
+.service.bottom-arrow {
 	padding: 0 0px 20px;
 }
 .service.bottom-arrow p, .skill p {
@@ -1741,7 +1737,7 @@ embed, iframe, object, video {
 
 /** categories widget */
 .widget ul li, .tagcloud a {
-	font-family: 'Gotham', Arial, sans-serif;
+	font-family: 'Montserrat', Arial, sans-serif;
 	font-weight: 400;
 	font-size: 13px;
 	text-transform: uppercase;
@@ -1908,9 +1904,18 @@ embed, iframe, object, video {
 /*	==================================================
 # Progress Bar
 ================================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+	.skills > .col-xs-12:nth-child(odd) {
+		clear: left;
+	}
+}
 .skill {
+	font-family: 'Montserrat', 'Open Sans';
 	margin-bottom: 3px;
-	font-weight: bold;
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 18px;
+	padding: 0 0 10px;
 }
 .progress, .progress-bar {
 	-webkit-box-shadow: none;
