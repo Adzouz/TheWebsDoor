@@ -103,7 +103,6 @@ section#works.page-type.grey-bg
     .row
       .col-xs-12
         h1.section-title.text-center = t('works.title')
-        /! diamond slider navigation
         #diamond-filter-portfolio.diamond-filter
           ul.special-font
             li.active
@@ -112,12 +111,12 @@ section#works.page-type.grey-bg
             - datas_categories.each do |category|
               li
                 a data-filter=category.id href="#" = category.title
-        /! diamond slider
+
         #diamondslider-portfolio.diamondslider.nav-white
           ul.slides
             - delay = 0.3
             - data.works.each do |work|
-              li.animated.shape.diamond.animated.delayed.no-opacity data-category=work.category data-animation="bounceInRotated" data-animation-delay="#{delay}s" 
+              li.shape.diamond.animated.delayed.no-opacity.highlighted data-category=work.category data-animation="bounceInRotated" data-animation-delay="#{delay}s" 
                 a.item-hover.ajax-nav href=work.url target="_blank"
                   span.hover-title.special-font= work.title
                   span.hover-action - #{t('works.see')} -
@@ -126,7 +125,6 @@ section#works.page-type.grey-bg
     .row
       .col-xs-12
         h1.section-title.text-center = t('works.ineat_title')
-        /! diamond slider navigation
         #diamond-filter-portfolio-ineat.diamond-filter
           ul.special-font
             li.active
@@ -135,12 +133,12 @@ section#works.page-type.grey-bg
             - datas_categories_ineat.each do |category|
               li
                 a data-filter=category.id href="#" = category.title
-        /! diamond slider
+                
         #diamondslider-portfolio-ineat.diamondslider.nav-white
           ul.slides
             - delay = 0.3
             - data.works_ineat.each do |work|
-              li.shape.diamond.animated.delayed.no-opacity data-category=work.category data-animation="bounceInRotated" data-animation-delay="#{delay}s"
+              li.shape.diamond.animated.delayed.no-opacity.highlighted data-category=work.category data-animation="bounceInRotated" data-animation-delay="#{delay}s"
                 a.item-hover.ajax-nav href=work.url target="_blank"
                   span.hover-title.special-font= work.title
                   span.hover-action - #{t('works.see')} -
