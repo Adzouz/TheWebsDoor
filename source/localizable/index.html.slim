@@ -38,7 +38,7 @@ section#about.page-type
       - datas_about.each do |about|
         .col-xs-12.col-sm-6.col-md-3
           .service.bottom-arrow.clearfix.animated.delayed.no-opacity data-animation="fadeInLeft" data-animation-delay="#{delay}s" 
-            .shape.diamond.center.dark.shape-icon
+            .shape.diamond.center.dark.shape-icon.highlighted
               i.fa.fa-fw class="fa-#{about.icon}"
             h3.service-title = about.title
             p = about.description
@@ -72,7 +72,7 @@ section#skills.page-type.depth-type
       - data.skills.each do |skill|
         .col-xs-12.col-sm-6.col-md-3
           .skill.clearfix.animated.delayed.no-opacity data-animation="bounceIn" data-animation-delay="#{delay}s" 
-            .shape.diamond.center
+            .shape.diamond.center.highlighted
               = image_tag "/images/bg/#{skill.image}"
             h3.skill-title = skill.title
             p.text-center.tagcloud
