@@ -8,6 +8,8 @@ en:
     works: 'Works'
     contact: 'Contact'
     blog: 'Blog'
+  mail_alert: 'Thanks, your e-mail has been sent!'
+  mail_alert_error: 'An error occured, please try again.'
   follow_me: 'Would you follow me?'
   catchphrase:
     first: 'Hi, I''m'

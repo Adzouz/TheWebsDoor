@@ -104,7 +104,36 @@
 				}
 			});
 
+			checkParameters();
+
 		} );
+
+		function checkParameters() {
+			var sentParam = getURLParameter('sent');
+			if (typeof sentParam != 'undefined') {
+				$('.alert-email-sent').show();
+				if(sentParam == 1) {
+					$('.alert-email-sent .success').show();
+				}
+				else if(sentParam == 0) {
+					$('.alert-email-sent').css('background-color', '#c0392b');
+					$('.alert-email-sent .error').show();
+				}
+			}
+		}
+
+		function getURLParameter(sParam) {
+			var sPageURL = window.location.search.substring(1);
+		    var sURLVariables = sPageURL.split('&');
+		    for (var i = 0; i < sURLVariables.length; i++)
+		    {
+		        var sParameterName = sURLVariables[i].split('=');
+		        if (sParameterName[0] == sParam)
+		        {
+		            return sParameterName[1];
+		        }
+		    }
+		}
 
 	/*	==================================================
 		# Initialize hashchange to check if a user

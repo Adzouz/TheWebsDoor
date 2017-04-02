@@ -37,7 +37,7 @@ html(lang=I18n.locale)
     = stylesheet_link_tag '../fonts/font-awesome/css/font-awesome.min'
 
     /! Main Stylesheet
-    link href="/stylesheets/style.css?v=6" rel="stylesheet" /
+    link href="/stylesheets/style.css?v=7" rel="stylesheet" /
 
     script src="//fast.eager.io/jA5YB0bXj6.js"
 
@@ -104,6 +104,15 @@ body
         i.fa.fa-plus.fa-fw
     /! end header box
   /! end Header
+
+  .alert-email-sent
+    .container
+      .success
+        = t('mail_alert')
+        i.fa.fa-paper-plane
+      .error
+        = t('mail_alert_error')
+        i.fa.fa-warning
   
   = yield
 
@@ -128,7 +137,7 @@ body
   = javascript_include_tag 'plugins/jquery.parallax'
   = javascript_include_tag 'plugins/jquery.appear'
   = javascript_include_tag 'plugins/jquery.scripts'
-  script src="/javascripts/vinto.js?v=3" type="text/javascript"
+  script src="/javascripts/vinto.js?v=4" type="text/javascript"
   = javascript_include_tag 'suncalc'
   script src="/javascripts/game.js" type="text/javascript"
 

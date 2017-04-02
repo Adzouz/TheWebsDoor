@@ -165,13 +165,12 @@ section#contact.page-type.black-bg.font-white
             - delay = delay + 0.3
       .col-xs-12.col-sm-5.col-sm-offset-1.col-md-5.col-md-offset-2
         .contact-form
-          form.form.form-horizontal accept-charset="UTF-8" action="https://formkeep.com/f/410d666b42cd" method="POST"
+          form.form.form-horizontal accept-charset="UTF-8" action="http://localhost:2424/sendr/s3Mp3kvKhsCz8ABHejUucLmC" method="POST"
             fieldset
-              input type="hidden" name="utf8" value="✓" /
-              input#contact_name.form-control.form-dark name="contact[name]" placeholder=("#{t('contact.form.name')} *") required="required" type="text" /
-              input#contact_email.form-control.form-dark name="contact[email]" placeholder=("#{t('contact.form.email')} *") required="required" type="email" /
-              input#contact_subject.form-control.form-dark name="contact[subject]" placeholder=("#{t('contact.form.subject')} *") required="required" type="text" /
-              textarea#contact_body.form-control.form-dark name="contact[body]" placeholder=("#{t('contact.form.message')} *") required="required" rows="6" 
+              input#contact_name.form-control.form-dark name="name" placeholder=("#{t('contact.form.name')} *") required="required" type="text" /
+              input#contact_email.form-control.form-dark name="email" placeholder=("#{t('contact.form.email')} *") required="required" type="email" /
+              input#contact_subject.form-control.form-dark name="subject" placeholder=("#{t('contact.form.subject')} *") required="required" type="text" /
+              textarea#contact_body.form-control.form-dark name="message" placeholder=("#{t('contact.form.message')} *") required="required" rows="6" 
               input#submit.btn.btn-border.border-white type="submit" value=t('contact.form.send') /
               .loading
 /! End Contact

@@ -1943,6 +1943,27 @@ embed, iframe, object, video {
 	background-color: #16a085;
 }
 
+.alert-email-sent {
+	display: none;
+	background-color: #16a085;
+	color: #f3f2f2;
+}
+
+.alert-email-sent .container {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.alert-email-sent .success, .alert-email-sent .error {
+	display: none;
+}
+
+.alert-email-sent .container i {
+	margin-left: 10px;
+}
+
 /*	==================================================
 # Misc.
 ================================================== */
