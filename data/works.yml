@@ -1,13 +1,13 @@
 -
   title: 'Lycée Saint-Rémi'
   url: 'http://saintremi.com'
-  image: 'saintremi.png'
+  image: 'saintremi.jpg'
   category: 1
 
 -
   title: 'Birthday Calendar'
   url: 'http://birthdaycalendar.evileye.fr'
-  image: 'birthday-calendar.jpeg'
+  image: 'birthday-calendar.jpg'
   category: 2
 
 -
@@ -25,13 +25,13 @@
 -
   title: 'Find my word'
   url: 'http://findmyword.evileye.fr'
-  image: 'find-my-word.jpeg'
+  image: 'find-my-word.jpg'
   category: 2
 
 -
   title: 'Smiley2Skype'
   url: 'http://smiley2skype.evileye.fr'
-  image: 'smiley2skype.jpeg'
+  image: 'smiley2skype.jpg'
   category: 2
 
 -
@@ -43,37 +43,37 @@
 -
   title: 'La Soundbox des Tutos'
   url: 'http://bit.ly/lestutos'
-  image: 'soundbox-tutos.png'
+  image: 'soundbox-tutos.jpg'
   category: 3
 
 -
   title: 'Pokébox'
   url: 'http://pokebox.evileye.fr'
-  image: 'pokebox.png'
+  image: 'pokebox.jpg'
   category: 2
 
 -
   title: 'Petit Pain'
   url: 'http://petitpain.fr'
-  image: 'petitpain.jpeg'
+  image: 'petitpain.jpg'
   category: 1
 
 -
   title: 'Say it with a Pin-up'
   url: 'http://pinup.evileye.fr'
-  image: 'pinup.jpeg'
+  image: 'pinup.jpg'
   category: 2
 
 -
   title: 'Super-Lav'
   url: 'http://superlav.com/'
-  image: 'superlav.png'
+  image: 'superlav.jpg'
   category: 1
 
 -
   title: 'KIKADIÇA (beta)'
   url: 'http://kikadica.evileye.fr/'
-  image: 'kikadica.png'
+  image: 'kikadica.jpg'
   category: 1
 
 -
