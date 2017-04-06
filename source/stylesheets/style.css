@@ -936,11 +936,18 @@ footer .copyright-banner {
 	line-height: 14px;
 	text-align: center;
 }
+.topbar {
+	display: flex;
+}
+.topbar .header-container {
+	flex: 1;
+}
 
 /*	==================================================
 # Header Logo - edit: v1.1
 ================================================== */
 .logo {
+	flex: 1;
 	margin: 0;
 }
 .logo, .logo a {
@@ -1292,6 +1299,8 @@ embed, iframe, object, video {
 /** mobile navigation */
 .header-container {
 	position: relative;
+	display: flex;
+	align-items: center;
 }
 @media (max-width: 991px) {
 	.header-container:after {
@@ -1308,13 +1317,9 @@ embed, iframe, object, video {
 	height: 20px;
 	background: none;
 	display: none;
-	position: absolute;
-	right: 0;
-	top: 50%;
 	cursor: pointer;
 	line-height: 0;
 	color: #fff;
-	margin-top: -10px;
 }
 #trigger-mobile-nav .fa {
 	font-size: 20px;
@@ -2123,6 +2128,10 @@ embed, iframe, object, video {
 @media screen and (max-width:767px) {
 	.nuages_left, .nuages_right {
 		display: none;
+	}
+
+	.diamondslider .slides {
+		padding: 0 30px;
 	}
 
 	/** testimonials */
