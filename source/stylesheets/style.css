@@ -106,6 +106,9 @@ p {
 a, .text-blue {
 	color: #16a085;
 }
+.text-highlighted {
+	color: #fff;
+}
 a:hover, a:focus {
 	color: #000;
 	text-decoration: none;
