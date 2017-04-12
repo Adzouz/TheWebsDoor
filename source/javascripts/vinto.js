@@ -18,7 +18,7 @@
 			// the header (top) height. We assume the first section
 			// is the next element after the header (top).
 			var top_header = $("#top");
-			top_header.next().css("padding-top", "+=" + top_header.height());
+			$('body').css("padding-top", "+=" + top_header.height());
 
 			// adds scrollTo functionality
 			main_nav.onePageNav({
