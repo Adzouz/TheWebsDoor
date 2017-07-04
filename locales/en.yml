@@ -26,7 +26,7 @@ en:
     <p class="desc">I trained myself in concerned technologies making my first website in secondary school at the age of 15. Always curious to learn more, I joined <strong class="text-highlighted">SUPINFO</strong> school where I graduated with a specialization in <strong class="text-highlighted">systems security</strong>.</p>
     <p class="desc">Since when I started my studies, I have designed <strong class="text-highlighted">websites</strong>, <strong class="text-highlighted">web apps</strong>, <strong class="text-highlighted">video games</strong> (in 2D for the web) and <strong class="text-highlighted">iOS apps</strong> (little mobile games).</p>
     <p class="desc">Interested in <strong class="text-highlighted">graphic design</strong> and creating <strong class="text-highlighted">user interfaces</strong>, I headed to a job of <strong class="text-highlighted">UI / UX designer</strong> on top of being <strong class="text-highlighted">front-end</strong> and <strong class="text-highlighted">back-end</strong> developer. The goal is to provide a complete solution to any customer (<strong class="text-highlighted">design</strong>, <strong class="text-highlighted">development</strong>, <strong class="text-highlighted">production</strong>, <strong class="text-highlighted">hosting</strong>, <strong class="text-highlighted">third-party application maintenance</strong>).</p>
-    <p class="desc">I''m self employed and I work for a company specialized in apps (web, mobile) and websites creation (responsive design) <a class="text-highlighted" href="http://www.ineat-conseil.com" target="_blank"><strong>INEAT</strong></a>.</p>'
+    <p class="desc">I''m self employed and I work for a company specialized in apps (web, mobile) and websites creation (responsive design) <a class="text-highlighted" href="http://www.ineat-group.com" target="_blank"><strong>INEAT</strong></a>.</p>'
     baseline: '<span class="text-blue">I can handle your visual identity on the web</span>'
     see_cv: 'See my CV'
   skills:
@@ -34,7 +34,7 @@ en:
     description: 'During my learning, I had the opportunity to deepen my knowledge and train myself on new technologies in order to go even further!'
   works:
     title: 'Works'
-    ineat_title: 'Works for INEAT-Conseil'
+    ineat_title: 'Works for INEAT'
     all: 'All'
     see: 'see'
   contact:

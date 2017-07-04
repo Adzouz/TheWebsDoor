@@ -26,7 +26,7 @@ fr:
     <p class="desc">Je me suis auto-formé aux principales technologies réalisant mon premier site au collège. Toujours plus curieux d''en apprendre d''avantage, j''ai intégré l''école <strong class="text-highlighted">SUPINFO</strong> dans laquelle j''obtins mon diplôme avec spécialisation en <strong class="text-highlighted">sécurité des systèmes</strong>.</p>
     <p class="desc">Je me suis lancé depuis le début de mes études dans la conception de <strong class="text-highlighted">sites Internet</strong>, d''<strong class="text-highlighted">applications web</strong>, de <strong class="text-highlighted">jeux vid&eacute;os</strong> (2D pour le web) et d''<strong class="text-highlighted">applications iOS</strong>.</p>
     <p class="desc">Passionné par la <strong class="text-highlighted">conception graphique</strong> et l''<strong class="text-highlighted">ergonomie</strong> je me suis dirigé vers un métier de <strong class="text-highlighted">UI / UX designer</strong> en plus d''être <strong class="text-highlighted">développeur front-end</strong> et <strong class="text-highlighted">back-end</strong>. Le but étant d''apporter une solution complète à tout client (<strong class="text-highlighted">conception</strong>, <strong class="text-highlighted">développement</strong>, <strong class="text-highlighted">mise en production</strong>, <strong>hébergement</strong>, <strong class="text-highlighted">infogérance</strong>).</p>
-    <p class="desc">Je travaille à mon compte et dans une entreprise spécialisée dans la création d''applications (web, mobile) et de sites web (responsive design) : <a class="text-highlighted" href="http://www.ineat-conseil.com" target="_blank"><strong>INEAT</strong></a>.</p>'
+    <p class="desc">Je travaille à mon compte et dans une entreprise spécialisée dans la création d''applications (web, mobile) et de sites web (responsive design) : <a class="text-highlighted" href="http://www.ineat-group.com" target="_blank"><strong>INEAT</strong></a>.</p>'
     baseline: '<span class="text-blue">Je m''occupe de toute identité visuelle sur le web</span>'
     see_cv: 'Voir mon CV'
   skills:
@@ -34,7 +34,7 @@ fr:
     description: 'Au cours de mon apprentissage, j''ai pu approfondir mes connaissances et m''exercer sur de nouvelles technologies afin d''aller encore plus loin !'
   works:
     title: 'Réalisations<br />personnelles'
-    ineat_title: 'Réalisations<br />pour INEAT-Conseil'
+    ineat_title: 'Réalisations<br />pour INEAT'
     all: 'Tous'
     see: 'voir'
   contact:
