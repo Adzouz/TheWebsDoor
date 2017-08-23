@@ -37,7 +37,7 @@ html(lang=I18n.locale)
     = stylesheet_link_tag '../fonts/font-awesome/css/font-awesome.min'
 
     /! Main Stylesheet
-    link href="/stylesheets/style.min.css?v=1.0" rel="stylesheet" /
+    link href="/stylesheets/style.min.css?v=1.2.1" rel="stylesheet" /
     / v=1.0
 
     script src="//fast.eager.io/jA5YB0bXj6.js"
@@ -52,11 +52,11 @@ body
         .row
           .col-xs-12.clearfix.topbar
             .header-container
+              #trigger-mobile-nav
+                i.fa.fa-bars
               .logo
                 a href="/" 
                   = image_tag 'logo.svg' 
-              #trigger-mobile-nav
-                i.fa.fa-bars
             nav#main-nav.main-nav.pull-right.clearfix.mobile-nav
               ul.nav
                 li
@@ -138,7 +138,7 @@ body
   = javascript_include_tag 'plugins/jquery.parallax'
   = javascript_include_tag 'plugins/jquery.appear'
   = javascript_include_tag 'plugins/jquery.scripts'
-  script src="/javascripts/vinto.js?v=1.0" type="text/javascript"
+  script src="/javascripts/vinto.js?v=1.2.0" type="text/javascript"
   = javascript_include_tag 'suncalc'
   script src="/javascripts/game.js" type="text/javascript"
 

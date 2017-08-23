@@ -27,6 +27,10 @@
 				scrollSpeed: 800,
 				scrollOffset: 60,
 				scrollThreshold: 0.5,
+				begin: function() {
+					mobile_nav_trigger.find('.fa').toggleClass('fa-bars').toggleClass('fa-window-close-o');
+					$('body').toggleClass('menu-mobile-opened');
+				}
 			});
 
 			// initialize the current menu item of the main 
@@ -40,6 +44,8 @@
 			mobile_nav_trigger.on("click", function(){
 
 				main_nav.stop().slideToggle();
+				$(this).find('.fa').toggleClass('fa-bars').toggleClass('fa-window-close-o');
+				$('body').toggleClass('menu-mobile-opened');
 				
 			});
 

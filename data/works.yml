@@ -41,12 +41,6 @@
   category: 4
 
 -
-  title: 'La Soundbox des Tutos'
-  url: 'http://bit.ly/lestutos'
-  image: 'soundbox-tutos.jpg'
-  category: 3
-
--
   title: 'Pokébox'
   url: 'http://pokebox.evileye.fr'
   image: 'pokebox.jpg'
@@ -92,4 +86,10 @@
   title: 'Shop Jahneration'
   url: 'http://shop.jahneration.com/'
   image: 'jahneration-shop.jpg'
+  category: 1
+
+-
+  title: 'Volckaert Peinture'
+  url: 'http://volckaert-peinture.fr/'
+  image: 'volckaert-peinture.jpg'
   category: 1

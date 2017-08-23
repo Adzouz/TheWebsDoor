@@ -2,7 +2,7 @@
   title: 'Front'
   image: 'competence1.jpg'
   tags:
-    - '#jade'
+    - '#pugjs'
     - '#sass'
     - '#javascript'
     - '#jQuery'
@@ -12,7 +12,6 @@
   tags:
     - '#php'
     - '#node.js'
-    - '#swift'
 -
   title: 'Design'
   image: 'competence4.jpg'
@@ -28,4 +27,4 @@
     - '#wordpress'
     - '#prestashop'
     - '#symfony2'
-    - '#expressjs'
+    - '#vue.js'
