@@ -22,7 +22,7 @@ html(lang=I18n.locale)
     meta property="fb:app_id" content="386568964690808" /
 
     meta property="og:image" content="http://thewebsdoor.com/images/facebook.png" /
-    
+
     /! Use title if it's in the page YAML frontmatter
     title= current_page.data.title || "The Web's Door"
 
@@ -55,8 +55,8 @@ body
               #trigger-mobile-nav
                 i.fa.fa-bars
               .logo
-                a href="/" 
-                  = image_tag 'logo.svg' 
+                a href="/"
+                  = image_tag '/images/logo.svg'
             nav#main-nav.main-nav.pull-right.clearfix.mobile-nav
               ul.nav
                 li
@@ -91,14 +91,14 @@ body
               .col-xs-12.col-md-6
                 p
                   = t('catchphrase.first')
-                  a href="#"  Adrien Lepoutre 
+                  a href="#"  Adrien Lepoutre
                   = t('catchphrase.job')
               .col-xs-12.col-md-6
                 h3 = t('follow_me')
                 p
                   - delay = 0.3
                   - data.social.each do |social|
-                    a.btn.btn-icon.btn-icon-white href=social.url target="_blank" title=social.title 
+                    a.btn.btn-icon.btn-icon-white href=social.url target="_blank" title=social.title
                       i.fontello class="social_icon-#{social.icon}"
                     - delay = delay + 0.3
       #header-open.header-box-trigger
@@ -114,7 +114,7 @@ body
       .error
         = t('mail_alert_error')
         i.fa.fa-warning
-  
+
   = yield
 
   /! Begin Footer
@@ -143,7 +143,7 @@ body
   script src="/javascripts/game.js" type="text/javascript"
 
   javascript:
-      
+
     jQuery(function($) {
 
       var date = new Date("1992-09-26");
@@ -151,7 +151,7 @@ body
 
       var timeDiff = Math.abs(today.getTime() - date.getTime());
       var age = parseInt(Math.ceil(timeDiff / (1000 * 3600 * 24)) / 365);
-      
+
       if (age > parseInt($('#parallax-one .age').html())) {
         $('#parallax-one .age').html(age);
       }
@@ -210,7 +210,7 @@ body
           $(".soleil").css("display", "none");
           $(".lune").css("display", "block");
             var posXLune = Math.ceil(((duration - remaining) / duration) * (contentWidth - luneWidth));
-            $(".lune").css("left", posXLune+"px");  
+            $(".lune").css("left", posXLune+"px");
         }
 
         switch(ambiance) {
