@@ -1,21 +1,21 @@
 /! Begin Home
-section#home.page-type.black-bg.font-white.depth-type.animated.delayed.no-opacity data-animation="fadeIn" data-animation-delay="0s" 
+section#home.page-type.black-bg.font-white.depth-type.animated.delayed.no-opacity data-animation="fadeIn" data-animation-delay="0s"
   .container
     .row
       .col-xs-12.text-center
         /! logo
         .big-logo.animated.short.delayed.no-opacity data-animation="bounceIn" data-animation-delay="0.2s"
           img alt="" src="/images/big-logo.svg" /
-        p.tagline.text-white.m0.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.4s" 
+        p.tagline.text-white.m0.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.4s"
           = t('catchphrase.first')
           span.text-blue.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.6s"  Adrien Lepoutre
           span.catchphrase-second.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.8s"= t('catchphrase.second')
   /! Background Triangle Overlay / Special Depth Bg
   .depth-bg
     /! parallax with texture
-    #parallax-index.parallax.texture style="background-image:url(/images/bg/bg-frame1.jpg);" 
+    #parallax-index.parallax.texture style="background-image:url(/images/bg/bg-frame1.jpg);"
     /! Background Overlay Image (e.g. a transparant triangle)
-    .depth-bg-img style=("background-image: url(/images/bg/home-bg.png);") 
+    .depth-bg-img style=("background-image: url(/images/bg/home-bg.png);")
   /! End Background Triangle Overlay / Special Depth Bg
 /! End Home
 
@@ -37,7 +37,7 @@ section#about.page-type
       - datas_about = I18n.locale == :en ? data.about.en : data.about.fr
       - datas_about.each do |about|
         .col-xs-12.col-sm-6.col-md-3
-          .service.bottom-arrow.clearfix.animated.delayed.no-opacity data-animation="fadeInLeft" data-animation-delay="#{delay}s" 
+          .service.bottom-arrow.clearfix.animated.delayed.no-opacity data-animation="fadeInLeft" data-animation-delay="#{delay}s"
             .shape.diamond.center.dark.shape-icon.highlighted
               i.fa.fa-fw class="fa-#{about.icon}"
             h3.service-title = about.title
@@ -55,7 +55,7 @@ aside#parallax-one.separator-type
         p.tagline = t('about.baseline')
         a.btn.btn-border.border-white href="http://evileye.fr/cv.pdf" target="_blank"  = t('about.see_cv')
   /! parallax with texture
-  #parallax-cta.parallax.texture style="background-image:url(/images/bg/bg-frame2.jpg);" 
+  #parallax-cta.parallax.texture style="background-image:url(/images/bg/bg-frame2.jpg);"
 /! End Separator Aside
 
 /! Begin Skills
@@ -71,7 +71,7 @@ section#skills.page-type.depth-type
       - delay = 0.3
       - data.skills.each do |skill|
         .col-xs-12.col-sm-6.col-md-3
-          .skill.clearfix.animated.delayed.no-opacity data-animation="bounceIn" data-animation-delay="#{delay}s" 
+          .skill.clearfix.animated.delayed.no-opacity data-animation="bounceIn" data-animation-delay="#{delay}s"
             .shape.diamond.center.highlighted
               = image_tag "/images/bg/#{skill.image}"
             h3.skill-title = skill.title
@@ -87,13 +87,13 @@ section#skills.page-type.depth-type
           - data.skills_levels.each do |skill_level|
             p.skill = skill_level.title
             .progress
-              .progress-bar.animated.delayed.no-opacity data-animation="slideInLeft" data-animation-delay="0.2s" style=("width: #{skill_level.percentage}%;") 
+              .progress-bar.animated.delayed.no-opacity data-animation="slideInLeft" data-animation-delay="0.2s" style=("width: #{skill_level.percentage}%;")
   /! special depth bg
   .depth-bg
     /! special depth image
-    .depth-img.frame-mac.animated.delayed.no-opacity data-animation="ts-slideInUp" data-animation-delay="1.2s" style=("background: url(/images/bg/bg-frame3.jpg);") 
+    .depth-img.frame-mac.animated.delayed.no-opacity data-animation="ts-slideInUp" data-animation-delay="1.2s" style=("background: url(/images/bg/bg-frame3.jpg);")
     /! background overlay image (e.g. a transparant triangle)
-    .depth-bg-img style=("background-image: url(/images/bg/skills-bg.png);") 
+    .depth-bg-img style=("background-image: url(/images/bg/skills-bg.png);")
   /! end special depth bg
 /! End Skills
 
@@ -116,7 +116,7 @@ section#works.page-type.grey-bg
           ul.slides
             - delay = 0.3
             - data.works.each do |work|
-              li.shape.diamond.animated.delayed.no-opacity.highlighted data-category=work.category data-animation="bounceInRotated" data-animation-delay="#{delay}s" 
+              li.shape.diamond.animated.delayed.no-opacity.highlighted data-category=work.category data-animation="bounceInRotated" data-animation-delay="#{delay}s"
                 a.item-hover.ajax-nav href=work.url target="_blank"
                   span.hover-title.special-font= work.title
                   span.hover-action - #{t('works.see')} -
@@ -133,7 +133,7 @@ section#works.page-type.grey-bg
             - datas_categories_ineat.each do |category|
               li
                 a data-filter=category.id href="#" = category.title
-                
+
         #diamondslider-portfolio-ineat.diamondslider.nav-white
           ul.slides
             - delay = 0.3
@@ -160,17 +160,17 @@ section#contact.page-type.black-bg.font-white
         p.bottom-margin-60
           - delay = 0.3
           - data.social.each do |social|
-            a.btn.btn-icon.btn-icon-white.animated.delayed.no-opacity data-animation="fadeIn" data-animation-delay="#{delay}s" href=social.url target="_blank" title=social.title 
+            a.btn.btn-icon.btn-icon-white.animated.delayed.no-opacity data-animation="fadeIn" data-animation-delay="#{delay}s" href=social.url target="_blank" title=social.title
               i.fontello class="social_icon-#{social.icon}"
             - delay = delay + 0.3
       .col-xs-12.col-sm-5.col-sm-offset-1.col-md-5.col-md-offset-2
         .contact-form
-          form.form.form-horizontal accept-charset="UTF-8" action="http://sendr.evileye.fr/sendr/s3Mp3kvKhsCz8ABHejUucLmC" method="POST"
+          form.form.form-horizontal accept-charset="UTF-8" action="http://sendr.alaqasar.com/sendr/s3Mp3kvKhsCz8ABHejUucLmC" method="POST"
             fieldset
               input#contact_name.form-control.form-dark name="name" placeholder=("#{t('contact.form.name')} *") required="required" type="text" /
               input#contact_email.form-control.form-dark name="email" placeholder=("#{t('contact.form.email')} *") required="required" type="email" /
               input#contact_subject.form-control.form-dark name="subject" placeholder=("#{t('contact.form.subject')} *") required="required" type="text" /
-              textarea#contact_body.form-control.form-dark name="message" placeholder=("#{t('contact.form.message')} *") required="required" rows="6" 
+              textarea#contact_body.form-control.form-dark name="message" placeholder=("#{t('contact.form.message')} *") required="required" rows="6"
               input#submit.btn.btn-border.border-white type="submit" value=t('contact.form.send') /
               .loading
 /! End Contact
