@@ -21,12 +21,12 @@ html(lang=I18n.locale)
     meta property="og:description" content= t('metas.description') /
     meta property="fb:app_id" content="386568964690808" /
 
-    meta property="og:image" content="http://thewebsdoor.com/images/facebook.png" /
+    meta property="og:image" content="https://thewebsdoor.com/images/facebook.png" /
 
     /! Use title if it's in the page YAML frontmatter
     title= current_page.data.title || "The Web's Door"
 
-    link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600italic,600,700,700italic,800italic,800,400italic|Roboto:400,400italic,300italic,300,700italic,700' rel='stylesheet' type='text/css' /
+    link href='//fonts.googleapis.com/css?family=Open+Sans:400,600italic,600,700,700italic,800italic,800,400italic|Roboto:400,400italic,300italic,300,700italic,700' rel='stylesheet' type='text/css' /
 
     /! Bootstrap
     = stylesheet_link_tag 'bootstrap.min'
@@ -39,8 +39,6 @@ html(lang=I18n.locale)
     /! Main Stylesheet
     link href="/stylesheets/style.min.css?v=1.2.1" rel="stylesheet" /
     / v=1.0
-
-    script src="//fast.eager.io/jA5YB0bXj6.js"
 
 body
 
@@ -70,7 +68,7 @@ body
                 li
                   a href="/#contact" = t('nav.contact')
                 li
-                  a href="http://blog.thewebsdoor.fr" = t('nav.blog')
+                  a href="https://blog.thewebsdoor.com" = t('nav.blog')
                 li.language-switch
                   - if I18n.locale == :en
                     a.fr href="/fr/"
@@ -126,7 +124,7 @@ body
         .lune style="display: none;"
         .nuages_right
     .container.text-center
-      p.copyright.no-margin-bottom &copy; 2017 - Adrien Lepoutre (The Web's Door).
+      p.copyright.no-margin-bottom &copy; 2018 - Adrien Lepoutre (The Web's Door).
   /! // End Footer
 
   = javascript_include_tag 'jquery-1.11.0.min'
@@ -138,7 +136,7 @@ body
   = javascript_include_tag 'plugins/jquery.parallax'
   = javascript_include_tag 'plugins/jquery.appear'
   = javascript_include_tag 'plugins/jquery.scripts'
-  script src="/javascripts/vinto.js?v=1.2.0" type="text/javascript"
+  script src="/javascripts/vinto.js?v=1.2.1" type="text/javascript"
   = javascript_include_tag 'suncalc'
   script src="/javascripts/game.js" type="text/javascript"
 

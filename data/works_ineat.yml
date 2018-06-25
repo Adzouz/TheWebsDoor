@@ -1,23 +1,17 @@
 -
-  title: 'J''innove'
-  url: 'http://jinnove.com'
-  image: 'jinnove.jpg'
-  category: 1
-
--
   title: 'Bulle Bleue'
-  url: 'http://bullebleue.fr'
+  url: 'https://bullebleue.fr'
   image: 'bullebleue.jpg'
   category: 1
 
 -
   title: 'TheBookEdition'
-  url: 'http://thebookedition.com'
+  url: 'https://thebookedition.com'
   image: 'tbe.jpg'
   category: 1
 
 -
   title: 'INESIS'
-  url: 'http://www.inesis.fr'
+  url: 'https://www.inesis.fr'
   image: 'inesis.jpg'
   category: 1

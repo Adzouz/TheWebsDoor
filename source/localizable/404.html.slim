@@ -7,7 +7,7 @@ section#page404
     .game-mobile-switch
       img src="/images/game/switch_#{lang}.svg"
     .score
-      | Score : 
+      | Score :
       span 0
     .game-info.animated.short
       - lang = I18n.locale == :en ? 'en' : 'fr'
@@ -24,4 +24,4 @@ section#page404
         h2.sub-title = t('page404.not_found')
     .row.text-center
       .col-xs-12
-        a.btn.btn-border.border-white href="http://thewebsdoor.fr" target="_blank"  = t('page404.back_text')
+        a.btn.btn-border.border-white href="https://thewebsdoor.com" target="_blank"  = t('page404.back_text')

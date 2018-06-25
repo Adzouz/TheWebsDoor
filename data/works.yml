@@ -6,13 +6,13 @@
 
 -
   title: 'Birthday Calendar'
-  url: 'http://birthdaycalendar.evileye.fr'
+  url: 'https://birthdaycalendar.alaqasar.com'
   image: 'birthday-calendar.jpg'
   category: 2
 
 -
   title: 'MEM - The Rock Band'
-  url: 'http://memrockband.evileye.fr'
+  url: 'https://memrockband.alaqasar.com'
   image: 'memrockband.jpg'
   category: 1
 
@@ -24,25 +24,25 @@
 
 -
   title: 'Find my word'
-  url: 'http://findmyword.evileye.fr'
+  url: 'https://findmyword.alaqasar.com'
   image: 'find-my-word.jpg'
   category: 2
 
 -
   title: 'Smiley2Skype'
-  url: 'http://smiley2skype.evileye.fr'
+  url: 'https://smiley2skype.alaqasar.com'
   image: 'smiley2skype.jpg'
   category: 2
 
 -
   title: 'Frogger Pokémon'
-  url: 'http://evileye.fr/frogger/'
+  url: 'https://frogger.alaqasar.com/'
   image: 'frogger-pokemon.jpg'
   category: 4
 
 -
   title: 'Pokébox'
-  url: 'http://pokebox.evileye.fr'
+  url: 'http://pokebox.alaqasar.com'
   image: 'pokebox.jpg'
   category: 2
 
@@ -54,7 +54,7 @@
 
 -
   title: 'Say it with a Pin-up'
-  url: 'http://pinup.evileye.fr'
+  url: 'https://pinup.alaqasar.com'
   image: 'pinup.jpg'
   category: 2
 
@@ -66,19 +66,19 @@
 
 -
   title: 'KIKADIÇA (beta)'
-  url: 'http://kikadica.evileye.fr/'
+  url: 'http://kikadica.alaqasar.com/'
   image: 'kikadica.jpg'
   category: 1
 
 -
   title: 'Jahneration'
-  url: 'http://jahneration.com/'
+  url: 'https://jahneration.com/'
   image: 'jahneration.jpg'
   category: 1
 
 -
   title: 'Shop Jahneration'
-  url: 'http://shop.jahneration.com/'
+  url: 'https://shop.jahneration.com/'
   image: 'jahneration-shop.jpg'
   category: 1
 
@@ -90,6 +90,12 @@
 
 -
   title: 'Pixels Drawing'
-  url: 'http://pixelsdrawing.evileye.fr/#/'
+  url: 'https://pixelsdrawing.alaqasar.com/#/'
   image: 'pixels-drawing.png'
+  category: 2
+
+-
+  title: 'NotiFoot'
+  url: 'https://notifoot.alaqasar.com/#/'
+  image: 'notifoot.png'
   category: 2

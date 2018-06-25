@@ -5,20 +5,20 @@
 
 -
   title: 'Twitter'
-  url: 'http://twitter.com/thewebsdoor'
+  url: 'https://twitter.com/thewebsdoor'
   icon: 'twitter'
 
 -
   title: 'LinkedIn'
-  url: 'http://www.linkedin.com/in/adrienlepoutre'
+  url: 'https://www.linkedin.com/in/adrienlepoutre'
   icon: 'linkedin'
 
 -
   title: 'Viadeo'
-  url: 'http://www.viadeo.com/fr/profile/adrienlepoutre'
+  url: 'https://www.viadeo.com/fr/profile/adrienlepoutre'
   icon: 'viadeo'
 
 -
   title: 'RSS Blog'
-  url: 'http://blog.thewebsdoor.fr/feed.xml'
+  url: 'https://blog.thewebsdoor.fr/feed.xml'
   icon: 'rss'
