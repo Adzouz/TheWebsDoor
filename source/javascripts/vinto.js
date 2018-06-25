@@ -44,7 +44,7 @@
       $(window).scroll(function () {
         $('#main-nav .nav a[href^="/#"]').each(function() {
           var idSection = $(this).attr('href').substr(1);
-          if ($(window).scrollTop() > $(idSection).offset().top - 100 && $(window).scrollTop() < $(idSection).offset().top + $(idSection).height()) {
+					if ($(idSection).length > 0 && $(window).scrollTop() > $(idSection).offset().top - 100 && $(window).scrollTop() < $(idSection).offset().top + $(idSection).height()) {
             main_nav.find('li').removeClass('current-menu-item');
             $(this).parent().addClass('current-menu-item');
           }
