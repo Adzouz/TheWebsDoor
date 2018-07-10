@@ -3,7 +3,7 @@ html(lang=I18n.locale)
   head
     meta content="IE=edge" http-equiv="X-UA-Compatible" /
     meta charset="utf-8" /
-    meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /
+    meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" name="viewport" /
 
     link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" /
     link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32" /
@@ -54,7 +54,7 @@ body
                 i.fa.fa-bars
               .logo
                 a href="/"
-                  = image_tag '/images/logo.svg'
+                  img alt="Logo header" src="/images/logo.svg" /
             nav#main-nav.main-nav.pull-right.clearfix.mobile-nav
               ul.nav
                 li
@@ -96,7 +96,7 @@ body
                 p
                   - delay = 0.3
                   - data.social.each do |social|
-                    a.btn.btn-icon.btn-icon-white href=social.url target="_blank" title=social.title
+                    a.btn.btn-icon.btn-icon-white href=social.url target="_blank" rel="noopener" title=social.title
                       i.fontello class="social_icon-#{social.icon}"
                     - delay = delay + 0.3
       #header-open.header-box-trigger
@@ -127,7 +127,7 @@ body
       p.copyright.no-margin-bottom &copy; 2018 - Adrien Lepoutre (The Web's Door).
   /! // End Footer
 
-  = javascript_include_tag 'jquery-1.11.0.min'
+  = javascript_include_tag 'jquery.min'
   = javascript_include_tag 'modernizr-2.7.1.min'
   = javascript_include_tag 'bootstrap.min'
   = javascript_include_tag 'plugins/jquery.easing'

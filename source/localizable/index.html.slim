@@ -5,7 +5,7 @@ section#home.page-type.black-bg.font-white.depth-type.animated.delayed.no-opacit
       .col-xs-12.text-center
         /! logo
         .big-logo.animated.short.delayed.no-opacity data-animation="bounceIn" data-animation-delay="0.2s"
-          img alt="" src="/images/big-logo.svg" /
+          img alt="Logo" src="/images/big-logo.svg" /
         p.tagline.text-white.m0.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.4s"
           = t('catchphrase.first')
           span.text-blue.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.6s"  Adrien Lepoutre
@@ -53,7 +53,7 @@ aside#parallax-one.separator-type
         p.tagline = t('about.title')
         = t('about.description')
         p.tagline = t('about.baseline')
-        a.btn.btn-border.border-white href="https://medias.alaqasar.com/cv.pdf" target="_blank"  = t('about.see_cv')
+        a.btn.btn-border.border-white href="https://medias.alaqasar.com/cv.pdf" target="_blank" rel="noopener"  = t('about.see_cv')
   /! parallax with texture
   #parallax-cta.parallax.texture style="background-image:url(/images/bg/bg-frame2.jpg);"
 /! End Separator Aside
@@ -117,10 +117,10 @@ section#works.page-type.grey-bg
             - delay = 0.3
             - data.works.each do |work|
               li.shape.diamond.animated.delayed.no-opacity.highlighted data-category=work.category data-animation="bounceInRotated" data-animation-delay="#{delay}s"
-                a.item-hover.ajax-nav href=work.url target="_blank"
+                a.item-hover.ajax-nav href=work.url target="_blank" rel="noopener"
                   span.hover-title.special-font= work.title
                   span.hover-action - #{t('works.see')} -
-                img src="/images/works/#{work.image}" /
+                img src="/images/works/#{work.image}" alt=work.title /
               - delay = delay + 0.1
     .row
       .col-xs-12
@@ -139,10 +139,10 @@ section#works.page-type.grey-bg
             - delay = 0.3
             - data.works_ineat.each do |work|
               li.shape.diamond.animated.delayed.no-opacity.highlighted data-category=work.category data-animation="bounceInRotated" data-animation-delay="#{delay}s"
-                a.item-hover.ajax-nav href=work.url target="_blank"
+                a.item-hover.ajax-nav href=work.url target="_blank" rel="noopener"
                   span.hover-title.special-font= work.title
                   span.hover-action - #{t('works.see')} -
-                img src="/images/works/#{work.image}" /
+                img src="/images/works/#{work.image}" alt=work.title /
               - delay = delay + 0.1
 /! End Works
 
@@ -160,16 +160,20 @@ section#contact.page-type.black-bg.font-white
         p.bottom-margin-60
           - delay = 0.3
           - data.social.each do |social|
-            a.btn.btn-icon.btn-icon-white.animated.delayed.no-opacity data-animation="fadeIn" data-animation-delay="#{delay}s" href=social.url target="_blank" title=social.title
+            a.btn.btn-icon.btn-icon-white.animated.delayed.no-opacity data-animation="fadeIn" data-animation-delay="#{delay}s" href=social.url target="_blank" rel="noopener" title=social.title
               i.fontello class="social_icon-#{social.icon}"
             - delay = delay + 0.3
       .col-xs-12.col-sm-5.col-sm-offset-1.col-md-5.col-md-offset-2
         .contact-form
           form.form.form-horizontal accept-charset="UTF-8" action="https://sendr.alaqasar.com/sendr/s3Mp3kvKhsCz8ABHejUucLmC" method="POST"
             fieldset
+              label.form-label for="contact_name" = ("#{t('contact.form.name')} *")
               input#contact_name.form-control.form-dark name="name" placeholder=("#{t('contact.form.name')} *") required="required" type="text" /
+              label.form-label for="contact_email" =("#{t('contact.form.email')} *")
               input#contact_email.form-control.form-dark name="email" placeholder=("#{t('contact.form.email')} *") required="required" type="email" /
+              label.form-label for="contact_subject" =("#{t('contact.form.subject')} *")
               input#contact_subject.form-control.form-dark name="subject" placeholder=("#{t('contact.form.subject')} *") required="required" type="text" /
+              label.form-label for="contact_body" =("#{t('contact.form.message')} *")
               textarea#contact_body.form-control.form-dark name="message" placeholder=("#{t('contact.form.message')} *") required="required" rows="6"
               input#submit.btn.btn-border.border-white type="submit" value=t('contact.form.send') /
               .loading
