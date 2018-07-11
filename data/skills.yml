@@ -2,16 +2,16 @@
   title: 'Front'
   image: 'competence1.jpg'
   tags:
-    - '#pugjs'
+    - '#vue.js'
     - '#sass'
     - '#javascript'
-    - '#jQuery'
+    - '#jquery'
 -
   title: 'Back'
   image: 'competence2.jpg'
   tags:
-    - '#php'
     - '#node.js'
+    - '#php'
 -
   title: 'Design'
   image: 'competence4.jpg'
@@ -24,7 +24,7 @@
   title: 'Frameworks / CMS'
   image: 'competence3.jpg'
   tags:
-    - '#wordpress'
-    - '#prestashop'
-    - '#symfony2'
     - '#vue.js'
+    - '#wordpress'
+    - '#symfony2'
+    - '#prestashop'

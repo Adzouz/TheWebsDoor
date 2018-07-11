@@ -3,15 +3,15 @@ html(lang=I18n.locale)
   head
     meta content="IE=edge" http-equiv="X-UA-Compatible" /
     meta charset="utf-8" /
-    meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" name="viewport" /
+    meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=5.0" name="viewport" /
 
-    link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" /
-    link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32" /
-    link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16" /
-    link rel="manifest" href="/images/favicons/manifest.json" /
-    link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#16a085" /
+    link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png" /
+    link rel="icon" type="image/png" href="/assets/images/favicons/favicon-32x32.png" sizes="32x32" /
+    link rel="icon" type="image/png" href="/assets/images/favicons/favicon-16x16.png" sizes="16x16" /
+    link rel="manifest" href="/assets/images/favicons/manifest.json" /
+    link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#16a085" /
     meta name="msapplication-TileColor" content="#ffffff" /
-    meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png" /
+    meta name="msapplication-TileImage" content="/assets/images/favicons/mstile-144x144.png" /
     meta name="theme-color" content="#ffffff" /
 
     meta name="description" content= t('metas.description') /
@@ -21,7 +21,7 @@ html(lang=I18n.locale)
     meta property="og:description" content= t('metas.description') /
     meta property="fb:app_id" content="386568964690808" /
 
-    meta property="og:image" content="https://thewebsdoor.com/images/facebook.png" /
+    meta property="og:image" content="https://thewebsdoor.com/assets/images/facebook.png" /
 
     /! Use title if it's in the page YAML frontmatter
     title= current_page.data.title || "The Web's Door"
@@ -29,15 +29,15 @@ html(lang=I18n.locale)
     link href='//fonts.googleapis.com/css?family=Open+Sans:400,600italic,600,700,700italic,800italic,800,400italic|Roboto:400,400italic,300italic,300,700italic,700' rel='stylesheet' type='text/css' /
 
     /! Bootstrap
-    = stylesheet_link_tag 'bootstrap.min'
+    link href="/assets/stylesheets/bootstrap.min.css" rel="stylesheet" /
 
     /! Stylesheets
-    = stylesheet_link_tag 'animate/animate.min'
-    = stylesheet_link_tag '../fonts/fontello/css/fontello'
-    = stylesheet_link_tag '../fonts/font-awesome/css/font-awesome.min'
+    link href="/assets/stylesheets/animate/animate.css" rel="stylesheet" /
+    link href="/assets/stylesheets/fontello.css" rel="stylesheet" /
+    link href="/assets/stylesheets/font-awesome.min.css" rel="stylesheet" /
 
     /! Main Stylesheet
-    link href="/stylesheets/style.min.css?v=1.2.1" rel="stylesheet" /
+    link href="/assets/stylesheets/main.css?v=1.2.2" rel="stylesheet" /
     / v=1.0
 
 body
@@ -48,14 +48,14 @@ body
     .header-inner
       .container
         .row
-          .col-xs-12.clearfix.topbar
+          .col-xs-12.topbar
             .header-container
               #trigger-mobile-nav
                 i.fa.fa-bars
               .logo
                 a href="/"
-                  img alt="Logo header" src="/images/logo.svg" /
-            nav#main-nav.main-nav.pull-right.clearfix.mobile-nav
+                  img alt="Logo header" src="/assets/images/logo.svg" /
+            nav#main-nav.main-nav.mobile-nav
               ul.nav
                 li
                   a href="/#home" = t('nav.home')
@@ -133,10 +133,10 @@ body
   = javascript_include_tag 'plugins/jquery.easing'
   = javascript_include_tag 'plugins/imagesloaded'
   = javascript_include_tag 'plugins/jquery.touchSwipe.min'
-  = javascript_include_tag 'plugins/jquery.parallax'
+  = javascript_include_tag 'parallax.min'
   = javascript_include_tag 'plugins/jquery.appear'
   = javascript_include_tag 'plugins/jquery.scripts'
-  script src="/javascripts/vinto.js?v=1.2.1" type="text/javascript"
+  script src="/javascripts/vinto.js?v=1.2.2" type="text/javascript"
   = javascript_include_tag 'suncalc'
   script src="/javascripts/game.js" type="text/javascript"
 

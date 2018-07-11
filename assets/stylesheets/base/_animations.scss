@@ -1,0 +1,111 @@
+@keyframes scroll {
+	100% {
+		background-position: -2000px 0px;
+	}
+}
+
+@keyframes nprogress-spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes ts-slideInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(100%);
+		-ms-transform: translateY(100%);
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+@keyframes bounceInCentered {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-50%) scale(.3);
+		-ms-transform: translateX(-50%) scale(.3);
+		transform: translateX(-50%) scale(.3);
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: translateX(-50%) scale(1.05);
+		-ms-transform: translateX(-50%) scale(1.05);
+		transform: translateX(-50%) scale(1.05);
+	}
+	70% {
+		opacity: 1;
+		-webkit-transform: translateX(-50%) scale(.9);
+		-ms-transform: translateX(-50%) scale(.9);
+		transform: translateX(-50%) scale(.9);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(-50%) scale(1);
+		-ms-transform: translateX(-50%) scale(1);
+		transform: translateX(-50%) scale(1);
+	}
+}
+
+@keyframes bounceInRotated {
+	0% {
+		opacity: 0;
+		-webkit-transform: rotate(45deg) scale(.3);
+		-ms-transform: rotate(45deg) scale(.3);
+		transform: rotate(45deg) scale(.3);
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: rotate(45deg) scale(1.05);
+		-ms-transform: rotate(45deg) scale(1.05);
+		transform: rotate(45deg) scale(1.05);
+	}
+	70% {
+		opacity: 1;
+		-webkit-transform: rotate(45deg) scale(.9);
+		-ms-transform: rotate(45deg) scale(.9);
+		transform: rotate(45deg) scale(.9);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: rotate(45deg) scale(1);
+		-ms-transform: rotate(45deg) scale(1);
+		transform: rotate(45deg) scale(1);
+	}
+}
+
+@keyframes bounceOutRotated {
+  0% {
+    -webkit-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+
+  25% {
+    -webkit-transform: rotate(45deg) scale(.95);
+    -ms-transform: rotate(45deg) scale(.95);
+    transform: rotate(45deg) scale(.95);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) scale(1.1);
+    -ms-transform: rotate(45deg) scale(1.1);
+    transform: rotate(45deg) scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) scale(.3);
+    -ms-transform: rotate(45deg) scale(.3);
+    transform: rotate(45deg) scale(.3);
+  }
+}

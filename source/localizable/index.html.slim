@@ -1,11 +1,11 @@
 /! Begin Home
-section#home.page-type.black-bg.font-white.depth-type.animated.delayed.no-opacity data-animation="fadeIn" data-animation-delay="0s"
+section#home.page-type.font-white.depth-type data-animation="fadeIn" data-animation-delay="0s"
   .container
     .row
       .col-xs-12.text-center
         /! logo
         .big-logo.animated.short.delayed.no-opacity data-animation="bounceIn" data-animation-delay="0.2s"
-          img alt="Logo" src="/images/big-logo.svg" /
+          img alt="Logo" src="/assets/images/big-logo.svg" /
         p.tagline.text-white.m0.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.4s"
           = t('catchphrase.first')
           span.text-blue.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.6s"  Adrien Lepoutre
@@ -13,9 +13,11 @@ section#home.page-type.black-bg.font-white.depth-type.animated.delayed.no-opacit
   /! Background Triangle Overlay / Special Depth Bg
   .depth-bg
     /! parallax with texture
-    #parallax-index.parallax.texture style="background-image:url(/images/bg/bg-frame1.jpg);"
+    #parallax-index.parallax.parallax-window.texture
+      .parallax-slider
+        img src="/assets/images/bg/bg-frame1.jpg"
     /! Background Overlay Image (e.g. a transparant triangle)
-    .depth-bg-img style=("background-image: url(/images/bg/home-bg.png);")
+    .depth-bg-img style=("background-image: url(/assets/images/bg/home-bg.png);")
   /! End Background Triangle Overlay / Special Depth Bg
 /! End Home
 
@@ -55,7 +57,9 @@ aside#parallax-one.separator-type
         p.tagline = t('about.baseline')
         a.btn.btn-border.border-white href="https://medias.alaqasar.com/cv.pdf" target="_blank" rel="noopener"  = t('about.see_cv')
   /! parallax with texture
-  #parallax-cta.parallax.texture style="background-image:url(/images/bg/bg-frame2.jpg);"
+  #parallax-cta.parallax.parallax-window.texture
+    .parallax-slider
+      img src="/assets/images/bg/bg-frame2.jpg"
 /! End Separator Aside
 
 /! Begin Skills
@@ -73,7 +77,7 @@ section#skills.page-type.depth-type
         .col-xs-12.col-sm-6.col-md-3
           .skill.clearfix.animated.delayed.no-opacity data-animation="bounceIn" data-animation-delay="#{delay}s"
             .shape.diamond.center.highlighted
-              = image_tag "/images/bg/#{skill.image}"
+              = image_tag "/assets/images/bg/#{skill.image}"
             h3.skill-title = skill.title
             p.text-center.tagcloud
               - skill.tags.each do |tag|
@@ -91,9 +95,9 @@ section#skills.page-type.depth-type
   /! special depth bg
   .depth-bg
     /! special depth image
-    .depth-img.frame-mac.animated.delayed.no-opacity data-animation="ts-slideInUp" data-animation-delay="1.2s" style=("background: url(/images/bg/bg-frame3.jpg);")
+    .depth-img.frame-mac.animated.delayed.no-opacity data-animation="ts-slideInUp" data-animation-delay="1.2s" style=("background: url(/assets/images/bg/bg-frame3.jpg);")
     /! background overlay image (e.g. a transparant triangle)
-    .depth-bg-img style=("background-image: url(/images/bg/skills-bg.png);")
+    .depth-bg-img style=("background-image: url(/assets/images/bg/skills-bg.png);")
   /! end special depth bg
 /! End Skills
 
@@ -120,7 +124,7 @@ section#works.page-type.grey-bg
                 a.item-hover.ajax-nav href=work.url target="_blank" rel="noopener"
                   span.hover-title.special-font= work.title
                   span.hover-action - #{t('works.see')} -
-                img src="/images/works/#{work.image}" alt=work.title /
+                img src="/assets/images/works/#{work.image}" alt=work.title /
               - delay = delay + 0.1
     .row
       .col-xs-12
@@ -142,12 +146,12 @@ section#works.page-type.grey-bg
                 a.item-hover.ajax-nav href=work.url target="_blank" rel="noopener"
                   span.hover-title.special-font= work.title
                   span.hover-action - #{t('works.see')} -
-                img src="/images/works/#{work.image}" alt=work.title /
+                img src="/assets/images/works/#{work.image}" alt=work.title /
               - delay = delay + 0.1
 /! End Works
 
 /! Begin Contact
-section#contact.page-type.black-bg.font-white
+section#contact.page-type.font-white
   .container
     .row.text-center
       .col-xs-12
@@ -177,4 +181,7 @@ section#contact.page-type.black-bg.font-white
               textarea#contact_body.form-control.form-dark name="message" placeholder=("#{t('contact.form.message')} *") required="required" rows="6"
               input#submit.btn.btn-border.border-white type="submit" value=t('contact.form.send') /
               .loading
+  #parallax-contact.parallax.parallax-window.texture
+    .parallax-slider
+      img src="/assets/images/bg/bg-frame4.jpg"
 /! End Contact

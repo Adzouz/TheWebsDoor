@@ -230,6 +230,7 @@
 			speed: 0.3
 		});
 		// var init_parallax = function() {
+		// 	$( '#parallax-index' ).parallax('10%', 0.1);
 		// 	$( '#parallax-cta' ).parallax('30%', 0.1);
 		// 	$( '#parallax-clients' ).parallax('30%', 0.1);
 		// 	$( '#parallax-contact' ).parallax('30%', 0.1);
