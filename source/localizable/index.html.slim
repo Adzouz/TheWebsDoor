@@ -5,7 +5,7 @@ section#home.page-type.font-white.depth-type data-animation="fadeIn" data-animat
       .col-xs-12.text-center
         /! logo
         .big-logo.animated.short.delayed.no-opacity data-animation="bounceIn" data-animation-delay="0.2s"
-          img alt="Logo" src="/assets/images/big-logo.svg" /
+          img.lazy alt="Logo" data-src="/assets/images/big-logo.svg" /
         p.tagline.text-white.m0.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.4s"
           = t('catchphrase.first')
           span.text-blue.animated.delayed.no-opacity data-animation="fadeInDown" data-animation-delay="0.6s"  Adrien Lepoutre
@@ -15,9 +15,9 @@ section#home.page-type.font-white.depth-type data-animation="fadeIn" data-animat
     /! parallax with texture
     #parallax-index.parallax.parallax-window.texture
       .parallax-slider
-        img src="/assets/images/bg/bg-frame1.jpg"
+        img src="/assets/images/bg/bg-frame1.jpg" alt=t('catchphrase.alt_background') /
     /! Background Overlay Image (e.g. a transparant triangle)
-    .depth-bg-img style=("background-image: url(/assets/images/bg/home-bg.png);")
+    .depth-bg-img.lazy data-src="/assets/images/bg/home-bg.png"
   /! End Background Triangle Overlay / Special Depth Bg
 /! End Home
 
@@ -59,7 +59,7 @@ aside#parallax-one.separator-type
   /! parallax with texture
   #parallax-cta.parallax.parallax-window.texture
     .parallax-slider
-      img src="/assets/images/bg/bg-frame2.jpg"
+      img src="/assets/images/bg/bg-frame2.jpg" alt=t('about.alt_background') /
 /! End Separator Aside
 
 /! Begin Skills
@@ -77,7 +77,7 @@ section#skills.page-type.depth-type
         .col-xs-12.col-sm-6.col-md-3
           .skill.clearfix.animated.delayed.no-opacity data-animation="bounceIn" data-animation-delay="#{delay}s"
             .shape.diamond.center.highlighted
-              = image_tag "/assets/images/bg/#{skill.image}"
+              img.lazy data-src="/assets/images/bg/#{skill.image}" alt="#{skill.title}"
             h3.skill-title = skill.title
             p.text-center.tagcloud
               - skill.tags.each do |tag|
@@ -95,9 +95,9 @@ section#skills.page-type.depth-type
   /! special depth bg
   .depth-bg
     /! special depth image
-    .depth-img.frame-mac.animated.delayed.no-opacity data-animation="ts-slideInUp" data-animation-delay="1.2s" style=("background: url(/assets/images/bg/bg-frame3.jpg);")
+    .depth-img.frame-mac.animated.delayed.no-opacity data-animation="slideInUp" data-animation-delay="1.2s" style=("background: url(/assets/images/bg/bg-frame3.jpg);")
     /! background overlay image (e.g. a transparant triangle)
-    .depth-bg-img style=("background-image: url(/assets/images/bg/skills-bg.png);")
+    .depth-bg-img.lazy data-src="/assets/images/bg/skills-bg.png"
   /! end special depth bg
 /! End Skills
 
@@ -106,7 +106,7 @@ section#works.page-type.grey-bg
   .container
     .row
       .col-xs-12
-        h1.section-title.text-center = t('works.title')
+        h1.section-title.text-center = t('works.title_perso')
         #diamond-filter-portfolio.diamond-filter
           ul.special-font
             li.active
@@ -119,16 +119,16 @@ section#works.page-type.grey-bg
         #diamondslider-portfolio.diamondslider.nav-white
           ul.slides
             - delay = 0.3
-            - data.works.each do |work|
+            - data.works_perso.each do |work|
               li.shape.diamond.animated.delayed.no-opacity.highlighted data-category=work.category data-animation="bounceInRotated" data-animation-delay="#{delay}s"
                 a.item-hover.ajax-nav href=work.url target="_blank" rel="noopener"
                   span.hover-title.special-font= work.title
                   span.hover-action - #{t('works.see')} -
-                img src="/assets/images/works/#{work.image}" alt=work.title /
+                img.lazy data-src="/assets/images/works/#{work.image}" alt=work.title /
               - delay = delay + 0.1
     .row
       .col-xs-12
-        h1.section-title.text-center = t('works.ineat_title')
+        h1.section-title.text-center = t('works.title_pro')
         #diamond-filter-portfolio-ineat.diamond-filter
           ul.special-font
             li.active
@@ -141,12 +141,12 @@ section#works.page-type.grey-bg
         #diamondslider-portfolio-ineat.diamondslider.nav-white
           ul.slides
             - delay = 0.3
-            - data.works_ineat.each do |work|
+            - data.works_pro.each do |work|
               li.shape.diamond.animated.delayed.no-opacity.highlighted data-category=work.category data-animation="bounceInRotated" data-animation-delay="#{delay}s"
                 a.item-hover.ajax-nav href=work.url target="_blank" rel="noopener"
                   span.hover-title.special-font= work.title
                   span.hover-action - #{t('works.see')} -
-                img src="/assets/images/works/#{work.image}" alt=work.title /
+                img.lazy data-src="/assets/images/works/#{work.image}" alt=work.title /
               - delay = delay + 0.1
 /! End Works
 
@@ -183,5 +183,5 @@ section#contact.page-type.font-white
               .loading
   #parallax-contact.parallax.parallax-window.texture
     .parallax-slider
-      img src="/assets/images/bg/bg-frame4.jpg"
+      img src="/assets/images/bg/bg-frame4.jpg" alt=t('contact.alt_background') /
 /! End Contact

@@ -16,7 +16,8 @@
 			// the header (top) height. We assume the first section
 			// is the next element after the header (top).
 			var top_header = $('#top');
-      $('body').css('padding-top', top_header.height());
+			$('body').css('padding-top', top_header.outerHeight());
+			console.log(top_header.outerHeight());
 
       var $root = $('html, body');
 
@@ -170,36 +171,6 @@
 			reload_js();
 		});
 
-	/*	==================================================
-		# DiamondSlider
-		# Portfolio and Team Diamond Sliders
-		================================================== */
-		$(function() {
-			// When a user hovers over an diamondslider item
-			// we want to show the item information.
-			$('.diamondslider .slides > li').hover(function() {
-        if ($(this).hasClass('highlighted')) {
-          var itemhover = $(this).find('.item-hover');
-          if (!itemhover.hasClass('show')) {
-            itemhover.stop().show();
-            itemhover.find('.hover-title').stop().animate({
-              'margin-top': '37.3134%',
-            }, 300, 'easeInOutCirc');
-          }
-        }
-      }, function() {
-        if ($(this).hasClass('highlighted')) {
-          var itemhover = $(this).find('.item-hover');
-          if (!itemhover.hasClass('show')) {
-            itemhover.find('.hover-title').stop().animate({
-              'margin-top': '-30%',
-            }, 300, 'easeInOutCirc');
-            itemhover.stop().hide();
-          }
-        }
-      });
-		});
-
 	  /* ==================================================
 		# Disable Parallax If Touch Device
 		================================================== */
@@ -216,16 +187,16 @@
 		# Initialize the parallax sections on load.
 		================================================== */
 		$('#parallax-index').parallax({
-			naturalWidth: 1920,
+			naturalWidth: 1440,
 			positionY: '-200px',
 			speed: 0.3
 		});
 		$('#parallax-cta').parallax({
-			naturalWidth: 1920,
+			naturalWidth: 1440,
 			speed: 0.3
 		});
 		$('#parallax-contact').parallax({
-			naturalWidth: 1920,
+			naturalWidth: 1440,
 			positionY: '-200px',
 			speed: 0.3
 		});

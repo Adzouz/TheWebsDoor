@@ -1,0 +1,168 @@
+@keyframes scroll {
+	100% {
+		background-position: -2000px 0px;
+	}
+}
+
+@keyframes nprogress-spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes slideInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes bounceInCentered {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%) scale(.3);
+	}
+	50% {
+		opacity: 1;
+		transform: translateX(-50%) scale(1.05);
+	}
+	70% {
+		opacity: 1;
+		transform: translateX(-50%) scale(.9);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(-50%) scale(1);
+	}
+}
+
+@keyframes bounceInRotated {
+	0% {
+		opacity: 0;
+		transform: rotate(45deg) scale(.3);
+	}
+	50% {
+		opacity: 1;
+		transform: rotate(45deg) scale(1.05);
+	}
+	70% {
+		opacity: 1;
+		transform: rotate(45deg) scale(.9);
+	}
+	100% {
+		opacity: 1;
+		transform: rotate(45deg) scale(1);
+	}
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+.bounceInCentered {
+	animation-name: bounceInCentered;
+}
+
+.bounceInRotated {
+	animation-name: bounceInRotated;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.bounceIn {
+  animation-name: bounceIn;
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}

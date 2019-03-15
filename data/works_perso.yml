@@ -1,38 +1,8 @@
 -
-  title: 'Lycée Saint-Rémi'
-  url: 'http://saintremi.com'
-  image: 'saintremi.jpg'
-  category: 1
-
--
-  title: 'Birthday Calendar'
-  url: 'https://birthdaycalendar.alaqasar.com'
-  image: 'birthday-calendar.jpg'
-  category: 2
-
--
-  title: 'MEM - The Rock Band'
-  url: 'https://memrockband.alaqasar.com'
-  image: 'memrockband.jpg'
-  category: 1
-
--
   title: 'Pacesium'
   url: 'http://pacesium.com'
   image: 'pacesium.jpg'
   category: 1
-
--
-  title: 'Find my word'
-  url: 'https://findmyword.alaqasar.com'
-  image: 'find-my-word.jpg'
-  category: 2
-
--
-  title: 'Smiley2Skype'
-  url: 'https://smiley2skype.alaqasar.com'
-  image: 'smiley2skype.jpg'
-  category: 2
 
 -
   title: 'Frogger Pokémon'
@@ -42,13 +12,13 @@
 
 -
   title: 'Pokébox'
-  url: 'http://pokebox.alaqasar.com'
+  url: 'https://pokebox.alaqasar.com'
   image: 'pokebox.jpg'
   category: 2
 
 -
   title: 'Petit Pain'
-  url: 'http://petitpain.fr'
+  url: 'https://petitpain.fr'
   image: 'petitpain.jpg'
   category: 1
 
@@ -66,7 +36,7 @@
 
 -
   title: 'KIKADIÇA (beta)'
-  url: 'http://kikadica.alaqasar.com/'
+  url: 'https://kikadica.alaqasar.com/'
   image: 'kikadica.jpg'
   category: 1
 
@@ -84,7 +54,7 @@
 
 -
   title: 'Volckaert Peinture'
-  url: 'http://volckaert-peinture.fr/'
+  url: 'https://volckaert-peinture.fr/'
   image: 'volckaert-peinture.jpg'
   category: 1
 

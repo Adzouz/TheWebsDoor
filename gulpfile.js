@@ -2,6 +2,8 @@
 
 //Dependencies required
 const gulp = require('gulp')
+const argv = require('yargs').argv
+var gulpif = require('gulp-if')
 //IMAGES
 const imagemin = require('gulp-imagemin')
 const imageminPngquant = require('imagemin-pngquant')
@@ -29,11 +31,11 @@ const jsSource = [
 
 gulp.task('scripts', function () {
   gulp.src(jsSource)
-  .pipe(sourceMap.init())
+  .pipe(gulpif(!argv.prod, sourceMap.init()))
   .pipe(babel())
   .pipe(concat('app.js'))
   .pipe(uglify())
-  .pipe(sourceMap.write())
+  .pipe(gulpif(!argv.prod, sourceMap.write()))
   .pipe(gulp.dest('source/assets/javascripts/'))
 })
 
@@ -79,14 +81,14 @@ gulp.task('imagemin', function () {
 
 // compile Sass files
 gulp.task('sass', function () {
-  gulp.src('assets/stylesheets/**/*')
-  .pipe(sourceMap.init())
+  gulp.src('assets/sass/**/*')
+  .pipe(gulpif(!argv.prod, sourceMap.init()))
   .pipe(plumber())
   .pipe(sass({outputStyle: 'compressed'}))
   // .pipe(sass())
-  .pipe(sourceMap.write())
+  .pipe(gulpif(!argv.prod, sourceMap.write()))
   .pipe(autoprefixer())
-    .pipe(gulp.dest('source/assets/stylesheets/'))
+  .pipe(gulp.dest('source/assets/stylesheets/'))
 })
 
 gulp.task('fonts', function () {
@@ -113,6 +115,6 @@ gulp.task('default', ['imagemin', 'fonts', 'scripts', 'sass'], function () {
   console.log("Default gulp task *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
   gulp.watch('assets/fonts/**/*', ['fonts'])
   gulp.watch('assets/images/**/*', ['imagemin'])
-  gulp.watch('assets/stylesheets/**/*', ['sass'])
+  gulp.watch('assets/sass/**/*', ['sass'])
   gulp.watch('assets/javascripts/**/*.js', ['scripts'])
 });

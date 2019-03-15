@@ -1,20 +1,20 @@
 -
   title: 'Front'
-  image: 'competence1.jpg'
+  image: 'competence1.png'
   tags:
-    - '#vue.js'
     - '#sass'
     - '#javascript'
+    - '#vue.js'
     - '#jquery'
 -
   title: 'Back'
-  image: 'competence2.jpg'
+  image: 'competence2.png'
   tags:
     - '#node.js'
     - '#php'
 -
   title: 'Design'
-  image: 'competence4.jpg'
+  image: 'competence4.png'
   tags:
     - '#photoshop'
     - '#illustrator'
@@ -22,9 +22,9 @@
     - '#sketch'
 -
   title: 'Frameworks / CMS'
-  image: 'competence3.jpg'
+  image: 'competence3.png'
   tags:
-    - '#vue.js'
+    - '#react'
+    - '#laravel'
     - '#wordpress'
-    - '#symfony2'
     - '#prestashop'

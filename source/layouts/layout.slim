@@ -26,18 +26,32 @@ html(lang=I18n.locale)
     /! Use title if it's in the page YAML frontmatter
     title= current_page.data.title || "The Web's Door"
 
-    link href='//fonts.googleapis.com/css?family=Open+Sans:400,600italic,600,700,700italic,800italic,800,400italic|Roboto:400,400italic,300italic,300,700italic,700' rel='stylesheet' type='text/css' /
+    /! Preload fonts
+    / link rel="preload" href="/assets/fonts/montserrat/montserrat-regular.eot" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/montserrat/montserrat-regular.svg" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/montserrat/montserrat-regular.ttf" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/montserrat/montserrat-regular.woff" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/montserrat/montserrat-regular.woff2" as="font" crossorigin="anonymous" /
 
-    /! Bootstrap
-    link href="/assets/stylesheets/bootstrap.min.css" rel="stylesheet" /
+    / link rel="preload" href="/assets/fonts/montserrat/montserrat-bold.eot" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/montserrat/montserrat-bold.svg" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/montserrat/montserrat-bold.ttf" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/montserrat/montserrat-bold.woff" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/montserrat/montserrat-bold.woff2" as="font" crossorigin="anonymous" /
 
-    /! Stylesheets
-    link href="/assets/stylesheets/animate/animate.css" rel="stylesheet" /
-    link href="/assets/stylesheets/fontello.css" rel="stylesheet" /
-    link href="/assets/stylesheets/font-awesome.min.css" rel="stylesheet" /
+    / link rel="preload" href="/assets/fonts/fontello/fontello.eot?70993252" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/fontello/fontello.svg?70993252" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/fontello/fontello.ttf?70993252" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/fontello/fontello.woff?70993252" as="font" crossorigin="anonymous" /
+
+    / link rel="preload" href="/assets/fonts/font-awesome/fontawesome-webfont.eot" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/font-awesome/fontawesome-webfont.svg" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/font-awesome/fontawesome-webfont.ttf" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/font-awesome/fontawesome-webfont.woff" as="font" crossorigin="anonymous" /
+    / link rel="preload" href="/assets/fonts/font-awesome/fontawesome-webfont.woff2" as="font" crossorigin="anonymous" /
 
     /! Main Stylesheet
-    link href="/assets/stylesheets/main.css?v=1.2.2" rel="stylesheet" /
+    link href="/assets/stylesheets/main.css?v=1.3.0" rel="stylesheet" /
     / v=1.0
 
 body
@@ -54,7 +68,7 @@ body
                 i.fa.fa-bars
               .logo
                 a href="/"
-                  img alt="Logo header" src="/assets/images/logo.svg" /
+                  img class="lazy" alt="Logo header" data-src="/assets/images/logo.svg" /
             nav#main-nav.main-nav.mobile-nav
               ul.nav
                 li
@@ -87,9 +101,9 @@ body
           .container
             .row
               .col-xs-12.col-md-6
+                h3
+                  = t('catchphrase.whoami')
                 p
-                  = t('catchphrase.first')
-                  a href="#"  Adrien Lepoutre
                   = t('catchphrase.job')
               .col-xs-12.col-md-6
                 h3 = t('follow_me')
@@ -124,9 +138,10 @@ body
         .lune style="display: none;"
         .nuages_right
     .container.text-center
-      p.copyright.no-margin-bottom &copy; 2018 - Adrien Lepoutre (The Web's Door).
+      p.copyright.no-margin-bottom &copy; 2019 - Adrien Lepoutre (The Web's Door).
   /! // End Footer
 
+  = javascript_include_tag 'lazyload.min'
   = javascript_include_tag 'jquery.min'
   = javascript_include_tag 'modernizr-2.7.1.min'
   = javascript_include_tag 'bootstrap.min'
@@ -136,11 +151,14 @@ body
   = javascript_include_tag 'parallax.min'
   = javascript_include_tag 'plugins/jquery.appear'
   = javascript_include_tag 'plugins/jquery.scripts'
-  script src="/javascripts/vinto.js?v=1.2.2" type="text/javascript"
+  script src="/javascripts/vinto.js?v=1.2.4" type="text/javascript"
   = javascript_include_tag 'suncalc'
   script src="/javascripts/game.js" type="text/javascript"
 
   javascript:
+    var myLazyLoad = new LazyLoad({
+      elements_selector: ".lazy"
+    });
 
     jQuery(function($) {
 

@@ -8,8 +8,8 @@ fr:
     description: 'Création de logos, chartes graphiques, visuels et maquettes de sites web ou d''applications.'
     icon: 'crop'
   -
-    title: 'Applis mobile'
-    description: 'Développement d''applications mobile et jeux pour iPhone et iPad, Android et Windows Phone.'
+    title: 'Progressive Web Apps'
+    description: 'Développement d''applications web téléchargeables pour appareils mobiles de tout type.'
     icon: 'mobile'
   -
     title: 'Applis web'
@@ -26,8 +26,8 @@ en:
     description: 'Creation of logos, graphic charters, visuals and sketches of websites or apps.'
     icon: 'crop'
   -
-    title: 'Mobile apps'
-    description: 'Mobile apps and games development for iPhone and iPad, Android and Windows Phone.'
+    title: 'Progressive Web Apps'
+    description: 'Development of downloadable web apps for every type of mobile devices.'
     icon: 'mobile'
   -
     title: 'Web apps'

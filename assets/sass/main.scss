@@ -1,21 +1,22 @@
-@import "base/variables";
-@import "base/animations";
-@import "base/fonts";
+@import "bootstrap";
+@import "font-awesome";
+
+@import "variables";
+@import "animations";
+@import "fonts";
+
+@import "fontello";
 
 /*	==================================================
 	# Default
 	================================================== */
 html {
+	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 }
-a:focus {
-	outline: 0px;
-}
-a:hover, a:focus {
-	text-decoration: none;
-}
+
 body {
-  font-family: $main-font, $fallback-font;
+	font-family: $main-font;
 	font-weight: 300;
 	font-size: 16px;
 	color: $dove-gray;
@@ -28,7 +29,7 @@ body {
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba($black, 0.6);
     z-index: 9998;
     opacity: 0;
     visibility: hidden;
@@ -42,93 +43,124 @@ body {
   }
 }
 
+a {
+	&:focus {
+		outline: 0px;
+	}
+	&:hover,
+	&:focus {
+		color: $black;
+		text-decoration: none;
+	}
+}
+
 /*	==================================================
 	# Typography
 	================================================== */
-h1, h2, h3, h4, h5, h6, .package-header, .special-font, .tagline {
-	font-family: $main-font, $fallback-font;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.package-header,
+.special-font,
+.tagline {
+	font-family: $main-font;
 	font-weight: 800;
-	color: #3d3d3d;
+	color: $mine-shaft;
 	text-transform: uppercase;
 }
+
 .main-nav {
-	font-family: $main-font, $fallback-font;
+	font-family: $main-font;
 	font-weight: 400;
 }
+
 .section-title {
 	margin: 100px 0 60px;
 	font-size: 46px;
 	text-transform: uppercase;
 }
+
 .sub-title {
 	font-size: 16px;
 	padding: 15px;
-	background: $mountain-meadow;
+	background: $deep-sea-green;
 	color: $white;
 	display: inline-block;
 	margin: 20px 0 40px;
 	font-weight: 600;
 }
+
 .tagline {
 	font-weight: 400;
 	font-size: 30px;
 	line-height: 40px;
 	margin-bottom: 40px;
+
+	.catchphrase-second {
+		display: block;
+	}
 }
-.tagline .catchphrase-second {
-	display: block;
-}
+
 h3 {
 	font-size: 20px;
 	margin: 35px 0 25px;
 }
+
 p {
 	line-height: 25px;
 	margin-bottom: 20px;
 }
-.normal-font, .normal-font li {
-	font-family: $main-font, $fallback-font, Arial !important;
-	text-transform: none !important;
-	font-weight: 300 !important;
-}
-.text-left {
-	text-align: left !important;
-}
-.text-center {
-	text-align: center !important;
-}
-.text-right {
-	text-align: right !important;
+
+.normal-font {
+	&,
+	li {
+		font-family: $main-font, Arial !important;
+		text-transform: none !important;
+		font-weight: 300 !important;
+	}
 }
 
 /*	==================================================
 	# Color Settings
 	================================================== */
-a, .text-blue {
+a,
+.text-blue {
 	color: $mountain-meadow;
 }
+
 .text-highlighted {
 	color: $white;
 }
-a:hover, a:focus {
-	color: $black;
-	text-decoration: none;
+
+.font-white {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	a:hover,
+	a:focus {
+		color: $white;
+	}
 }
-.font-white h1, .font-white h2, .font-white h3, .font-white h4, .font-white h5, .font-white h6, .font-white a:hover, .font-white a:focus {
-	color: $white;
-}
+
 .text-white {
 	color: $white;
 }
+
 .text-grey {
-	color: #ddd;
+	color: $alto;
 }
 
 /*	==================================================
 	# Buttons
 	================================================== */
 .btn {
-	font-family: $main-font, $fallback-font;
+	font-family: $main-font;
 	font-weight: 400;
 	font-size: 16px;
 	text-transform: uppercase;
@@ -136,27 +168,85 @@ a:hover, a:focus {
 	padding: 10px 18px;
 	letter-spacing: 2px;
 	border-radius: 2px;
-}
-.btn {
 	transition: all 0.3s ease;
 }
-.btn-primary, .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
-	background-color: $mountain-meadow;
-	border-color: $mountain-meadow;
+
+.btn-primary {
+	&,
+	&.disabled,
+	&[disabled] {
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $mountain-meadow;
+			border-color: $mountain-meadow;
+		}
+	}
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		background-color: $black;
+		border-color: $black;
+	}
 }
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+
+fieldset[disabled] {
+	.btn-primary {
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $mountain-meadow;
+			border-color: $mountain-meadow;
+		}
+	}
+}
+
+.open .dropdown-toggle.btn-primary {
 	background-color: $black;
 	border-color: $black;
 }
-.btn-border, .btn-border.disabled, .btn-border[disabled], fieldset[disabled] .btn-border, .btn-border.disabled:hover, .btn-border[disabled]:hover, .btn-border.disabled:focus, .btn-border[disabled]:focus, fieldset[disabled] .btn-border:focus, .btn-border.disabled:active, .btn-border[disabled]:active, fieldset[disabled] .btn-border:active, .btn-border.disabled.active, .btn-border[disabled].active, fieldset[disabled] .btn-border.active {
-	border: 1px solid $dove-gray;
-	color: $dove-gray;
-	background: none;
+
+.btn-border {
+	&,
+	&.disabled,
+	&[disabled] {
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			border: 1px solid $dove-gray;
+			color: $dove-gray;
+			background: none;
+		}
+	}
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		color: $mountain-meadow;
+		border-color: $mountain-meadow;
+	}
 }
-.btn-border:hover, .btn-border:focus, .btn-border:active, .btn-border.active, .open .dropdown-toggle.btn-border {
+
+fieldset[disabled] {
+	.btn-border {
+		&:hover,
+		&:focus,
+		&:active {
+			border: 1px solid $dove-gray;
+			color: $dove-gray;
+			background: none;
+		}
+	}
+}
+
+.open .dropdown-toggle.btn-border {
 	color: $mountain-meadow;
 	border-color: $mountain-meadow;
 }
+
 .border-white {
 	border-color: $white;
 	color: $white;
@@ -167,7 +257,6 @@ a:hover, a:focus {
 	================================================== */
 .form-label {
 	display: block;
-	width: 100%;
 	position: absolute;
   z-index: 0;
 }
@@ -196,11 +285,11 @@ a:hover, a:focus {
     background: $mercury;
   }
   &.form-dark {
-    color: #bbb;
-    background-color: #3e3e3e;
+    color: $mercury;
+    background-color: $mine-shaft;
 
     &:focus {
-      background: #303030;
+      background: darken($mine-shaft, 5%);
     }
   }
 }
@@ -269,9 +358,8 @@ a, img, .package-header {
 }
 
 /** ThemeShifters slideInUp */
-.ts-slideInUp {
-	-webkit-animation-name: ts-slideInUp;
-	animation-name: ts-slideInUp;
+.slideInUp {
+	animation-name: slideInUp;
 	opacity: 1;
 }
 
@@ -340,7 +428,7 @@ a, img, .package-header {
     }
   }
   &.dark {
-    background: #3d3d3d;
+    background: $mine-shaft;
     color: $white;
   }
   &-icon {
@@ -375,7 +463,7 @@ a, img, .package-header {
 ================================================== */
 .btn-icon {
 	background-color: #f3f2f2;
-	color: #3d3d3d;
+	color: $mine-shaft;
 	display: inline-block;
 	margin: 0 8px 13px 5px;
 	width: 30px;
@@ -399,19 +487,27 @@ a, img, .package-header {
 /*	==================================================
 # DiamondSlider
 ================================================== */
-.diamondslider .slides {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	z-index: 60;
-	margin: 0 auto;
-	padding: 0;
-	max-width: 750px;
-}
+.diamondslider {
+  .slides {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 60;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 750px;
 
-.diamondslider .slides li {
-	flex: 0 0 120px;
-	height: 120px;
+    li {
+      flex: 0 0 120px;
+      height: 120px;
+
+      &:hover {
+        .item-hover {
+          transform: rotate(-45deg) translateY(0) !important;
+        }
+      }
+    }
+  }
 }
 
 /** DiamondSlider: Category Navigation */
@@ -434,7 +530,7 @@ a, img, .package-header {
 	margin: 0 15px;
 }
 .diamond-filter ul > li a {
-	color: #3d3d3d;
+	color: $mine-shaft;
 }
 .diamond-filter.font-white ul > li a {
 	color: $white;
@@ -445,14 +541,20 @@ a, img, .package-header {
 
 /** Item Hover */
 .item-hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 	background: rgba(22, 160, 133, 0.75);
 	position: absolute !important;
 	z-index: 80;
-	display: none;
 	overflow: hidden;
 	font-size: 16px;
 	width: 140%;
-	height: 140%;
+  height: 140%;
+  transition: .2s all;
+  transition-timing-function: ease-in-out;
+  transform: rotate(-45deg) translateY(-100%) !important;
 }
 .small .item-hover {
 	font-size: 16px;
@@ -462,11 +564,9 @@ a, img, .package-header {
 	color: $white;
 }
 .item-hover .hover-title {
-
-	/*margin-top: 37.3134%;*/
-	margin-top: -30%;
 	font-weight: 500;
-	padding: 0 20px;
+  padding: 0 20px;
+  margin-top: 10px;
 }
 .item-hover .hover-action {
 	margin-top: 3.7313%;
@@ -497,7 +597,7 @@ a, img, .package-header {
 }
 p.desc {
 	text-align: justify;
-	color: #ddd;
+	color: $alto;
 }
 p.desc a:hover, p.desc a:active, p.desc a:focus {
 	color: $white;
@@ -513,6 +613,8 @@ p.desc a:hover, p.desc a:active, p.desc a:focus {
 }
 .page-type .container {
 	padding-bottom: 90px;
+	position: relative;
+	z-index: 1;
 }
 .title-type .container {
 	padding: 110px 0;
@@ -772,7 +874,7 @@ footer .copyright-banner {
 	margin-top: 0;
 }
 .header-box-inner a {
-	color: #3d3d3d;
+	color: $mine-shaft;
 }
 .header-box-inner.opened {
 	display: block;
@@ -986,17 +1088,17 @@ embed, iframe, object, video {
 }
 
 .nav > li.language-switch a {
-	background: $white;
 	border-radius: 3px;
-	margin: 16px 15px;
+	margin: 15px;
 	padding: 5px 8px;
-	color: $black;
+	color: $white;
 	font-weight: bold;
 	position: relative;
 }
 
 .nav > li.language-switch a:hover {
-	color: $white;
+	background: $white;
+	color: $black;
 }
 
 .nav > li.language-switch a span {
@@ -1019,15 +1121,6 @@ embed, iframe, object, video {
 	z-index: 1;
 	opacity: 0;
 	transition: all 0.3s ease;
-}
-
-.nav > li.language-switch a.fr:after {
-	background: url(/assets/images/fr.svg) no-repeat;
-	background-size: 100% 100%;
-}
-.nav > li.language-switch a.en:after {
-	background: url(/assets/images/en.svg) no-repeat;
-	background-size: 100% 100%;
 }
 
 .nav > li.language-switch a:hover:after {
@@ -1069,6 +1162,8 @@ embed, iframe, object, video {
 ================================================== */
 .separator-type .container {
 	padding: 175px 0;
+	position: relative;
+	z-index: 1;
 }
 .separator-type.carousel-type .container {
 	padding: 100px 0;
@@ -1087,17 +1182,25 @@ embed, iframe, object, video {
 	top: 0;
 	bottom: 0;
 	width: 100%;
-	z-index: -10;
+	z-index: 0;
 }
 
-.parallax-mirror {
+.parallax-mirror,
+.parallax-window {
   .parallax-slider {
 	@media screen and (max-width: 991px) {
-		position: relative;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: -11;
 	}
     img {
 		@media screen and (max-width: 991px) {
+			width: 100%;
 			height: 100%;
+			object-fit: cover;
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -1189,9 +1292,6 @@ embed, iframe, object, video {
 .service.bottom-arrow {
 	padding: 0 0px 20px;
 }
-.service.bottom-arrow p, .skill p {
-	text-align: justify;
-}
 
 /*	==================================================
 # Team
@@ -1233,11 +1333,10 @@ embed, iframe, object, video {
 	z-index: 10;
 }
 .package-header {
-	background: #3d3d3d;
+	background: $mine-shaft;
 	color: $white;
 	padding: 20px 30px;
 	border-radius: 3px;
-	-webkit-border-radius: 3px;
 }
 .price-package:hover .package-header {
 	background: $black;
@@ -1310,7 +1409,7 @@ embed, iframe, object, video {
 ================================================== */
 .big-logo {
 	margin: 80px auto 60px;
-	max-width: 300px;
+	max-width: 200px;
 }
 
 .big-logo img {
@@ -1327,7 +1426,6 @@ embed, iframe, object, video {
 	background: $white;
 	padding: 35px;
 	border-radius: 3px;
-	-webkit-border-radius: 3px;
 	width: 660px;
 	position: relative;
 }
@@ -1376,12 +1474,11 @@ embed, iframe, object, video {
 	font-size: 36px;
 }
 .post-title, .post-title a {
-	color: #3d3d3d;
+	color: $mine-shaft;
 }
 .post-media {
 	margin-bottom: 45px;
 	border-radius: 4px;
-	-webkit-border-radius: 4px;
 	overflow: hidden;
 }
 .post-media img {
@@ -1513,7 +1610,7 @@ embed, iframe, object, video {
 
 /** categories widget */
 .widget ul li, .tagcloud a {
-	font-family: $main-font, $fallback-font;
+	font-family: $main-font;
 	font-weight: 400;
 	font-size: 16px;
 	text-transform: uppercase;
@@ -1527,7 +1624,6 @@ embed, iframe, object, video {
 	padding: 0 5px;
 	background: $wild-sand;
 	border-radius: 3px;
-	-webkit-border-radius: 3px;
 	float: right;
 }
 .widget_categories li:hover, .widget li:hover a {
@@ -1543,7 +1639,6 @@ embed, iframe, object, video {
 	padding: 5px 10px;
 	border: 1px solid $dove-gray;
 	border-radius: 3px;
-	-webkit-border-radius: 3px;
 	display: inline-block;
 	margin: 0 10px 10px 0;
 }
@@ -1636,8 +1731,6 @@ embed, iframe, object, video {
 	height: 100%;
 	box-shadow: 0 0 10px $black, 0 0 5px $black;
 	opacity: 1.0;
-	-webkit-transform: rotate(3deg) translate(0px, -4px);
-	-ms-transform: rotate(3deg) translate(0px, -4px);
 	transform: rotate(3deg) translate(0px, -4px);
 }
 
@@ -1657,7 +1750,6 @@ embed, iframe, object, video {
 	border-top-color: $black;
 	border-left-color: $black;
 	border-radius: 50%;
-	-webkit-animation: nprogress-spinner 400ms linear infinite;
 	animation: nprogress-spinner 400ms linear infinite;
 }
 
@@ -1670,7 +1762,7 @@ embed, iframe, object, video {
 	}
 }
 .skill {
-	font-family: $main-font, $fallback-font;
+	font-family: $main-font;
 	margin-bottom: 3px;
 	font-weight: 800;
 	text-transform: uppercase;
@@ -1678,12 +1770,10 @@ embed, iframe, object, video {
 	padding: 0 0 10px;
 }
 .progress, .progress-bar {
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 .progress {
 	border-radius: 3px;
-	-webkit-border-radius: 3px;
 	background-color: #f3f2f2;
 	height: 30px;
 }
@@ -1747,7 +1837,6 @@ embed, iframe, object, video {
 	background-attachment: scroll !important;
 }
 .animated.short {
-	-webkit-animation-duration: .5s;
 	animation-duration: .5s;
 }
 
@@ -1922,17 +2011,4 @@ embed, iframe, object, video {
 	.section-title {
 		font-size: 34px;
 	}
-}
-
-.bounceOutRotated {
-  -webkit-animation-name: bounceOutRotated;
-  animation-name: bounceOutRotated;
-}
-.bounceInCentered {
-	-webkit-animation-name: bounceInCentered;
-	animation-name: bounceInCentered;
-}
-.bounceInRotated {
-	-webkit-animation-name: bounceInRotated;
-	animation-name: bounceInRotated;
 }
