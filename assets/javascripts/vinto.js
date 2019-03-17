@@ -16,8 +16,7 @@
 			// the header (top) height. We assume the first section
 			// is the next element after the header (top).
 			var top_header = $('#top');
-			$('body').css('padding-top', top_header.outerHeight());
-			console.log(top_header.outerHeight());
+			$('body').css('padding-top', top_header.height());
 
       var $root = $('html, body');
 
@@ -201,7 +200,6 @@
 			speed: 0.3
 		});
 		// var init_parallax = function() {
-		// 	$( '#parallax-index' ).parallax('10%', 0.1);
 		// 	$( '#parallax-cta' ).parallax('30%', 0.1);
 		// 	$( '#parallax-clients' ).parallax('30%', 0.1);
 		// 	$( '#parallax-contact' ).parallax('30%', 0.1);

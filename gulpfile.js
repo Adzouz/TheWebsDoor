@@ -24,19 +24,25 @@ const plumber = require('gulp-plumber')
 //javascript optimization, source maps included
 const jsSource = [
   'assets/javascripts/jquery.min.js',
+  'assets/javascripts/lazyload.min.js',
   'assets/javascripts/modernizr-2.7.1.min.js',
   'assets/javascripts/bootstrap.min.js',
+  'assets/javascripts/parallax.min.js',
   'assets/javascripts/plugins/**/*.js',
+  'assets/javascripts/vinto.js',
+  'assets/javascripts/contact-form.js',
+  'assets/javascripts/suncalc.js',
+  'assets/javascripts/game.js'
 ]
 
 gulp.task('scripts', function () {
   gulp.src(jsSource)
-  .pipe(gulpif(!argv.prod, sourceMap.init()))
-  .pipe(babel())
-  .pipe(concat('app.js'))
-  .pipe(uglify())
-  .pipe(gulpif(!argv.prod, sourceMap.write()))
-  .pipe(gulp.dest('source/assets/javascripts/'))
+    .pipe(gulpif(!argv.prod, sourceMap.init()))
+    .pipe(babel())
+    .pipe(concat('app.js'))
+    .pipe(uglify())
+    .pipe(gulpif(!argv.prod, sourceMap.write()))
+    .pipe(gulp.dest('source/assets/javascripts/'))
 })
 
 // image minification -- only changes if necessary
@@ -85,7 +91,6 @@ gulp.task('sass', function () {
   .pipe(gulpif(!argv.prod, sourceMap.init()))
   .pipe(plumber())
   .pipe(sass({outputStyle: 'compressed'}))
-  // .pipe(sass())
   .pipe(gulpif(!argv.prod, sourceMap.write()))
   .pipe(autoprefixer())
   .pipe(gulp.dest('source/assets/stylesheets/'))
