@@ -4,8 +4,18 @@ fr:
     title: 'Sites Internet'
     slug: 'sites'
 
+  -
+    id: 2
+    title: 'Applications Web'
+    slug: 'sites'
+
 en:
   -
     id: 1
     title: 'Websites'
+    slug: 'sites'
+
+  -
+    id: 2
+    title: 'Web apps'
     slug: 'sites'

@@ -26,33 +26,8 @@ html(lang=I18n.locale)
     /! Use title if it's in the page YAML frontmatter
     title= current_page.data.title || "The Web's Door"
 
-    /! Preload fonts
-    / link rel="preload" href="/assets/fonts/montserrat/montserrat-regular.eot" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/montserrat/montserrat-regular.svg" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/montserrat/montserrat-regular.ttf" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/montserrat/montserrat-regular.woff" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/montserrat/montserrat-regular.woff2" as="font" crossorigin="anonymous" /
-
-    / link rel="preload" href="/assets/fonts/montserrat/montserrat-bold.eot" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/montserrat/montserrat-bold.svg" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/montserrat/montserrat-bold.ttf" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/montserrat/montserrat-bold.woff" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/montserrat/montserrat-bold.woff2" as="font" crossorigin="anonymous" /
-
-    / link rel="preload" href="/assets/fonts/fontello/fontello.eot?70993252" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/fontello/fontello.svg?70993252" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/fontello/fontello.ttf?70993252" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/fontello/fontello.woff?70993252" as="font" crossorigin="anonymous" /
-
-    / link rel="preload" href="/assets/fonts/font-awesome/fontawesome-webfont.eot" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/font-awesome/fontawesome-webfont.svg" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/font-awesome/fontawesome-webfont.ttf" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/font-awesome/fontawesome-webfont.woff" as="font" crossorigin="anonymous" /
-    / link rel="preload" href="/assets/fonts/font-awesome/fontawesome-webfont.woff2" as="font" crossorigin="anonymous" /
-
     /! Main Stylesheet
-    link href="/assets/stylesheets/main.css?v=1.3.0" rel="stylesheet" /
-    / v=1.0
+    link href="/assets/stylesheets/main.css?v=1.3.2" rel="stylesheet" /
 
 body
 
@@ -81,8 +56,6 @@ body
                   a href="/#works" = t('nav.works')
                 li
                   a href="/#contact" = t('nav.contact')
-                li
-                  a href="https://blog.thewebsdoor.com" = t('nav.blog')
                 li.language-switch
                   - if I18n.locale == :en
                     a.fr href="/fr/"
@@ -141,7 +114,7 @@ body
       p.copyright.no-margin-bottom &copy; 2019 - Adrien Lepoutre (The Web's Door).
   /! // End Footer
 
-  script src="/assets/javascripts/app.js?v=1.0" type="text/javascript"
+  script src="/assets/javascripts/app.js?v=1.0.1" type="text/javascript"
 
   javascript:
     var myLazyLoad = new LazyLoad({
@@ -234,7 +207,7 @@ body
       }
 
       function initScene() {
-        var times = SunCalc.getTimes(new Date(), 50.6329700, 3.0585800);
+        var times = SunCalc.getTimes(new Date(), 45.5576996, -74.0104841);
 
         var beginSunriseHours = times.sunrise.getHours() < 10 ? '0' + times.sunrise.getHours() : times.sunrise.getHours(),
             endSunriseHours = times.sunrise.getHours() < 9 ? '0' + (times.sunrise.getHours() + 1) : times.sunrise.getHours() + 1,

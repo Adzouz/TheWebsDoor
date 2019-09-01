@@ -11,11 +11,6 @@ fr:
 
   -
     id: 3
-    title: 'Applications Mobile'
-    slug: 'mobileapps'
-
-  -
-    id: 4
     title: 'Jeux'
     slug: 'games'
 
@@ -32,10 +27,5 @@ en:
 
   -
     id: 3
-    title: 'Mobile apps'
-    slug: 'mobileapps'
-
-  -
-    id: 4
     title: 'Games'
     slug: 'games'

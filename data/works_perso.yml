@@ -8,7 +8,7 @@
   title: 'Frogger Pokémon'
   url: 'https://frogger.alaqasar.com/'
   image: 'frogger-pokemon.jpg'
-  category: 4
+  category: 3
 
 -
   title: 'Pokébox'
@@ -47,12 +47,6 @@
   category: 1
 
 -
-  title: 'Shop Jahneration'
-  url: 'https://shop.jahneration.com/'
-  image: 'jahneration-shop.jpg'
-  category: 1
-
--
   title: 'Volckaert Peinture'
   url: 'https://volckaert-peinture.fr/'
   image: 'volckaert-peinture.jpg'
@@ -60,7 +54,7 @@
 
 -
   title: 'Pixels Drawing'
-  url: 'https://pixelsdrawing.alaqasar.com/#/'
+  url: 'https://thewebsdoor.github.io/PixelsDrawing/'
   image: 'pixels-drawing.png'
   category: 2
 
@@ -69,3 +63,9 @@
   url: 'https://notifoot.alaqasar.com/#/'
   image: 'notifoot.png'
   category: 2
+
+-
+  title: 'Minesweeper'
+  url: 'https://thewebsdoor.github.io/Minesweeper/'
+  image: 'minesweeper.png'
+  category: 3

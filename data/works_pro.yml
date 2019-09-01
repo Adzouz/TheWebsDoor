@@ -11,7 +11,31 @@
   category: 1
 
 -
+  title: 'VIA Rail'
+  url: 'https://viarail.ca'
+  image: 'viarail.png'
+  category: 1
+
+-
+  title: 'Bota Bota'
+  url: 'https://botabota.ca'
+  image: 'botabota.png'
+  category: 1
+
+-
   title: 'RESISTO'
   url: 'https://resisto.ca'
   image: 'resisto.png'
   category: 1
+
+-
+  title: 'Monetico'
+  url: 'https://monetico.ca'
+  image: 'monetico.png'
+  category: 1
+
+-
+  title: 'Écoportrait'
+  url: 'https://www.fondsftq.com/ecoportrait/'
+  image: 'ecoportrait.png'
+  category: 2

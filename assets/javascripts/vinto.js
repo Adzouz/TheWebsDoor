@@ -1,5 +1,9 @@
 (function( $ ) {
 
+	var myLazyLoad = new LazyLoad({
+		elements_selector: ".lazy"
+	});
+
   'use strict';
 
   var body 		= $( 'body' ),
