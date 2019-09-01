@@ -69,3 +69,9 @@
   url: 'https://thewebsdoor.github.io/Minesweeper/'
   image: 'minesweeper.png'
   category: 3
+
+-
+  title: 'Sacrée Tirelire'
+  url: 'https://thewebsdoor.github.io/SacreeTirelire/'
+  image: 'sacreetirelire.png'
+  category: 2
