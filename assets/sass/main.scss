@@ -321,7 +321,7 @@ input.error, textarea.error {
 .contact-form .loading {
 	display: none;
 	background: $black;
-	background: url(/assets/images/ajax_loader.gif) no-repeat;
+	background: url(../images/ajax_loader.gif) no-repeat;
 	width: 25px;
 	height: 25px;
 	margin-top: 15px;
@@ -653,32 +653,32 @@ footer .copyright-banner {
 	width: 123px;
 }
 .soleil {
-	background: url(/assets/images/weather/soleil.png) no-repeat;
+	background: url(../images/weather/soleil.png) no-repeat;
 	background-size: 100% 100%;
 }
 .svg .soleil {
-	background: url(/assets/images/weather/soleil.svg) no-repeat;
+	background: url(../images/weather/soleil.svg) no-repeat;
 	background-size: 100% 100%;
 }
 .lune {
-	background: url(/assets/images/weather/lune.png) no-repeat;
+	background: url(../images/weather/lune.png) no-repeat;
 	background-size: 100% 100%;
 }
 .svg .lune {
-	background: url(/assets/images/weather/lune.svg) no-repeat;
+	background: url(../images/weather/lune.svg) no-repeat;
 	background-size: 100% 100%;
 }
 .nuages_left, .nuages_right {
 	width: 274px;
 	height: 165px;
-	background: url(/assets/images/weather/nuages.png);
+	background: url(../images/weather/nuages.png);
 	background-size: 100% 100%;
 	position: absolute;
 	top: 17px;
 	z-index: 5;
 }
 .svg .nuages_left, .svg .nuages_right {
-	background: url(/assets/images/weather/nuages.svg);
+	background: url(../images/weather/nuages.svg);
 }
 .nuages_left {
 	left: 100px;
@@ -694,11 +694,11 @@ footer .copyright-banner {
 	z-index: 5;
 }
 .fondu-left {
-	background: url(/assets/images/weather/transition_gauche.png);
+	background: url(../images/weather/transition_gauche.png);
 	left: 0px;
 }
 .fondu-right {
-	background: url(/assets/images/weather/transition_droite.png);
+	background: url(../images/weather/transition_droite.png);
 	right: 0px;
 }
 .m0 {
@@ -712,7 +712,7 @@ footer .copyright-banner {
 
 /** about **/
 #about {
-	background: url(/assets/images/bg/about-bg.png) top no-repeat $white;
+	background: url(../images/bg/about-bg.png) top no-repeat $white;
 }
 #about .container {
 	padding-top: 30px;
@@ -778,7 +778,7 @@ footer .copyright-banner {
 	display: block;
 	width: 119px;
 	height: 115px;
-	background: url(/assets/images/game/link.png) no-repeat;
+	background: url(../images/game/link.png) no-repeat;
 	background-position: 0 0;
 	margin: auto;
 	position: absolute;
@@ -794,7 +794,7 @@ footer .copyright-banner {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: url(/assets/images/game/ground.png) repeat-x;
+	background: url(../images/game/ground.png) repeat-x;
 	z-index: 10;
 }
 .fence {
@@ -804,7 +804,7 @@ footer .copyright-banner {
 	width: 70px;
 	height: 66px;
 	right: -70px;
-	background: url(/assets/images/game/fence.png) no-repeat;
+	background: url(../images/game/fence.png) no-repeat;
 	z-index: 10;
 }
 .score {
@@ -837,7 +837,7 @@ footer .copyright-banner {
 
 /** works **/
 #works {
-	background-image: url(/assets/images/bg/works-bg.png);
+	background-image: url(../images/bg/works-bg.png);
 	background-position: top;
 	background-repeat: no-repeat;
 }
@@ -1245,14 +1245,14 @@ embed, iframe, object, video {
 .owl-controls .owl-buttons div {
 	width: 9px;
 	height: 15px;
-	background: url(/assets/images/diamondslider/direction_nav.png);
+	background: url(../images/diamondslider/direction_nav.png);
 	position: absolute;
 	top: 50%;
 	margin-top: -8px;
 	opacity: 0.2;
 }
 .nav-white .owl-controls .owl-buttons div {
-	background: url(/assets/images/diamondslider/direction_nav_white.png);
+	background: url(../images/diamondslider/direction_nav_white.png);
 }
 .owl-controls .owl-buttons div:hover {
 	opacity: 0.7;
@@ -1387,7 +1387,7 @@ embed, iframe, object, video {
 .bottom-arrow:after {
 	content: "";
 	display: block;
-	background: url(/assets/images/bottom-arrow-white.png);
+	background: url(../images/bottom-arrow-white.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
@@ -1666,7 +1666,7 @@ embed, iframe, object, video {
 # Ajax Loaders
 ================================================== */
 .ajax-preloader {
-	background-image: url(/assets/images/ajax_loader.gif);
+	background-image: url(../images/ajax_loader.gif);
 	background-repeat: no-repeat;
 	background-position: center;
 	min-height: 30px;
