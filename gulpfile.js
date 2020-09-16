@@ -36,7 +36,7 @@ const jsSource = [
 ]
 
 gulp.task('scripts', function () {
-  gulp.src(jsSource)
+  return gulp.src(jsSource)
     .pipe(gulpif(!argv.prod, sourceMap.init()))
     .pipe(babel())
     .pipe(concat('app.js'))
@@ -47,11 +47,11 @@ gulp.task('scripts', function () {
 
 // image minification -- only changes if necessary
 gulp.task('imagemin', function () {
-  gulp.src('assets/images/**/*')
+  return gulp.src('assets/images/**/*')
     .pipe(imagemin([
       imageminPngquant({
         speed: 1,
-        quality: 98 //lossy settings
+        quality: [0.8, 0.98] //lossy settings
       }),
       imageminZopfli({
         more: true
@@ -74,7 +74,7 @@ gulp.task('imagemin', function () {
         }]
       }),
       //jpg lossless
-      imagemin.jpegtran({
+      imagemin.mozjpeg({
         progressive: true
       }),
       //jpg very light lossy, use vs jpegtran
@@ -87,22 +87,22 @@ gulp.task('imagemin', function () {
 
 // compile Sass files
 gulp.task('sass', function () {
-  gulp.src('assets/sass/**/*')
-  .pipe(gulpif(!argv.prod, sourceMap.init()))
-  .pipe(plumber())
-  .pipe(sass({outputStyle: 'compressed'}))
-  .pipe(gulpif(!argv.prod, sourceMap.write()))
-  .pipe(autoprefixer())
-  .pipe(gulp.dest('source/assets/stylesheets/'))
+  return gulp.src('assets/sass/**/*')
+    .pipe(gulpif(!argv.prod, sourceMap.init()))
+    .pipe(plumber())
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(gulpif(!argv.prod, sourceMap.write()))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest('source/assets/stylesheets/'))
 })
 
 gulp.task('fonts', function () {
-  gulp.src('assets/fonts/**/*')
+  return gulp.src('assets/fonts/**/*')
     .pipe(gulp.dest('source/assets/fonts/'))
 })
 
 gulp.task('clean', function () {
-  del([
+  return del([
     'source/assets/images/*',
     'source/assets/javascripts/*',
     'source/assets/stylesheets/*',
@@ -111,12 +111,12 @@ gulp.task('clean', function () {
 })
 
 // build task for production server
-gulp.task('build', ['clean', 'imagemin', 'fonts', 'scripts', 'sass'], function () {
+gulp.task('build', gulp.series('clean', 'imagemin', 'fonts', 'scripts', 'sass'), function () {
   console.log('Build task running -*-*-*-*-*-*-*-*-*-*-*-*-*-*')
 })
 
 // Gulp defaut tasks
-gulp.task('default', ['imagemin', 'fonts', 'scripts', 'sass'], function () {
+gulp.task('default', gulp.series('imagemin', 'fonts', 'scripts', 'sass'), function () {
   console.log("Default gulp task *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
   gulp.watch('assets/fonts/**/*', ['fonts'])
   gulp.watch('assets/images/**/*', ['imagemin'])
