@@ -27,7 +27,7 @@ html(lang=I18n.locale)
     title= current_page.data.title || "The Web's Door"
 
     /! Main Stylesheet
-    link href="./assets/stylesheets/main.css?v=1.3.3" rel="stylesheet" /
+    link href="./assets/stylesheets/main.css?v=1.3.4" rel="stylesheet" /
 
 body
 
@@ -91,15 +91,6 @@ body
     /! end header box
   /! end Header
 
-  .alert-email-sent
-    .container
-      .success
-        = t('mail_alert')
-        i.fa.fa-paper-plane
-      .error
-        = t('mail_alert_error')
-        i.fa.fa-warning
-
   = yield
 
   /! Begin Footer
@@ -111,7 +102,7 @@ body
         .lune style="display: none;"
         .nuages_right
     .container.text-center
-      p.copyright.no-margin-bottom &copy; 2019 - Adrien Lepoutre (The Web's Door).
+      p.copyright.no-margin-bottom Adrien Lepoutre - The Web's Door
   /! // End Footer
 
   script src="./assets/javascripts/app.js?v=1.0.1" type="text/javascript"

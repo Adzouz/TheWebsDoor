@@ -129,16 +129,16 @@ section#works.page-type.grey-bg
     .row
       .col-xs-12
         h1.section-title.text-center = t('works.title_pro')
-        #diamond-filter-portfolio-ineat.diamond-filter
+        #diamond-filter-portfolio-pro.diamond-filter
           ul.special-font
             li.active
               a data-filter="*" href="#"  = t('works.all')
-            - datas_categories_ineat = I18n.locale == :en ? data.categories_ineat.en : data.categories_ineat.fr
-            - datas_categories_ineat.each do |category|
+            - datas_categories = I18n.locale == :en ? data.categories.en : data.categories.fr
+            - datas_categories.each do |category|
               li
                 a data-filter=category.id href="#" = category.title
 
-        #diamondslider-portfolio-ineat.diamondslider.nav-white
+        #diamondslider-portfolio-pro.diamondslider.nav-white
           ul.slides
             - delay = 0.3
             - data.works_pro.each do |work|
@@ -152,35 +152,20 @@ section#works.page-type.grey-bg
 
 /! Begin Contact
 section#contact.page-type.font-white
-  .container
-    .row.text-center
+  .container.text-center
+    .row
       .col-xs-12
         h1.section-title = t('contact.title')
     .row
-      .col-xs-12.col-sm-6.col-md-5
-        p.desc
+      .col-xs-12
+        p.text-white
           = t('contact.description')
-        h3.top-margin-60 = t('follow_me')
-        p.bottom-margin-60
+        p.bottom-margin-60.top-margin-60
           - delay = 0.3
           - data.social.each do |social|
             a.btn.btn-icon.btn-icon-white.animated.delayed.no-opacity data-animation="fadeIn" data-animation-delay="#{delay}s" href=social.url target="_blank" rel="noopener" title=social.title
               i.fontello class="social_icon-#{social.icon}"
             - delay = delay + 0.3
-      .col-xs-12.col-sm-5.col-sm-offset-1.col-md-5.col-md-offset-2
-        .contact-form
-          form.form.form-horizontal accept-charset="UTF-8" action="https://sendr.alaqasar.com/sendr/s3Mp3kvKhsCz8ABHejUucLmC" method="POST"
-            fieldset
-              label.form-label for="contact_name" = ("#{t('contact.form.name')} *")
-              input#contact_name.form-control.form-dark name="name" placeholder=("#{t('contact.form.name')} *") required="required" type="text" /
-              label.form-label for="contact_email" =("#{t('contact.form.email')} *")
-              input#contact_email.form-control.form-dark name="email" placeholder=("#{t('contact.form.email')} *") required="required" type="email" /
-              label.form-label for="contact_subject" =("#{t('contact.form.subject')} *")
-              input#contact_subject.form-control.form-dark name="subject" placeholder=("#{t('contact.form.subject')} *") required="required" type="text" /
-              label.form-label for="contact_body" =("#{t('contact.form.message')} *")
-              textarea#contact_body.form-control.form-dark name="message" placeholder=("#{t('contact.form.message')} *") required="required" rows="6"
-              input#submit.btn.btn-border.border-white type="submit" value=t('contact.form.send') /
-              .loading
   #parallax-contact.parallax.parallax-window.texture
     .parallax-slider
       img src="./assets/images/bg/bg-frame4.jpg" alt=t('contact.alt_background') /

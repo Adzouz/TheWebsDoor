@@ -44,12 +44,6 @@ fr:
     title: 'Contact'
     description: 'Intéressé par mon travail ?<br />Je peux m''occuper de votre projet !<br /><br />Besoin d''un devis ou d''une prestation ?<br />N''hésitez pas à m''envoyer un message et j''y répondrai aussi rapidement que possible !'
     alt_background: 'Arrière plan section contact'
-    form:
-      name: 'Nom'
-      email: 'E-mail'
-      subject: 'Sujet'
-      message: 'Message'
-      send: 'Envoyer !'
   page404:
     not_found: 'Cette page n''existe pas ou plus.'
     back_text: 'Revenir au site'

@@ -14,11 +14,6 @@
   icon: 'linkedin'
 
 -
-  title: 'Viadeo'
-  url: 'https://www.viadeo.com/fr/profile/adrienlepoutre'
-  icon: 'viadeo'
-
--
-  title: 'RSS Blog'
-  url: 'https://blog.thewebsdoor.fr/feed.xml'
-  icon: 'rss'
+  title: 'Github'
+  url: 'https://github.com/TheWebsDoor'
+  icon: 'github'

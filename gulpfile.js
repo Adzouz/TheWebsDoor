@@ -18,7 +18,7 @@ const babel = require("gulp-babel")
 const autoprefixer = require("gulp-autoprefixer")
 const del = require('del')
 // Sass
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'));
 const plumber = require('gulp-plumber')
 
 //javascript optimization, source maps included
@@ -30,7 +30,6 @@ const jsSource = [
   'assets/javascripts/parallax.min.js',
   'assets/javascripts/plugins/**/*.js',
   'assets/javascripts/vinto.js',
-  'assets/javascripts/contact-form.js',
   'assets/javascripts/suncalc.js',
   'assets/javascripts/game.js'
 ]

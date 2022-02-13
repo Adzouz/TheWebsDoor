@@ -44,12 +44,6 @@ en:
     title: 'Contact'
     description: 'Interested by my work?<br />I can manage your project!<br /><br />Need a quotation or a service?<br />Feel free to send me a message and I''ll answer as soon as possible!'
     alt_background: 'Background contact section'
-    form:
-      name: 'Name'
-      email: 'E-mail'
-      subject: 'Subject'
-      message: 'Message'
-      send: 'Send!'
   page404:
     not_found: 'This page does not exist.'
     back_text: 'Back to website'

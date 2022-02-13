@@ -318,15 +318,6 @@ input.error, textarea.error {
   position: relative;
 }
 
-.contact-form .loading {
-	display: none;
-	background: $black;
-	background: url(../images/ajax_loader.gif) no-repeat;
-	width: 25px;
-	height: 25px;
-	margin-top: 15px;
-}
-
 a, img, .package-header {
 	transition: all 0.3s ease;
 }

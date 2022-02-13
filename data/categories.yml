@@ -9,11 +9,6 @@ fr:
     title: 'Applications Web'
     slug: 'webapps'
 
-  -
-    id: 3
-    title: 'Jeux'
-    slug: 'games'
-
 en:
   -
     id: 1
@@ -24,8 +19,3 @@ en:
     id: 2
     title: 'Web apps'
     slug: 'webapps'
-
-  -
-    id: 3
-    title: 'Games'
-    slug: 'games'

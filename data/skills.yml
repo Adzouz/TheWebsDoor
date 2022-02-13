@@ -5,7 +5,7 @@
     - '#sass'
     - '#javascript'
     - '#vue.js'
-    - '#jquery'
+    - '#react'
 -
   title: 'Back'
   image: 'competence2.png'
@@ -18,13 +18,11 @@
   tags:
     - '#photoshop'
     - '#illustrator'
-    - '#bootstrap'
+    - '#xd'
     - '#sketch'
 -
   title: 'Frameworks / CMS'
   image: 'competence3.png'
   tags:
-    - '#react'
-    - '#laravel'
     - '#wordpress'
     - '#prestashop'

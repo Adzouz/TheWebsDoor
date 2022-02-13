@@ -1,26 +1,9 @@
 -
-  title: 'Pacesium'
-  url: 'http://pacesium.com'
-  image: 'pacesium.jpg'
-  category: 1
-
--
-  title: 'Frogger Pokémon'
-  url: 'https://frogger.alaqasar.com/'
-  image: 'frogger-pokemon.jpg'
-  category: 3
-
--
-  title: 'Pokébox'
-  url: 'https://pokebox.alaqasar.com'
-  image: 'pokebox.jpg'
+  title: 'Pokedex GO'
+  url: 'https://pokedex.alaqasar.com'
+  image: 'pokedex.png'
   category: 2
 
--
-  title: 'Petit Pain'
-  url: 'https://petitpain.fr'
-  image: 'petitpain.jpg'
-  category: 1
 
 -
   title: 'Say it with a Pin-up'
@@ -41,12 +24,6 @@
   category: 1
 
 -
-  title: 'Jahneration'
-  url: 'https://jahneration.com/'
-  image: 'jahneration.jpg'
-  category: 1
-
--
   title: 'Volckaert Peinture'
   url: 'https://volckaert-peinture.fr/'
   image: 'volckaert-peinture.jpg'
@@ -56,12 +33,6 @@
   title: 'Pixels Drawing'
   url: 'https://thewebsdoor.github.io/PixelsDrawing/'
   image: 'pixels-drawing.png'
-  category: 2
-
--
-  title: 'NotiFoot'
-  url: 'https://notifoot.alaqasar.com/#/'
-  image: 'notifoot.png'
   category: 2
 
 -
