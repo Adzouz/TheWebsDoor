@@ -1,33 +1,26 @@
 -
+  title: 'Aiden Clark'
+  url: 'https://aidenclarkmusic.com/'
+  image: 'aidenclark.png'
+  category: 1
+
+-
+  title: 'Streetex'
+  url: 'https://streetex.alaqasar.com/'
+  image: 'streetex.png'
+  category: 2
+
+-
+  title: 'KIKADIÇA'
+  url: 'https://kikadica.alaqasar.com/'
+  image: 'kikadica.png'
+  category: 1
+
+-
   title: 'Pokedex GO'
   url: 'https://pokedex.alaqasar.com'
   image: 'pokedex.png'
   category: 2
-
-
--
-  title: 'Say it with a Pin-up'
-  url: 'https://pinup.alaqasar.com'
-  image: 'pinup.jpg'
-  category: 2
-
--
-  title: 'Super-Lav'
-  url: 'http://superlav.com/'
-  image: 'superlav.jpg'
-  category: 1
-
--
-  title: 'KIKADIÇA (beta)'
-  url: 'https://kikadica.alaqasar.com/'
-  image: 'kikadica.jpg'
-  category: 1
-
--
-  title: 'Volckaert Peinture'
-  url: 'https://volckaert-peinture.fr/'
-  image: 'volckaert-peinture.jpg'
-  category: 1
 
 -
   title: 'Pixels Drawing'
@@ -45,4 +38,10 @@
   title: 'Sacrée Tirelire'
   url: 'https://thewebsdoor.github.io/SacreeTirelire/'
   image: 'sacreetirelire.png'
+  category: 2
+
+-
+  title: 'Say it with a Pin-up'
+  url: 'https://pinup.alaqasar.com'
+  image: 'pinup.jpg'
   category: 2

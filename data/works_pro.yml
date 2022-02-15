@@ -33,3 +33,15 @@
   url: 'https://www.fondsftq.com/ecoportrait/'
   image: 'ecoportrait.png'
   category: 2
+
+-
+  title: 'Volckaert Peinture'
+  url: 'https://volckaert-peinture.fr/'
+  image: 'volckaert-peinture.jpg'
+  category: 1
+
+-
+  title: 'Super-Lav'
+  url: 'http://superlav.com/'
+  image: 'superlav.jpg'
+  category: 1
