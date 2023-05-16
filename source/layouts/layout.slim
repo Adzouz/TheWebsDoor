@@ -29,248 +29,248 @@ html(lang=I18n.locale)
     /! Main Stylesheet
     link href="./assets/stylesheets/main.css?v=1.3.4" rel="stylesheet" /
 
-body
+  body
 
-  /! begin Header
-  header.header-type.clearfix#top
-    /! begin header inner
-    .header-inner
-      .container
-        .row
-          .col-xs-12.topbar
-            .header-container
-              #trigger-mobile-nav
-                i.fa.fa-bars
-              .logo
-                a href="/"
-                  img class="lazy" alt="Logo header" data-src="./assets/images/logo.svg" /
-            nav#main-nav.main-nav.mobile-nav
-              ul.nav
-                li
-                  a href="./#home" = t('nav.home')
-                li
-                  a href="./#about" = t('nav.about')
-                li
-                  a href="./#skills" = t('nav.skills')
-                li
-                  a href="./#works" = t('nav.works')
-                li
-                  a href="./#contact" = t('nav.contact')
-                li.language-switch
-                  - if I18n.locale == :en
-                    a.fr href="/fr/"
-                      span FR
-                      span.mobile Français
-                  - else
-                    a.en href="/"
-                      span EN
-                      span.mobile English
-    /! end header inner
+    /! begin Header
+    header.header-type.clearfix#top
+      /! begin header inner
+      .header-inner
+        .container
+          .row
+            .col-xs-12.topbar
+              .header-container
+                #trigger-mobile-nav
+                  i.fa.fa-bars
+                .logo
+                  a href="/"
+                    img class="lazy" alt="Logo header" data-src="./assets/images/logo.svg" /
+              nav#main-nav.main-nav.mobile-nav
+                ul.nav
+                  li
+                    a href="./#home" = t('nav.home')
+                  li
+                    a href="./#about" = t('nav.about')
+                  li
+                    a href="./#skills" = t('nav.skills')
+                  li
+                    a href="./#works" = t('nav.works')
+                  li
+                    a href="./#contact" = t('nav.contact')
+                  li.language-switch
+                    - if I18n.locale == :en
+                      a.fr href="/fr/"
+                        span FR
+                        span.mobile Français
+                    - else
+                      a.en href="/"
+                        span EN
+                        span.mobile English
+      /! end header inner
 
-    /! begin header box
-    #header-box.header-box.font-white
-      .header-box-inner.closed
-        .header-box-inner-container
-          .container
-            .row
-              .col-xs-12.col-md-6
-                h3
-                  = t('catchphrase.whoami')
-                p
-                  = t('catchphrase.job')
-              .col-xs-12.col-md-6
-                h3 = t('follow_me')
-                p
-                  - delay = 0.3
-                  - data.social.each do |social|
-                    a.btn.btn-icon.btn-icon-white href=social.url target="_blank" rel="noopener" title=social.title
-                      i.fontello class="social_icon-#{social.icon}"
-                    - delay = delay + 0.3
-      #header-open.header-box-trigger
-        i.fa.fa-plus.fa-fw
-    /! end header box
-  /! end Header
+      /! begin header box
+      #header-box.header-box.font-white
+        .header-box-inner.closed
+          .header-box-inner-container
+            .container
+              .row
+                .col-xs-12.col-md-6
+                  h3
+                    = t('catchphrase.whoami')
+                  p
+                    = t('catchphrase.job')
+                .col-xs-12.col-md-6
+                  h3 = t('follow_me')
+                  p
+                    - delay = 0.3
+                    - data.social.each do |social|
+                      a.btn.btn-icon.btn-icon-white href=social.url target="_blank" rel="noopener" title=social.title
+                        i.fontello class="social_icon-#{social.icon}"
+                      - delay = delay + 0.3
+        #header-open.header-box-trigger
+          i.fa.fa-plus.fa-fw
+      /! end header box
+    /! end Header
 
-  = yield
+    = yield
 
-  /! Begin Footer
-  footer.footer-type#footer
-    .copyright-banner
-      .container#contentWeather
-        .nuages_left
-        .soleil style="display: block; left: 383px;"
-        .lune style="display: none;"
-        .nuages_right
-    .container.text-center
-      p.copyright.no-margin-bottom Adrien Lepoutre - The Web's Door
-  /! // End Footer
+    /! Begin Footer
+    footer.footer-type#footer
+      .copyright-banner
+        .container#contentWeather
+          .nuages_left
+          .soleil style="display: block; left: 383px;"
+          .lune style="display: none;"
+          .nuages_right
+      .container.text-center
+        p.copyright.no-margin-bottom Adrien Lepoutre - The Web's Door
+    /! // End Footer
 
-  script src="./assets/javascripts/app.js?v=1.0.1" type="text/javascript"
+    script src="./assets/javascripts/app.js?v=1.0.1" type="text/javascript"
 
-  javascript:
-    var myLazyLoad = new LazyLoad({
-      elements_selector: ".lazy"
-    });
-
-    jQuery(function($) {
-
-      var date = new Date("1992-09-26");
-      var today = new Date();
-
-      var timeDiff = Math.abs(today.getTime() - date.getTime());
-      var age = parseInt(Math.ceil(timeDiff / (1000 * 3600 * 24)) / 365);
-
-      if (age > parseInt($('#parallax-one .age').html())) {
-        $('#parallax-one .age').html(age);
-      }
-
-      var intervalScene = initScene();
-
-      $(window).resize(function () {
-        clearInterval(intervalScene);
-        intervalScene = initScene(intervalScene);
+    javascript:
+      var myLazyLoad = new LazyLoad({
+        elements_selector: ".lazy"
       });
 
-      //   ______   ______    ______    ______   ______    ______
-      //  /\  ___\ /\  __ \  /\  __ \  /\__  _\ /\  ___\  /\  == \
-      //  \ \  __\ \ \ \/\ \ \ \ \/\ \ \/_/\ \/ \ \  __\  \ \  __<
-      //   \ \_\    \ \_____\ \ \_____\   \ \_\  \ \_____\ \ \_\ \_\
-      //    \/_/     \/_____/  \/_____/    \/_/   \/_____/  \/_/ /_/
-      //
+      jQuery(function($) {
 
-      function setEnvironnement(ambiance, duration, remaining, contentWidth, soleilWidth, luneWidth) {
-        if(ambiance == "jour") {
-          $("#contentWeather").find(".fondu-left").remove();
-          $("#contentWeather").find(".fondu-right").remove();
-          $(".soleil").css("display", "block");
-          $(".lune").css("display", "none");
-          var posXSoleil = Math.ceil(((duration - remaining) / duration) * (contentWidth - soleilWidth));
-          $(".soleil").css("left", posXSoleil+"px");
+        var date = new Date("1992-09-26");
+        var today = new Date();
+
+        var timeDiff = Math.abs(today.getTime() - date.getTime());
+        var age = parseInt(Math.ceil(timeDiff / (1000 * 3600 * 24)) / 365);
+
+        if (age > parseInt($('#parallax-one .age').html())) {
+          $('#parallax-one .age').html(age);
         }
-        else if(ambiance == "soir" || ambiance == "matin") {
-          $("#contentWeather").find(".fondu-left").remove();
-          $("#contentWeather").find(".fondu-right").remove();
-          if(ambiance == "soir") {
-            var posXSoleil = contentWidth - soleilWidth;
-            var posXLune = 0;
-            var backgroundSoleil = Math.ceil(((duration - remaining) / duration) * soleilWidth);
-            var backgroundLune = Math.ceil(((duration - remaining) / duration) * luneWidth) - luneWidth;
+
+        var intervalScene = initScene();
+
+        $(window).resize(function () {
+          clearInterval(intervalScene);
+          intervalScene = initScene(intervalScene);
+        });
+
+        //   ______   ______    ______    ______   ______    ______
+        //  /\  ___\ /\  __ \  /\  __ \  /\__  _\ /\  ___\  /\  == \
+        //  \ \  __\ \ \ \/\ \ \ \ \/\ \ \/_/\ \/ \ \  __\  \ \  __<
+        //   \ \_\    \ \_____\ \ \_____\   \ \_\  \ \_____\ \ \_\ \_\
+        //    \/_/     \/_____/  \/_____/    \/_/   \/_____/  \/_/ /_/
+        //
+
+        function setEnvironnement(ambiance, duration, remaining, contentWidth, soleilWidth, luneWidth) {
+          if(ambiance == "jour") {
+            $("#contentWeather").find(".fondu-left").remove();
+            $("#contentWeather").find(".fondu-right").remove();
             $(".soleil").css("display", "block");
-            $(".lune").css("display", "block");
+            $(".lune").css("display", "none");
+            var posXSoleil = Math.ceil(((duration - remaining) / duration) * (contentWidth - soleilWidth));
+            $(".soleil").css("left", posXSoleil+"px");
           }
-          else {
-            var posXSoleil = 0;
-            var posXLune = contentWidth - luneWidth;
-            var backgroundSoleil = Math.ceil(((duration - remaining) / duration) * soleilWidth) - soleilWidth;
-            var backgroundLune = Math.ceil(((duration - remaining) / duration) * luneWidth);
-            $(".soleil").css("display", "block");
-            $(".lune").css("display", "block");
-          }
-          $(".soleil").css("left", posXSoleil+"px");
-          $(".soleil").css("background-position", backgroundSoleil+"px");
-          $(".lune").css("left", posXLune+"px");
-          $(".lune").css("background-position", backgroundLune+"px");
-          $("#contentWeather").append('<div class="fondu-left"></div><div class="fondu-right"></div>');
-        }
-        else {
-          $("#contentWeather").find(".fondu-left").remove();
-          $("#contentWeather").find(".fondu-right").remove();
-          $(".soleil").css("display", "none");
-          $(".lune").css("display", "block");
-            var posXLune = Math.ceil(((duration - remaining) / duration) * (contentWidth - luneWidth));
-            $(".lune").css("left", posXLune+"px");
-        }
-
-        switch(ambiance) {
-          case 'jour':
-            $(".copyright-banner").css("background", "#57b4f7");
-          break;
-          case 'soir':
-            $(".copyright-banner").css("background", "#5081a2");
-          break;
-          case 'matin':
-            $(".copyright-banner").css("background", "#5081a2");
-          break;
-          case 'nuit':
-            $(".copyright-banner").css("background", "#0c2535");
-          break;
-        }
-      }
-
-      function initScene() {
-        var times = SunCalc.getTimes(new Date(), 45.5576996, -74.0104841);
-
-        var beginSunriseHours = times.sunrise.getHours() < 10 ? '0' + times.sunrise.getHours() : times.sunrise.getHours(),
-            endSunriseHours = times.sunrise.getHours() < 9 ? '0' + (times.sunrise.getHours() + 1) : times.sunrise.getHours() + 1,
-            beginSunsetHours = times.sunset.getHours() < 11 ? '0' + (times.sunset.getHours() - 1) : times.sunset.getHours() - 1,
-            endSunsetHours = times.sunset.getHours() < 10 ? '0' + times.sunset.getHours() : times.sunset.getHours(),
-            currentTime = Math.floor(Date.now() / 1000),
-            beginSunrise = beginSunriseHours + ':' + times.sunrise.getMinutes(),
-            endSunrise = endSunriseHours + ':' + times.sunrise.getMinutes(),
-            beginSunset = beginSunsetHours + ':' + times.sunset.getMinutes(),
-            endSunset = endSunsetHours + ':' + times.sunset.getMinutes(),
-            contentWidth = $("#contentWeather").width() + 30,
-            soleilWidth = 130,
-            luneWidth = 122,
-            ambiance = "jour",
-            timeBeginSunrise = (times.sunrise.getHours() * 3600) + (times.sunrise.getMinutes() * 60),
-            timeEndSunrise = ((times.sunrise.getHours() + 1) * 3600) + (times.sunrise.getMinutes() * 60),
-            timeBeginSunset = ((times.sunset.getHours() - 1) * 3600) + (times.sunset.getMinutes() * 60),
-            timeEndSunset = (times.sunset.getHours() * 3600) + (times.sunset.getMinutes() * 60);
-
-        return setInterval(function() {
-
-          currentTime++;
-          var dt = new Date(currentTime * 1000);
-            var hours = dt.getHours();
-            var minutes = dt.getMinutes();
-            var secondes = dt.getSeconds();
-            if (hours < 10) hours = '0' + hours;
-            if (minutes < 10) minutes = '0' + minutes;
-
-            var currentDate = hours + ":" + minutes;
-            var timeCurrentDate = (hours * 3600) + (minutes * 60) + secondes;
-
-          if(currentDate >= beginSunset && currentDate < endSunset) {
-            ambiance = "soir";
-            var duration = 3600;
-            var remaining = timeEndSunset - timeCurrentDate;
-            setEnvironnement(ambiance, duration, remaining, contentWidth, soleilWidth, luneWidth);
-          }
-          else if(currentDate >= beginSunrise && currentDate < endSunrise) {
-            ambiance = "matin";
-            var duration = 3600;
-            var remaining = timeEndSunrise - timeCurrentDate;
-            setEnvironnement(ambiance, duration, remaining, contentWidth, soleilWidth, luneWidth);
-          }
-          else if(currentDate >= endSunrise && currentDate < beginSunset) {
-            ambiance = "jour";
-            var duration = timeBeginSunset - timeEndSunrise;
-            var remaining = timeBeginSunset - timeCurrentDate;
-            setEnvironnement(ambiance, duration, remaining, contentWidth, soleilWidth, luneWidth);
-          }
-          else {
-            ambiance = "nuit";
-            var duration = ((3600 * 24) - timeEndSunset) + timeBeginSunrise;
-            if(currentDate >= endSunset && currentDate <= "24:00") {
-              var remaining = ((3600 * 24) - timeCurrentDate) + timeBeginSunrise;
+          else if(ambiance == "soir" || ambiance == "matin") {
+            $("#contentWeather").find(".fondu-left").remove();
+            $("#contentWeather").find(".fondu-right").remove();
+            if(ambiance == "soir") {
+              var posXSoleil = contentWidth - soleilWidth;
+              var posXLune = 0;
+              var backgroundSoleil = Math.ceil(((duration - remaining) / duration) * soleilWidth);
+              var backgroundLune = Math.ceil(((duration - remaining) / duration) * luneWidth) - luneWidth;
+              $(".soleil").css("display", "block");
+              $(".lune").css("display", "block");
             }
             else {
-              var remaining = timeBeginSunrise - timeCurrentDate;
+              var posXSoleil = 0;
+              var posXLune = contentWidth - luneWidth;
+              var backgroundSoleil = Math.ceil(((duration - remaining) / duration) * soleilWidth) - soleilWidth;
+              var backgroundLune = Math.ceil(((duration - remaining) / duration) * luneWidth);
+              $(".soleil").css("display", "block");
+              $(".lune").css("display", "block");
             }
-            setEnvironnement(ambiance, duration, remaining, contentWidth, soleilWidth, luneWidth);
+            $(".soleil").css("left", posXSoleil+"px");
+            $(".soleil").css("background-position", backgroundSoleil+"px");
+            $(".lune").css("left", posXLune+"px");
+            $(".lune").css("background-position", backgroundLune+"px");
+            $("#contentWeather").append('<div class="fondu-left"></div><div class="fondu-right"></div>');
+          }
+          else {
+            $("#contentWeather").find(".fondu-left").remove();
+            $("#contentWeather").find(".fondu-right").remove();
+            $(".soleil").css("display", "none");
+            $(".lune").css("display", "block");
+              var posXLune = Math.ceil(((duration - remaining) / duration) * (contentWidth - luneWidth));
+              $(".lune").css("left", posXLune+"px");
           }
 
-        }, 1000);
-      }
-    });
+          switch(ambiance) {
+            case 'jour':
+              $(".copyright-banner").css("background", "#57b4f7");
+            break;
+            case 'soir':
+              $(".copyright-banner").css("background", "#5081a2");
+            break;
+            case 'matin':
+              $(".copyright-banner").css("background", "#5081a2");
+            break;
+            case 'nuit':
+              $(".copyright-banner").css("background", "#0c2535");
+            break;
+          }
+        }
 
-  javascript:
+        function initScene() {
+          var times = SunCalc.getTimes(new Date(), 45.5576996, -74.0104841);
 
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          var beginSunriseHours = times.sunrise.getHours() < 10 ? '0' + times.sunrise.getHours() : times.sunrise.getHours(),
+              endSunriseHours = times.sunrise.getHours() < 9 ? '0' + (times.sunrise.getHours() + 1) : times.sunrise.getHours() + 1,
+              beginSunsetHours = times.sunset.getHours() < 11 ? '0' + (times.sunset.getHours() - 1) : times.sunset.getHours() - 1,
+              endSunsetHours = times.sunset.getHours() < 10 ? '0' + times.sunset.getHours() : times.sunset.getHours(),
+              currentTime = Math.floor(Date.now() / 1000),
+              beginSunrise = beginSunriseHours + ':' + times.sunrise.getMinutes(),
+              endSunrise = endSunriseHours + ':' + times.sunrise.getMinutes(),
+              beginSunset = beginSunsetHours + ':' + times.sunset.getMinutes(),
+              endSunset = endSunsetHours + ':' + times.sunset.getMinutes(),
+              contentWidth = $("#contentWeather").width() + 30,
+              soleilWidth = 130,
+              luneWidth = 122,
+              ambiance = "jour",
+              timeBeginSunrise = (times.sunrise.getHours() * 3600) + (times.sunrise.getMinutes() * 60),
+              timeEndSunrise = ((times.sunrise.getHours() + 1) * 3600) + (times.sunrise.getMinutes() * 60),
+              timeBeginSunset = ((times.sunset.getHours() - 1) * 3600) + (times.sunset.getMinutes() * 60),
+              timeEndSunset = (times.sunset.getHours() * 3600) + (times.sunset.getMinutes() * 60);
 
-    ga('create', 'UA-50328591-5', 'auto');
-    ga('send', 'pageview');
+          return setInterval(function() {
+
+            currentTime++;
+            var dt = new Date(currentTime * 1000);
+              var hours = dt.getHours();
+              var minutes = dt.getMinutes();
+              var secondes = dt.getSeconds();
+              if (hours < 10) hours = '0' + hours;
+              if (minutes < 10) minutes = '0' + minutes;
+
+              var currentDate = hours + ":" + minutes;
+              var timeCurrentDate = (hours * 3600) + (minutes * 60) + secondes;
+
+            if(currentDate >= beginSunset && currentDate < endSunset) {
+              ambiance = "soir";
+              var duration = 3600;
+              var remaining = timeEndSunset - timeCurrentDate;
+              setEnvironnement(ambiance, duration, remaining, contentWidth, soleilWidth, luneWidth);
+            }
+            else if(currentDate >= beginSunrise && currentDate < endSunrise) {
+              ambiance = "matin";
+              var duration = 3600;
+              var remaining = timeEndSunrise - timeCurrentDate;
+              setEnvironnement(ambiance, duration, remaining, contentWidth, soleilWidth, luneWidth);
+            }
+            else if(currentDate >= endSunrise && currentDate < beginSunset) {
+              ambiance = "jour";
+              var duration = timeBeginSunset - timeEndSunrise;
+              var remaining = timeBeginSunset - timeCurrentDate;
+              setEnvironnement(ambiance, duration, remaining, contentWidth, soleilWidth, luneWidth);
+            }
+            else {
+              ambiance = "nuit";
+              var duration = ((3600 * 24) - timeEndSunset) + timeBeginSunrise;
+              if(currentDate >= endSunset && currentDate <= "24:00") {
+                var remaining = ((3600 * 24) - timeCurrentDate) + timeBeginSunrise;
+              }
+              else {
+                var remaining = timeBeginSunrise - timeCurrentDate;
+              }
+              setEnvironnement(ambiance, duration, remaining, contentWidth, soleilWidth, luneWidth);
+            }
+
+          }, 1000);
+        }
+      });
+
+    javascript:
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-50328591-5', 'auto');
+      ga('send', 'pageview');
